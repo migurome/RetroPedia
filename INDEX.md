@@ -37,6 +37,10 @@ Contenido inicial extraído de [plutiedev.com](https://plutiedev.com) (2026-07-2
 - [Hilos de SpritesMind sobre timing de bus, DMA y Z80](MegaDrive/cpu/spritesmind-bus-timing-hilos.md) *(índice curado, foro)*
 - [Big Evil Corporation — bases del ensamblador 68000](MegaDrive/cpu/bec-asm-basics.md) *(blog de TANGLEWOOD)*
 - [Hello World en código máquina puro para Mega Drive (anotado)](MegaDrive/cpu/bumbershoot-hello-world-anotado.md) *(blog de Bumbershoot Software)*
+- [Primer diseño e implementación del Autómata Celular Cíclico (CCA) en Genesis](MegaDrive/cpu/bumbershoot-cca-primera-implementacion.md) *(blog de Bumbershoot Software)*
+- [Optimización del bucle principal del CCA en 68000 (2018)](MegaDrive/cpu/bumbershoot-cca-optimizacion-inicial.md) *(blog de Bumbershoot Software)*
+- [Re-optimización del CCA en Genesis en 2025 — contar ciclos en serio](MegaDrive/cpu/bumbershoot-cca-reoptimizacion-2025.md) *(blog de Bumbershoot Software)*
+- [Variaciones sobre el ABI/convención de llamada del 68000](MegaDrive/cpu/bumbershoot-variaciones-abi-68000.md) *(blog de Bumbershoot Software)*
 
 **graficos/**
 - [Configuración inicial del VDP](MegaDrive/graficos/vdp-setup.md)
@@ -71,6 +75,8 @@ Contenido inicial extraído de [plutiedev.com](https://plutiedev.com) (2026-07-2
 - [Bumbershoot Software — pipeline de cuantización y compresión para un logo en Genesis](MegaDrive/graficos/bumbershoot-refinando-graficos-logo.md) *(blog de Bumbershoot Software)*
 - [Bumbershoot Software — scroll de pantalla completa dirigido por interrupción VBLANK](MegaDrive/graficos/bumbershoot-scroll-pantalla-completa-vblank.md) *(blog de Bumbershoot Software)*
 - [Fundido de paleta y efecto "pixel bleed" por VSRAM (Bumbershoot / CCA)](MegaDrive/graficos/bumbershoot-cca-fade-pixel-bleed.md) *(blog de Bumbershoot Software)*
+- [Presupuesto de ancho de banda a VRAM y la "venganza" de las badlines del C64](MegaDrive/graficos/bumbershoot-badlines-revenge.md) *(blog de Bumbershoot Software)*
+- [Modo pseudo-bitmap mediante dos planos de scroll superpuestos](MegaDrive/graficos/bumbershoot-pseudo-bitmap-dos-planos.md) *(blog de Bumbershoot Software)*
 
 **sonido/**
 - [Operaciones comunes del YM2612](MegaDrive/sonido/ym2612-operations.md)
@@ -88,6 +94,7 @@ Contenido inicial extraído de [plutiedev.com](https://plutiedev.com) (2026-07-2
 - [Sonido, parte I — el chip PSG — enfoque Big Evil Corporation](MegaDrive/sonido/bec-sound-psg.md) *(blog de TANGLEWOOD)*
 - [Driver de música PSG en Z80 con decaimiento de subframe (Bumbershoot)](MegaDrive/sonido/bumbershoot-z80-driver-psg.md) *(blog de Bumbershoot Software)*
 - [Reproducción de PCM por el YM2612 con temporización por ciclos (Bumbershoot)](MegaDrive/sonido/bumbershoot-ym2612-pcm-playback.md) *(blog de Bumbershoot Software)*
+- [Un bug de offset de canal en los registros $B0/$B4 del YM2612, diagnosticado con Gens KGen](MegaDrive/sonido/bumbershoot-bug-offset-canal-ym2612.md) *(blog de Bumbershoot Software)*
 
 **perifericos/**
 - [Puertos de I/O de la Mega Drive](MegaDrive/perifericos/io-ports.md)
@@ -159,10 +166,18 @@ Contenido inicial extraído de [plutiedev.com](https://plutiedev.com) (2026-07-2
 - [Big Evil Corporation — puesta en marcha del toolchain](MegaDrive/herramientas/bec-getting-started.md)
 - [Taller de ensamblador Mega Drive y ejemplo "hello world" (2018)](MegaDrive/herramientas/bec-workshop-2018.md) *(mayormente redundante con "Getting Started" — ver notas de la propia entrada)*
 
-**herramientas/** — [blog de Bumbershoot Software](https://bumbershootsoft.wordpress.com/platform-guide-sega-genesis-mega-drive/), guía de plataforma + serie de desarrollo 2018/2025
+**herramientas/** — [blog de Bumbershoot Software](https://bumbershootsoft.wordpress.com/platform-guide-sega-genesis-mega-drive/), guía de plataforma + serie de desarrollo 2018/2025/2026
 - [Bumbershoot Software — panorama de hardware y elección de herramientas para Genesis/Mega Drive](MegaDrive/herramientas/bumbershoot-preparando-entorno-genesis.md)
 - [Comparativa de emuladores para desarrollo en Mega Drive/Genesis](MegaDrive/herramientas/bumbershoot-emuladores-desarrollo.md)
 - [Comparativa de toolchains de ensamblador para Mega Drive (SGDK, ASMX, Vasm, WLA-DX, ASMotor)](MegaDrive/herramientas/bumbershoot-comparativa-toolchains.md)
+- [El toolchain improvisado de 2018 para Genesis (ASMX + conversión manual)](MegaDrive/herramientas/bumbershoot-toolchain-improvisado-2018.md)
+- [Modernizando el toolchain de ASMX en 2025 (INCBIN, RORG/REND, smdfix)](MegaDrive/herramientas/bumbershoot-modernizando-toolchain-asmx-2025.md)
+- [Probando ASMotor para Mega Drive (2026)](MegaDrive/herramientas/bumbershoot-asmotor-mega-drive.md)
+- [Bugs de compatibilidad entre emuladores detectados al lanzar CCA (Genesis)](MegaDrive/herramientas/bumbershoot-cca-bugs-emuladores-lanzamiento.md)
+- [Descompresor LZ4 en ensamblador 68000](MegaDrive/herramientas/bumbershoot-lz4-decompression-68000.md)
+- [Bumbershoot Software — el toolchain improvisado de 2018 para Genesis (ASMX + conversión manual)](MegaDrive/herramientas/bumbershoot-toolchain-improvisado-2018.md)
+- [Bumbershoot Software — modernizando el toolchain de ASMX en 2025 (INCBIN, RORG/REND, smdfix)](MegaDrive/herramientas/bumbershoot-modernizando-toolchain-asmx-2025.md)
+- [Bumbershoot Software — probando ASMotor para Mega Drive (2026)](MegaDrive/herramientas/bumbershoot-asmotor-mega-drive.md)
 
 ### SNES
 

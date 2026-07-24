@@ -6,23 +6,20 @@ Base de conocimiento sobre desarrollo de videoconsolas retro (Mega Drive, SNES, 
 
 ```
 RetroPedia/
-├── INDEX.md            # Mapa general, enlaces a todo el contenido
-├── GLOSARIO.md          # Conceptos transversales a varias plataformas
-├── _plantilla.md        # Plantilla para nuevas entradas
+├── INDEX.md              # Mapa general, enlaces a todo el contenido
+├── GLOSARIO.md            # Conceptos transversales a varias plataformas
+├── GLOSARIO/              # Fundamentos de programación (fixed-point, colisiones...)
+├── _plantilla.md          # Plantilla para nuevas entradas
 ├── MegaDrive/
-│   ├── README.md        # Overview de la plataforma
-│   ├── graficos/
-│   ├── sonido/
-│   ├── cpu/
-│   ├── memoria/
-│   └── herramientas/
-└── SNES/
-    ├── README.md
-    ├── graficos/
-    ├── sonido/
-    ├── cpu/
-    ├── memoria/
-    └── herramientas/
+│   ├── README.md          # Overview de la plataforma
+│   ├── graficos/, sonido/, cpu/, memoria/, perifericos/, avanzado/
+│   └── herramientas/      # incluye herramientas/sgdk/
+├── SNES/
+│   ├── README.md
+│   └── graficos/, sonido/, cpu/, memoria/, perifericos/, herramientas/
+└── MOTORES/
+    ├── README.md          # Arquitectura de motores, multiplataforma (no ligado a una consola)
+    └── arquitectura/, efectos/, graficos-hardware/
 ```
 
 Los subdirectorios de categoría (`graficos/`, `sonido/`, etc.) se crean bajo demanda, según vaya haciendo falta contenido — no hace falta tenerlos todos vacíos de antemano.
@@ -42,4 +39,4 @@ Los subdirectorios de categoría (`graficos/`, `sonido/`, etc.) se crean bajo de
 
 ## Estado
 
-Estructura recién creada — sin contenido técnico todavía. Se irá alimentando a medida que abramos proyectos concretos (Mega Drive, SNES, ...).
+Más de 200 entradas técnicas ya extraídas para Mega Drive (plutiedev.com, blogs de Big Evil Corporation/TANGLEWOOD y Bumbershoot Software, SGDK, SpritesMind/Sega Retro/Sonic Retro como índices curados), SNES (SNESdev Wiki), y una sección `MOTORES/` de arquitectura de motores multiplataforma (fabiensanglard.net) pensada explícitamente como referencia de diseño para una futura v2 de motor-cenital. Todas las entradas están marcadas `estado: borrador` en su frontmatter hasta ser revisadas/contrastadas trabajando en un proyecto real — ver [INDEX.md](INDEX.md) para el mapa completo y la nota de origen de cada tanda de contenido. Próximas fuentes pendientes de extraer (ver `Notas.txt`): más SNES (nesdev.org, pvsneslib, foros), más Mega Drive (retroreversing.com) y una plataforma nueva, NeoGeo (ngdevkit).
