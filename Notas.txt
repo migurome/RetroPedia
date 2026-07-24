@@ -4,7 +4,6 @@ https://github.com/alekmaul/pvsneslib
 https://forums.nesdev.org/viewforum.php?f=12&sid=29bf8dfd75f311812386081234173234
 
 MD: 
-https://bumbershootsoft.wordpress.com/platform-guide-sega-genesis-mega-drive/
 https://www.retroreversing.com/megadrive
 
 NeoGeo:
