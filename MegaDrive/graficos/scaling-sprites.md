@@ -38,4 +38,4 @@ _Miniplanets_ lleva los enfoques anteriores a su conclusión lógica en las tarj
 
 ## Referencias cruzadas
 
-- (pendiente de enlazar)
+- [../herramientas/md-engine/camara-y-scroll.md](../herramientas/md-engine/camara-y-scroll.md): versiones pre-escaladas y cambio de fondo por niveles en MD Engine (DB Fighter)

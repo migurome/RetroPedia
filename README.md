@@ -17,9 +17,13 @@ RetroPedia/
 ├── SNES/
 │   ├── README.md
 │   └── graficos/, sonido/, cpu/, memoria/, perifericos/, herramientas/
-└── MOTORES/
-    ├── README.md          # Arquitectura de motores, multiplataforma (no ligado a una consola)
-    └── arquitectura/, efectos/, graficos-hardware/
+├── NeoGeo/
+│   ├── README.md          # Overview (qué está comprobado y qué no)
+│   └── graficos/, herramientas/   # ngdevkit en Windows, sprites SCB, ROM C/S, caso práctico
+├── MOTORES/
+│   ├── README.md          # Arquitectura de motores, multiplataforma (no ligado a una consola)
+│   └── arquitectura/, efectos/, graficos-hardware/
+└── EXTRACCION/            # Sacar fondos, sprites y animaciones de un vídeo (sin ROM ni código)
 ```
 
 Los subdirectorios de categoría (`graficos/`, `sonido/`, etc.) se crean bajo demanda, según vaya haciendo falta contenido — no hace falta tenerlos todos vacíos de antemano.
@@ -39,4 +43,4 @@ Los subdirectorios de categoría (`graficos/`, `sonido/`, etc.) se crean bajo de
 
 ## Estado
 
-Más de 200 entradas técnicas ya extraídas para Mega Drive (plutiedev.com, blogs de Big Evil Corporation/TANGLEWOOD y Bumbershoot Software, SGDK, SpritesMind/Sega Retro/Sonic Retro como índices curados), SNES (SNESdev Wiki), y una sección `MOTORES/` de arquitectura de motores multiplataforma (fabiensanglard.net) pensada explícitamente como referencia de diseño para una futura v2 de motor-cenital. Todas las entradas están marcadas `estado: borrador` en su frontmatter hasta ser revisadas/contrastadas trabajando en un proyecto real — ver [INDEX.md](INDEX.md) para el mapa completo y la nota de origen de cada tanda de contenido. Próximas fuentes pendientes de extraer (ver `Notas.txt`): más SNES (nesdev.org, pvsneslib, foros), más Mega Drive (retroreversing.com) y una plataforma nueva, NeoGeo (ngdevkit).
+Más de 200 entradas técnicas ya extraídas para Mega Drive (plutiedev.com, blogs de Big Evil Corporation/TANGLEWOOD y Bumbershoot Software, SGDK, SpritesMind/Sega Retro/Sonic Retro como índices curados), SNES (SNESdev Wiki), y una sección `MOTORES/` de arquitectura de motores multiplataforma (fabiensanglard.net) pensada explícitamente como referencia de diseño para una futura v2 de motor-cenital. Todas las entradas están marcadas `estado: borrador` en su frontmatter hasta ser revisadas/contrastadas trabajando en un proyecto real — ver [INDEX.md](INDEX.md) para el mapa completo y la nota de origen de cada tanda de contenido. Próximas fuentes pendientes de extraer (ver `Notas.txt`): más SNES (nesdev.org, pvsneslib, foros), y más Mega Drive (retroreversing.com). La plataforma NeoGeo (ngdevkit) ya tiene sección propia (2026-10-23), con 5 entradas sacadas de un proyecto real probado en GnGeo: instalación en Windows, sprites SCB, formatos de ROM y un caso práctico.

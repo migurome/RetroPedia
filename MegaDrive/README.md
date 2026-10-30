@@ -35,13 +35,13 @@ Contenido inicial extraído de [plutiedev.com](https://plutiedev.com) (2026-07-2
 
 | Categoría | Nº entradas |
 |---|---|
-| cpu/ | 16 |
-| graficos/ | 34 |
+| cpu/ | 17 |
+| graficos/ | 35 |
 | sonido/ | 16 |
 | perifericos/ | 12 |
 | memoria/ | 13 |
 | avanzado/ | 4 |
-| herramientas/ | 18 + 9 (subcarpeta `sgdk/`) |
+| herramientas/ | 18 + 9 (subcarpeta `sgdk/`) + 6 (subcarpeta `md-engine/`) |
 
 `herramientas/sgdk/` documenta [SGDK](https://github.com/Stephane-D/SGDK), el SDK en C más usado para Mega Drive hoy en día (alternativa de alto nivel al ASM puro de las demás entradas): instalación, estructura de proyecto/build, y los tutoriales de la wiki oficial (introducción, hello world, backgrounds, sprites, input, matemáticas). La referencia función-por-función completa vive en la documentación Doxygen oficial (enlazada desde `overview.md`) y no se ha volcado aquí.
 

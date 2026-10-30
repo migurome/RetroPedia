@@ -103,6 +103,17 @@ VDP_setPalette(PAL1, moon.palette->data);
 - Los bitmaps deben tener dimensiones alineadas a 8 píxeles.
 - Restricción: 16 colores por tile, máximo 64 colores en total.
 - Hay opciones de compresión (RLE, Huffman) disponibles a nivel de declaración de recursos.
+- **Comprimir los fondos sale muy a cuenta:** `IMAGE nombre "f.png" FAST ALL` (LZ4W) en lugar de `NONE ALL` solo cuesta un poco más de tiempo al cargar la pantalla. En Super Smash Land MD, 25 fondos de 160x144 y 320x224 con colores planos pasaron de 108 KB a 39 KB, y con eso cupieron tres canciones PCM más.
+- **`VDP_drawImageEx(..., dma = TRUE)` usa un búfer temporal de la cola de DMA** para el mapa con el tile base sumado, y también para los tiles si la imagen va comprimida. La copia ocurre en la VBlank. Si en ese mismo fotograma se crean muchos sprites nuevos con frames comprimidos, también piden búfer temporal, y el mapa o los tiles del fondo pueden salir pisados: casillas que muestran otros tiles del mismo fondo.
+  - Al cambiar de pantalla conviene `dma = FALSE` (copia por CPU, inmediata). El tiempo extra en un cambio de pantalla no se nota.
+  - Para diagnosticarlo, volcar la VRAM: el mapa del plano B empieza por defecto en 0xC000 y el del A en 0xE000 (64x32, 2 bytes por casilla, big endian). La tabla de sprites va en 0xF400.
+- **Tablas de recursos escritas a mano:** si el código tiene un array con los `Image*` de cada pantalla, añadir `_Static_assert(sizeof(T)/sizeof(T[0]) == N)`. Una pantalla nueva que falta en la tabla deja un puntero nulo, y SGDK pinta basura sin dar ningún error.
+- **Marcador sobre un escenario que llena la pantalla:** usar el plano ventana en las últimas filas: `VDP_setWindowVPos(TRUE, fila)` y `VDP_drawTextBG(WINDOW, …)`.
+  - En esas filas la ventana sustituye al plano A, así que el primer plano del escenario no ensucia el texto.
+  - Si además se vacía el plano B en esas filas, las letras salen sobre el color de fondo, como una franja.
+  - En los menús se quita con `VDP_setWindowVPos(FALSE, 0)`.
+  - Usado en el prototipo a 1,5x y 2x de Super Smash Land MD (B053).
+- **Capturas de pruebas en un cambio de pantalla:** el fotograma en que se pulsa el botón que cambia de pantalla ya está cargando la siguiente, y la captura sale mezclada (tiles nuevos con el mapa viejo). No es un fallo del juego, salvo que se vea también fuera de ese fotograma.
 
 ## Referencias cruzadas
 

@@ -92,6 +92,10 @@ En VDPREG_MODE2, bit 3:
 - Activar V30 (240px/480px) en un sistema NTSC provoca fallos de consola: esta configuración solo es segura en sistemas PAL.
 - El modo interlazado (448px) requiere lógica adicional: dos pasadas de refresco (líneas pares/impares) y dos interrupciones de vblank.
 - Para raster effects en el modo interlazado de alta resolución, hay que comprobar el bit 4 del puerto `$C00004` para saber si la pasada actual es de líneas pares o impares.
+- **Probar en FPGA (núcleo de Mega Drive por HDMI):** desactivar la opción de mezcla de píxeles para el *dithering* (*composite blend* / *dither blending*). Mezcla cada píxel con el de al lado para imitar cómo el vídeo compuesto funde las tramas.
+  - En H40, los textos y números con trazos de 1 píxel salen con «sombras» y no se leen.
+  - Pasó con Super Smash Land MD: parecía un fallo de los gráficos y era esa opción.
+  - Antes de rediseñar fuentes por legibilidad, comprobar la configuración de vídeo.
 
 ## Referencias cruzadas
 

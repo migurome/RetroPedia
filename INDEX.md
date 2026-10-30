@@ -16,17 +16,29 @@ Contenido inicial extraído de [plutiedev.com](https://plutiedev.com) (2026-07-2
 - [Detección de colisiones básica](GLOSARIO/basic-collision.md)
 - [Ordenación de sprites](GLOSARIO/sorting-sprites.md)
 - [Sistemas numéricos — decimal, binario y hexadecimal](GLOSARIO/dec-bin-hex.md)
+- [Colisión con máscaras de píxel — trapecios y rampas de 1 píxel](GLOSARIO/mask-collision-slopes.md)
+
+### DISENO/ — diseño de niveles y de mundo
+
+- [Índice de DISENO](DISENO/README.md)
+- [Principios de diseño de niveles](DISENO/principios-diseno-niveles.md)
+- [Guiar al jugador — señalización, landmarks y colocación](DISENO/guiar-al-jugador.md)
+- [Diseño de mundo metroidvania](DISENO/mundo-metroidvania.md)
+- [Métricas del personaje y cámara](DISENO/metricas-y-camara.md)
+- [Aplicación a Retrovania — métricas reales, procedimiento y checklist](DISENO/aplicacion-retrovania.md)
 
 ## Plataformas
 
 - [MegaDrive/](MegaDrive/README.md)
 - [SNES/](SNES/README.md)
+- [NeoGeo/](NeoGeo/README.md)
 
 ### Mega Drive / Genesis
 
 **cpu/**
 - [Motorola 68000 — instrucciones y modos de direccionamiento (base)](MegaDrive/cpu/68000-instrucciones-modos-direccionamiento.md)
 - [Multiplicación y división en el 68000](MegaDrive/cpu/multiplication-division.md)
+- [Optimizar C compilado con gcc para el 68000 (lecciones de un port con SGDK)](MegaDrive/cpu/optimizar-c-gcc-68000.md)
 - [Matemáticas BCD en el 68000](MegaDrive/cpu/bcd-math.md)
 - [Matemáticas de 64 bits en el 68000](MegaDrive/cpu/64bit-math.md)
 - [La instrucción MOVEP](MegaDrive/cpu/movep.md)
@@ -73,6 +85,7 @@ Contenido inicial extraído de [plutiedev.com](https://plutiedev.com) (2026-07-2
 - [Mapas y planos de scroll — enfoque Big Evil Corporation](MegaDrive/graficos/bec-maps-scrolling.md) *(blog de TANGLEWOOD)*
 - [Bumbershoot Software — VDP desde cero: "Hello World" y bitmap con ASM puro](MegaDrive/graficos/bumbershoot-hello-world-y-bitmap-vdp.md) *(blog de Bumbershoot Software)*
 - [Bumbershoot Software — pipeline de cuantización y compresión para un logo en Genesis](MegaDrive/graficos/bumbershoot-refinando-graficos-logo.md) *(blog de Bumbershoot Software)*
+- [Imitar la paleta de otras consolas en Mega Drive (Game Boy, Virtual Boy, NES…)](MegaDrive/graficos/imitar-paletas-otras-consolas.md) *(proyecto Retrovania)*
 - [Bumbershoot Software — scroll de pantalla completa dirigido por interrupción VBLANK](MegaDrive/graficos/bumbershoot-scroll-pantalla-completa-vblank.md) *(blog de Bumbershoot Software)*
 - [Fundido de paleta y efecto "pixel bleed" por VSRAM (Bumbershoot / CCA)](MegaDrive/graficos/bumbershoot-cca-fade-pixel-bleed.md) *(blog de Bumbershoot Software)*
 - [Presupuesto de ancho de banda a VRAM y la "venganza" de las badlines del C64](MegaDrive/graficos/bumbershoot-badlines-revenge.md) *(blog de Bumbershoot Software)*
@@ -95,6 +108,8 @@ Contenido inicial extraído de [plutiedev.com](https://plutiedev.com) (2026-07-2
 - [Driver de música PSG en Z80 con decaimiento de subframe (Bumbershoot)](MegaDrive/sonido/bumbershoot-z80-driver-psg.md) *(blog de Bumbershoot Software)*
 - [Reproducción de PCM por el YM2612 con temporización por ciclos (Bumbershoot)](MegaDrive/sonido/bumbershoot-ym2612-pcm-playback.md) *(blog de Bumbershoot Software)*
 - [Un bug de offset de canal en los registros $B0/$B4 del YM2612, diagnosticado con Gens KGen](MegaDrive/sonido/bumbershoot-bug-offset-canal-ym2612.md) *(blog de Bumbershoot Software)*
+- [Generar proyectos .fur de Furnace por script y exportarlos a VGM](MegaDrive/sonido/furnace-fur-generar-y-exportar-vgm.md) *(experimentos propios; PSG dos octavas arriba)*
+- [Transcribir chiptune (Game Boy) desde audio grabado sin oírlo](MegaDrive/sonido/transcribir-chiptune-desde-audio.md) *(experimentos propios)*
 
 **perifericos/**
 - [Puertos de I/O de la Mega Drive](MegaDrive/perifericos/io-ports.md)
@@ -155,6 +170,14 @@ Contenido inicial extraído de [plutiedev.com](https://plutiedev.com) (2026-07-2
 
 **herramientas/** — caso práctico
 - [Caso práctico — hacer un juego de Mega Drive en 2019 (Doctor Ludos / SGDK)](MegaDrive/herramientas/caso-practico-sgdk-2019.md)
+
+**herramientas/md-engine/** — [MD Engine](https://store.steampowered.com/search/?term=MD%20Engine) (Two Black Cats, Steam), motor visual sobre TBCE/SGDK; análisis directo de la v1.0.9 (2026-10-15)
+- [MD Engine — overview (motor visual para Mega Drive)](MegaDrive/herramientas/md-engine/overview.md)
+- [MD Engine — formato de proyecto (.mdep / .mderes, sprites, colisiones RLE)](MegaDrive/herramientas/md-engine/formato-proyecto.md)
+- [MD Engine — eventos, valores y variables en los scripts](MegaDrive/herramientas/md-engine/eventos-y-scripts.md)
+- [MD Engine — física, grupos de colisión y gotchas de hitbox](MegaDrive/herramientas/md-engine/fisica-y-colisiones.md)
+- [MD Engine — cámara, niveles largos con scroll y parallax](MegaDrive/herramientas/md-engine/camara-y-scroll.md)
+- [MD Engine — generar proyectos por código, depurar el C generado y pruebas automáticas](MegaDrive/herramientas/md-engine/depuracion-y-generacion.md)
 
 **herramientas/** — [Sega Retro](https://segaretro.org/Category:Mega_Drive_technical_information), wiki de documentación técnica (índice curado)
 - [Sega Retro — overview y limitaciones de acceso](MegaDrive/herramientas/segaretro-overview.md)
@@ -254,6 +277,20 @@ Contenido extraído de la [SNESdev Wiki](https://snes.nesdev.org/wiki/SNESdev_Wi
 - [Juegos de SNES difíciles de emular con precisión](SNES/herramientas/juegos-dificiles-de-emular.md)
 - [Juegos de SNES con modos gráficos inusuales](SNES/herramientas/juegos-modos-graficos-inusuales.md)
 
+### Neo Geo
+
+Contenido de un proyecto real (`RickAndMorty/neogeo`, 2026-10-23): ngdevkit 0.5 en Windows/MSYS2 y ROM probada en GnGeo. Las entradas prácticas están en `estado: revisado`. La ficha general es `borrador`: los límites de hardware que no se midieron van marcados como pendientes.
+
+- [Neo Geo — overview](NeoGeo/README.md) — hardware, ROM del cartucho y qué está comprobado
+
+**herramientas/**
+- [ngdevkit en Windows (MSYS2) — instalación, build de la ROM y GnGeo](NeoGeo/herramientas/ngdevkit-windows.md) — paquetes con `pacman -U` sin TrustAll, crt0 y VBlank, ROM P/C/S/M/V, `romtool`, mandos de GnGeo, pruebas con PrintWindow/PostMessage
+- [Caso práctico — personajes de SimuLockdown (Godot 3) en Neo Geo](NeoGeo/herramientas/caso-practico-simulockdown.md) ⭐ — leer `.tscn`, arte ×3,5 y ×2, escalas enteras, paletas, px/s → px/fotograma, presupuesto real
+
+**graficos/**
+- [Sprites — SCB1-SCB4, cadenas sticky, espejo y orden de dibujo](NeoGeo/graficos/sprites-scb.md) — personajes de varias columnas, giro, profundidad y coordenadas de la capa fix
+- [Formatos de la ROM C, la ROM S y las paletas](NeoGeo/graficos/rom-c-s-y-paletas.md) — codificación de tiles en Python, color de 16 bits con bit oscuro, backdrop, paleta cerrada
+
 ## Motores — arquitectura y diseño (multiplataforma)
 
 - [MOTORES/](MOTORES/README.md) — conocimiento de arquitectura de motores NO ligado a una consola concreta; referencia para diseñar una segunda versión de motor-cenital y futuros motores. Fuente inicial: [fabiensanglard.net](https://fabiensanglard.net/).
@@ -266,6 +303,7 @@ Contenido extraído de la [SNESdev Wiki](https://snes.nesdev.org/wiki/SNESdev_Wi
 - [Another World — el port a Sega Genesis / Mega Drive](MOTORES/arquitectura/another-world-genesis.md) ⭐
 - [Another World — el port a Super Nintendo (SNES)](MOTORES/arquitectura/another-world-snes.md)
 - [Another World — el port a Game Boy Advance](MOTORES/arquitectura/another-world-gba.md)
+- [Portar un juego de Game Maker a una consola retro (Super Smash Land → Mega Drive)](MOTORES/arquitectura/port-desde-game-maker.md)
 - [Another World — el port a Atari Jaguar](MOTORES/arquitectura/another-world-jaguar.md)
 - [Timers de juego — problemas y soluciones (bucle principal y framerate)](MOTORES/arquitectura/game-timers-framerate.md)
 - [Coma flotante explicada visualmente](MOTORES/arquitectura/floating-point-visually-explained.md)
@@ -284,6 +322,20 @@ Contenido extraído de la [SNESdev Wiki](https://snes.nesdev.org/wiki/SNESdev_Wi
 - [Street Fighter II: Health Bar](MOTORES/graficos-hardware/sf2-health-bar.md)
 
 *(No se creó entrada para los "Game Engine Black Books" de Wolfenstein 3D/DOOM: las páginas de fabiensanglard.net son solo anuncios de venta del libro, sin contenido técnico gratuito.)*
+
+## Extracción de assets desde vídeo (ingeniería inversa)
+
+- [EXTRACCION/](EXTRACCION/README.md) — sacar fondos, sprites y datos de animación de un juego o animación cuando solo hay vídeo (sin ROM ni código). Orden recomendado y lección principal en el README. Origen: proyecto Extractor (2026-10-22).
+
+- [Detectar la rejilla de pixel art en un vídeo y bajar a resolución nativa](EXTRACCION/rejilla-pixel-art-desde-video.md) — corte de planos, escala por error de reconstrucción, muestreo del centro del bloque
+- [Reconstruir fondos y escenarios a partir de vídeo](EXTRACCION/fondos-desde-video.md) — tipos de cámara, mediana por tramos, votación, deriva del registro, parallax, inpainting
+- [Extraer sprites con una biblioteca de poses (búsqueda por plantilla y refinado "Venn")](EXTRACCION/sprites-por-plantillas.md) ⭐ — el método que funciona; paleta y contorno; de poses a movimientos
+- [Separar las capas de parallax por su movimiento (capas de Wang y Adelson)](EXTRACCION/capas-parallax-por-movimiento.md) — un panorama por capa y factor de parallax medido *(sin probar aún)*
+- [Completar fondos tapados — detección de tiles y relleno por ejemplos](EXTRACCION/tiles-y-relleno-de-fondos.md) — tileset/tilemap, Criminisi/Resynthesizer, ProPainter/E2FGVI *(sin probar aún)*
+- [Elementos animados del fondo, efectos y timing](EXTRACCION/elementos-animados-efectos-y-timing.md) — bucles, efectos aditivos o screen, fotogramas repetidos *(sin probar aún)*
+- [Paletas cerradas y fuentes de texto](EXTRACCION/paleta-y-fuentes.md) — median cut/k-means sin difuminado, `.gpl`, fuentes en mapa de bits *(sin probar aún)*
+- [IA y descomposición de vídeo en capas (qué sirve y qué no)](EXTRACCION/segmentacion-ia-y-descomposicion.md) — SAM 2, ProPainter, rembg/isnet-anime, MarioNette, Sprite-from-Sprite, Deformable Sprites, Omnimatte
+- [Caso práctico — corto pixel art de Rick and Morty en 4K](EXTRACCION/caso-rick-and-morty-pixel.md) — cronología de intentos, cifras reales y dónde están los scripts
 
 ## Cómo añadir una entrada al índice
 

@@ -1,10 +1,5 @@
+MD:
+https://classic.copetti.org/writings/consoles/mega-drive-genesis/#cracking-sampling
 SNES:
+https://snes.nesdev.org/wiki/SNESdev_Wiki#Registers
 https://www.nesdev.org/
-https://github.com/alekmaul/pvsneslib
-https://forums.nesdev.org/viewforum.php?f=12&sid=29bf8dfd75f311812386081234173234
-
-MD: 
-https://www.retroreversing.com/megadrive
-
-NeoGeo:
-https://github.com/cinnamoncoin/ngdevkit
