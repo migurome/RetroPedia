@@ -108,7 +108,10 @@ golpes simplificados a los reales, Goku visitó 59 estados en un minuto, frente 
   atacante**. Es la base de todos los agarres.
 - **En un estado ajeno:**
   - se siguen ejecutando el −2 y el −1 **propios**, pero no el −3;
-  - `ChangeAnim` usa las animaciones propias y `ChangeAnim2`, las del dueño del estado;
+  - `ChangeAnim` usa las animaciones propias y `ChangeAnim2`, la **animación** del dueño del estado (frames,
+    tiempos, desplazamientos y cajas), pero **los sprites del propio personaje**, buscados por grupo y número
+    en su SFF: así el lanzado se ve con su cara. Si se toman también los sprites del dueño, en los agarres
+    salen dos copias del atacante;
   - `Const()` y `Name` siguen siendo los propios.
 - **Se vuelve con `SelfState` o al recibir un golpe normal.**
 - **Implementación:** cada actor guarda su banco (`own`) y el del dueño del estado actual (`lb`). La memoria de
