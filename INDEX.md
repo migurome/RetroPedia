@@ -318,6 +318,7 @@ Segunda tanda (2026-10-30, `estado: borrador`): documentación de la comunidad. 
 - [Caché de sprites en VRAM — texturas PVR, subida y asignador buddy](Dreamcast/graficos/cache-sprites-vram.md) ⭐ — coste medido por sprite, listas PT/TR, por qué `pvr_mem_malloc` se fragmenta
 - [PowerVR2 — render por tiles y listas](Dreamcast/graficos/powervr-pipeline.md) ⭐ — binning/render, 2 frames de latencia, orden OP→TR→PT, bucle de escena, *direct rendering*, fillrate TR ~0,5 M vs PT ~2,2 M px, registros, framebuffer sin PVR
 - [Texturas, paletas y sprites](Dreamcast/graficos/texturas-paletas-y-sprites.md) — formatos, twiddled/VQ/strided/mipmaps, paleta global de 1024 entradas (64×16 o 4×256), spritesheets con texconv, modo sprite y su UV de 16 bits
+- [Escenarios 2D en el PVR — paletas de 4/8 bpp, baldosas y direct rendering](Dreamcast/graficos/escenarios-2d-paletas-y-baldosas.md) ⭐ — contar colores en ARGB1555, bancos de 8 bpp compartidos, troceo en potencias de 2, twiddling en PC igual que KOS, parallax como cizalla, UV clamp, de 0,68 a 0,14 ms por frame
 
 **sonido/**
 - [ADPCM del AICA — formato, codificador y límites](Dreamcast/sonido/aica-adpcm.md) — algoritmo de `wav2adpcm`, `snd_sfx_load_raw_buf`, límite de 65.534 muestras, 2 MB de RAM de audio

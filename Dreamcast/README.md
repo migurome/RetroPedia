@@ -53,6 +53,7 @@ Lo marcado con ✔ se comprobó en un proyecto real (`hyperdbz-dreamcast-port`, 
 - [Caché de sprites en VRAM — texturas PVR, subida y asignador buddy](graficos/cache-sprites-vram.md)
 - [PowerVR2 — render por tiles, listas OP/TR/PT, bucle de escena y fillrate](graficos/powervr-pipeline.md)
 - [Texturas del PVR — formatos, twiddling, VQ, paletas de 4/8 bpp y modo sprite](graficos/texturas-paletas-y-sprites.md)
+- [Escenarios 2D en el PVR — paletas de 4/8 bpp, baldosas potencia de 2 y direct rendering](graficos/escenarios-2d-paletas-y-baldosas.md)
 
 **sonido/**
 - [ADPCM del AICA — formato, codificador y límites](sonido/aica-adpcm.md)
