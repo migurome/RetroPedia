@@ -32,6 +32,7 @@ Contenido inicial extraído de [plutiedev.com](https://plutiedev.com) (2026-07-2
 - [MegaDrive/](MegaDrive/README.md)
 - [SNES/](SNES/README.md)
 - [NeoGeo/](NeoGeo/README.md)
+- [Dreamcast/](Dreamcast/README.md)
 
 ### Mega Drive / Genesis
 
@@ -291,6 +292,23 @@ Contenido de un proyecto real (`RickAndMorty/neogeo`, 2026-10-23): ngdevkit 0.5 
 - [Sprites — SCB1-SCB4, cadenas sticky, espejo y orden de dibujo](NeoGeo/graficos/sprites-scb.md) — personajes de varias columnas, giro, profundidad y coordenadas de la capa fix
 - [Formatos de la ROM C, la ROM S y las paletas](NeoGeo/graficos/rom-c-s-y-paletas.md) — codificación de tiles en Python, color de 16 bits con bit oscuro, backdrop, paleta cerrada
 
+### Dreamcast
+
+Contenido de un proyecto real (`hyperdbz-dreamcast-port`, port de un juego de lucha de MUGEN; 2026-10-30): KallistiOS con DreamSDK R4 en Windows y pruebas en Flycast 2.7. Las cifras de CPU y de carga salen del emulador y están pendientes de confirmar en una consola con GDEMU.
+
+- [Dreamcast — overview](Dreamcast/README.md) — hardware, memoria libre real con KOS y qué está comprobado
+
+**herramientas/**
+- [DreamSDK R4 en Windows — instalación y problemas resueltos](Dreamcast/herramientas/dreamsdk-windows.md) — compilar desde scripts, `DREAMSDK_HOME`, wrappers de `kos-cc`, kos-ports (zlib), rutas con espacios
+- [Imagen de disco autoarrancable (CDI)](Dreamcast/herramientas/imagen-cdi.md) — objcopy, scramble, campos y CRC de IP.BIN en Python, `mkisofs -C 0,11702`, cdi4dc
+- [Flycast automatizado — buzón en RAM con Lua y capturas](Dreamcast/herramientas/flycast-automatizado.md) — consola serie en Windows, API Lua de memoria, PrintWindow con DPI, límites de los tiempos del emulador
+
+**graficos/**
+- [Caché de sprites en VRAM — texturas PVR, subida y asignador buddy](Dreamcast/graficos/cache-sprites-vram.md) ⭐ — coste medido por sprite, listas PT/TR, por qué `pvr_mem_malloc` se fragmenta
+
+**sonido/**
+- [ADPCM del AICA — formato, codificador y límites](Dreamcast/sonido/aica-adpcm.md) — algoritmo de `wav2adpcm`, `snd_sfx_load_raw_buf`, límite de 65.534 muestras, 2 MB de RAM de audio
+
 ## Motores — arquitectura y diseño (multiplataforma)
 
 - [MOTORES/](MOTORES/README.md) — conocimiento de arquitectura de motores NO ligado a una consola concreta; referencia para diseñar una segunda versión de motor-cenital y futuros motores. Fuente inicial: [fabiensanglard.net](https://fabiensanglard.net/).
@@ -320,6 +338,10 @@ Contenido de un proyecto real (`RickAndMorty/neogeo`, 2026-10-23): ngdevkit 0.5 
 - [CPS-1 Sound System](MOTORES/graficos-hardware/cps1-sound-system.md)
 - [Street Fighter II: Rotating and Scaling](MOTORES/graficos-hardware/sf2-rotacion-escalado.md)
 - [Street Fighter II: Health Bar](MOTORES/graficos-hardware/sf2-health-bar.md)
+
+**mugen/** — motor de lucha MUGEN (Elecbyte), visto para portar sus juegos a consolas (proyecto `hyperdbz-dreamcast-port`)
+- [Formatos de MUGEN — SFF (v1/v2), AIR y SND](MOTORES/mugen/formatos-sff-air-snd.md) — cabeceras, RLE8/LZ5/PCX, paletas `.act` invertidas, cajas Clsn, cifras reales
+- [Compilar la lógica CNS de MUGEN — semántica real y trampas](MOTORES/mugen/cns-compilacion.md) ⭐ — `&&`/`||` sin cortocircuito, `:=`, `[State]` sin número, precedencias, diseño del bytecode
 
 *(No se creó entrada para los "Game Engine Black Books" de Wolfenstein 3D/DOOM: las páginas de fabiensanglard.net son solo anuncios de venta del libro, sin contenido técnico gratuito.)*
 
