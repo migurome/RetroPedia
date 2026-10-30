@@ -296,18 +296,37 @@ Contenido de un proyecto real (`RickAndMorty/neogeo`, 2026-10-23): ngdevkit 0.5 
 
 Contenido de un proyecto real (`hyperdbz-dreamcast-port`, port de un juego de lucha de MUGEN; 2026-10-30): KallistiOS con DreamSDK R4 en Windows y pruebas en Flycast 2.7. Las cifras de CPU y de carga salen del emulador y están pendientes de confirmar en una consola con GDEMU.
 
+Segunda tanda (2026-10-30, `estado: borrador`): documentación de la comunidad. Incluye [dreamcast.wiki](https://www.dreamcast.wiki/Development), la [referencia de hardware de Marcus Comstedt](https://mc.pp.se/dc/), los repositorios de KallistiOS, kos-ports y GLdc, y [awesome-dreamcast](https://github.com/dreamcastdevs/awesome-dreamcast). Los nombres de la API se contrastaron con las cabeceras de KOS de DreamSDK R4. dcemulation.org da 403. El blog dreamcastdev.blogspot.com y los foros generales (r/dreamcast, dreamcast-talk) se descartaron por falta de contenido técnico.
+
 - [Dreamcast — overview](Dreamcast/README.md) — hardware, memoria libre real con KOS y qué está comprobado
 
 **herramientas/**
 - [DreamSDK R4 en Windows — instalación y problemas resueltos](Dreamcast/herramientas/dreamsdk-windows.md) — compilar desde scripts, `DREAMSDK_HOME`, wrappers de `kos-cc`, kos-ports (zlib), rutas con espacios
 - [Imagen de disco autoarrancable (CDI)](Dreamcast/herramientas/imagen-cdi.md) — objcopy, scramble, campos y CRC de IP.BIN en Python, `mkisofs -C 0,11702`, cdi4dc
 - [Flycast automatizado — buzón en RAM con Lua y capturas](Dreamcast/herramientas/flycast-automatizado.md) — consola serie en Windows, API Lua de memoria, PrintWindow con DPI, límites de los tiempos del emulador
+- [Toolchain de KallistiOS en Linux, macOS y WSL](Dreamcast/herramientas/toolchain-kos.md) — dc-chain/kos-chain, variables y flags de `environ.sh`, Makefile tipo, `KOS_ROMDISK_DIR` (y `KOS_INIT_ROMDISK` obsoleto), romdisks por nivel, mkdcdisc, ejemplos de KOS
+- [Carga en consola y depuración](Dreamcast/herramientas/carga-y-depuracion.md) — BBA/LAN/coder's cable, `dc-tool -x/-c/-g`, `/pc`, GDB en el puerto 2159, DHCP de dcload-ip, emuladores para desarrollo
+- [Bibliotecas, motores y recursos](Dreamcast/herramientas/bibliotecas-motores-y-recursos.md) — software vs GLdc vs API PVR, lista de kos-ports, Simulant, DolmexicaInfinite (tipo MUGEN), SH4ZAM, documentación y comunidad
+
+**cpu/**
+- [Optimización del SH-4](Dreamcast/cpu/sh4-optimizacion.md) ⭐ — alineación obligatoria, caché de correspondencia directa, `pref`/`movca`/`ocbi`, store queues, ABI, doble emisión, FIPR/FTRV/FSRRA, bloques de 32 vértices
+
+**memoria/**
+- [Mapa de memoria](Dreamcast/memoria/mapa-de-memoria.md) — P1 cacheada / P2 sin caché, áreas físicas, VRAM vista a 64 y 32 bits, sin escrituras de 8 bits en VRAM, tiempos de la SDRAM
 
 **graficos/**
 - [Caché de sprites en VRAM — texturas PVR, subida y asignador buddy](Dreamcast/graficos/cache-sprites-vram.md) ⭐ — coste medido por sprite, listas PT/TR, por qué `pvr_mem_malloc` se fragmenta
+- [PowerVR2 — render por tiles y listas](Dreamcast/graficos/powervr-pipeline.md) ⭐ — binning/render, 2 frames de latencia, orden OP→TR→PT, bucle de escena, *direct rendering*, fillrate TR ~0,5 M vs PT ~2,2 M px, registros, framebuffer sin PVR
+- [Texturas, paletas y sprites](Dreamcast/graficos/texturas-paletas-y-sprites.md) — formatos, twiddled/VQ/strided/mipmaps, paleta global de 1024 entradas (64×16 o 4×256), spritesheets con texconv, modo sprite y su UV de 16 bits
 
 **sonido/**
 - [ADPCM del AICA — formato, codificador y límites](Dreamcast/sonido/aica-adpcm.md) — algoritmo de `wav2adpcm`, `snd_sfx_load_raw_buf`, límite de 65.534 muestras, 2 MB de RAM de audio
+
+**perifericos/**
+- [Bus Maple, mando y VMU](Dreamcast/perifericos/maple-mando-y-vmu.md) — trama y códigos Maple, `cont_state_t` (KOS invierte los bits del protocolo), `MAPLE_FOREACH`, partidas con `vmu_pkg_t`
+
+**avanzado/**
+- [Arranque — IP.BIN, 1ST_READ.BIN y syscalls](Dreamcast/avanzado/arranque-ip-bin-y-syscalls.md) — estructura de IP.BIN en `0x8C008000`, regiones, carga en `0x8C010000`, vectores SYSINFO/ROMFONT/FLASHROM/GDROM
 
 ## Motores — arquitectura y diseño (multiplataforma)
 
