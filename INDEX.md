@@ -341,7 +341,7 @@ Contenido de un proyecto real (`hyperdbz-dreamcast-port`, port de un juego de lu
 
 **mugen/** — motor de lucha MUGEN (Elecbyte), visto para portar sus juegos a consolas (proyecto `hyperdbz-dreamcast-port`)
 - [Formatos de MUGEN — SFF (v1/v2), AIR y SND](MOTORES/mugen/formatos-sff-air-snd.md) — cabeceras, RLE8/LZ5/PCX, paletas `.act` invertidas, cajas Clsn, cifras reales
-- [Compilar la lógica CNS de MUGEN — semántica real y trampas](MOTORES/mugen/cns-compilacion.md) ⭐ — `&&`/`||` sin cortocircuito, `:=`, `[State]` sin número, precedencias, diseño del bytecode
+- [Compilar la lógica CNS de MUGEN — semántica real y trampas](MOTORES/mugen/cns-compilacion.md) ⭐ — `&&`/`||` sin cortocircuito, `:=`, `[State]` sin número, lo que hace el motor por su cuenta (aterrizaje, giro, `elem`), coste medido en Dreamcast
 
 *(No se creó entrada para los "Game Engine Black Books" de Wolfenstein 3D/DOOM: las páginas de fabiensanglard.net son solo anuncios de venta del libro, sin contenido técnico gratuito.)*
 

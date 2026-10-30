@@ -43,6 +43,35 @@ Los grupos deben ser consecutivos desde 1: sin `trigger1`, el controlador no se 
 9. **Precedencia de archivos:** gana la primera definición de cada estado en este orden: `cmd`, `cns`, `st`, `st1`... y al final `stcommon` (`common1.cns`).
 10. **Parámetros que no son expresiones:** `attr = S, NA`, `postype = p1`, `flag = noshadow`, `sound = S1,0`, `anim = F2010`, `sparkno = S ifelse(...)` (la `S` delante indica sprite propio). Se reconocen porque solo tienen nombres y comas, y al menos un nombre no es un trigger.
 
+### Lo que hace el motor y no está en el CNS
+
+Una VM que solo ejecute los controladores se queda atascada. Hay comportamientos que MUGEN aplica por su
+cuenta y que el código de los personajes da por hechos (descubiertos con una simulación que se bloqueaba):
+
+- **Aterrizaje:** con `physics = A`, cuando el personaje cae (`vel y > 0`) y llega a `pos y >= 0`, el motor
+  lo pasa al **estado 52**. El estado 50 (salto) no tiene ningún controlador de aterrizaje.
+- **Suelo:** solo `physics` S y C se pegan al suelo con rozamiento. `physics = N` no se toca: los estados de
+  caída tras un golpe (5050, 5953...) aplican su propia gravedad con `GetHitVar(yaccel)` y comparan `pos y`
+  con `Const(movement.air.gethit.groundlevel)` (25 por defecto). Si se pega N al suelo, nunca llegan.
+- **Giro automático:** solo con control en los estados 0, 11 y 20. Hyper DBZ gira en el resto con su propia
+  animación y `Turn`. Si el motor también gira, se pelean y la animación se reinicia sin fin.
+- **`ChangeAnim` con `elem`:** `elem = AnimElemNo(0)` cambia de animación conservando el fotograma.
+  Sin él, los estados que esperan `AnimTime = 0` nunca acaban.
+- **`GetHitVar`:** el golpe debe rellenar al menos `hittime`, `slidetime`, `hitshaketime`, `animtype`, `xvel`,
+  `yvel`, `yaccel` y `fall.*`, o los estados de recibir daño no avanzan.
+
+### Coste medido en Dreamcast (Flycast)
+
+Dos personajes de Hyper DBZ, por tick: unos **1.320 controladores**, **2.100–2.500 expresiones** y 12.000–18.000
+opcodes. Con una VM de bytecode sin optimizar, en el SH-4 cuesta **5–7 ms por tick** en combate, y 10,7 ms si los
+helpers también ejecutan -2/-3. Es el 30–65 % de un frame de 16,7 ms. Lo dominan los estados especiales
+(-2 y -1), que se evalúan siempre. Una VM a ~78 ciclos por opcode tiene mucho margen: traducir a C,
+cachear los triggers constantes en el tick y descartar antes los `triggerall` falsos.
+
+Truco útil: compilar la misma VM para PC (MinGW, con un `kos.h` mínimo que traduce `fs_open` y el temporizador)
+y fijar la semilla aleatoria. Los resultados son idénticos a los de la consola y cada prueba tarda segundos en
+lugar de minutos.
+
 ### Diseño del bytecode usado
 
 - Palabras de 16 bits (el SH-4 no admite lecturas desalineadas de 32 bits) y constantes de 32 bits en dos palabras.
