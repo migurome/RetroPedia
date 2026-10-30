@@ -51,6 +51,19 @@ typedef struct {
 
 API de Lua usada: `flycast.memory.read32/readTable8/readTable32`, `flycast.emulator.exit`, los eventos `start`, `vblank` y `terminate`, y las bibliotecas estándar de Lua (`io`, `os.getenv`).
 
+### Pulsar botones desde Lua
+
+`flycast.input.pressButtons(jugador, máscara)` y `flycast.input.releaseButtons(jugador, máscara)`, con el
+jugador desde 1, mantienen pulsados los botones hasta soltarlos. Así se puede probar un juego con mando sin
+la consola:
+1. Un archivo con líneas `vblank máscara` dice qué se mantiene pulsado desde cada vblank.
+2. En el evento `vblank`, al llegar a cada línea, se suelta la máscara anterior y se pulsa la nueva.
+
+Máscara del mando de Dreamcast: C 1, B 2, A 4, START 8, arriba 16, abajo 32, izquierda 64, derecha 128, Z 256,
+Y 512, X 1024. El programa lo lee como cualquier mando (`maple_enum_type` + `maple_dev_status`). Para
+comprobar el resultado, el juego escribe en el buzón lo que ha visto (botones y estado del jugador) cada
+pocos frames.
+
 ### Capturas de pantalla
 
 Desde PowerShell, con `PrintWindow(hwnd, hdc, 3)` (1 = solo área cliente, 2 = `PW_RENDERFULLCONTENT`, necesario para ventanas DirectX) se captura la ventana aunque esté tapada o en otra posición. Antes hay que llamar a `SetProcessDpiAwarenessContext(-4)`: si no, con el escalado de Windows las medidas salen mal y la captura queda desplazada. La ventana del juego se reconoce por su título, `Flycast - <nombre>`.

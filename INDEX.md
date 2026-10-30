@@ -303,7 +303,7 @@ Segunda tanda (2026-10-30, `estado: borrador`): documentación de la comunidad. 
 **herramientas/**
 - [DreamSDK R4 en Windows — instalación y problemas resueltos](Dreamcast/herramientas/dreamsdk-windows.md) — compilar desde scripts, `DREAMSDK_HOME`, wrappers de `kos-cc`, kos-ports (zlib), rutas con espacios
 - [Imagen de disco autoarrancable (CDI)](Dreamcast/herramientas/imagen-cdi.md) — objcopy, scramble, campos y CRC de IP.BIN en Python, `mkisofs -C 0,11702`, cdi4dc
-- [Flycast automatizado — buzón en RAM con Lua y capturas](Dreamcast/herramientas/flycast-automatizado.md) — consola serie en Windows, API Lua de memoria, PrintWindow con DPI, límites de los tiempos del emulador
+- [Flycast automatizado — buzón en RAM con Lua y capturas](Dreamcast/herramientas/flycast-automatizado.md) — consola serie en Windows, API Lua de memoria, botones del mando desde Lua, PrintWindow con DPI, límites de los tiempos del emulador
 - [Toolchain de KallistiOS en Linux, macOS y WSL](Dreamcast/herramientas/toolchain-kos.md) — dc-chain/kos-chain, variables y flags de `environ.sh`, Makefile tipo, `KOS_ROMDISK_DIR` (y `KOS_INIT_ROMDISK` obsoleto), romdisks por nivel, mkdcdisc, ejemplos de KOS
 - [Carga en consola y depuración](Dreamcast/herramientas/carga-y-depuracion.md) — BBA/LAN/coder's cable, `dc-tool -x/-c/-g`, `/pc`, GDB en el puerto 2159, DHCP de dcload-ip, emuladores para desarrollo
 - [Bibliotecas, motores y recursos](Dreamcast/herramientas/bibliotecas-motores-y-recursos.md) — software vs GLdc vs API PVR, lista de kos-ports, Simulant, DolmexicaInfinite (tipo MUGEN), SH4ZAM, documentación y comunidad
@@ -364,6 +364,7 @@ Segunda tanda (2026-10-30, `estado: borrador`): documentación de la comunidad. 
 - [Formatos de MUGEN — SFF (v1/v2), AIR y SND](MOTORES/mugen/formatos-sff-air-snd.md) — cabeceras, RLE8/LZ5/PCX, paletas `.act` invertidas, cajas Clsn, cifras reales
 - [Compilar la lógica CNS de MUGEN — semántica real y trampas](MOTORES/mugen/cns-compilacion.md) ⭐ — `&&`/`||` sin cortocircuito, `:=`, `[State]` sin número, lo que hace el motor por su cuenta (aterrizaje, giro, `elem`), coste medido en Dreamcast
 - [Física y golpes del motor de MUGEN 1.0](MOTORES/mugen/fisica-y-golpes-del-motor.md) ⭐ — orden del tick, rozamiento y aterrizaje, empuje y límites (los helpers no), cámara con tension, HitDef y sus valores por defecto, hitpause frente a hitshake, estados ajenos
+- [Comandos del .cmd de MUGEN y movimientos del motor](MOTORES/mugen/comandos-y-entrada.md) — sintaxis (`~` `/` `$` `>` `+`), reconocedor con historial, pasos en el mismo tick, `>` cuenta las teclas soltadas, andar/saltar/agacharse los hace el motor
 
 *(No se creó entrada para los "Game Engine Black Books" de Wolfenstein 3D/DOOM: las páginas de fabiensanglard.net son solo anuncios de venta del libro, sin contenido técnico gratuito.)*
 
