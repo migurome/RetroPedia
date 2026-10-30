@@ -63,14 +63,62 @@ cuenta y que el código de los personajes da por hechos (descubiertos con una si
 ### Coste medido en Dreamcast (Flycast)
 
 Dos personajes de Hyper DBZ, por tick: unos **1.320 controladores**, **2.100–2.500 expresiones** y 12.000–18.000
-opcodes. Con una VM de bytecode sin optimizar, en el SH-4 cuesta **5–7 ms por tick** en combate, y 10,7 ms si los
-helpers también ejecutan -2/-3. Es el 30–65 % de un frame de 16,7 ms. Lo dominan los estados especiales
-(-2 y -1), que se evalúan siempre. Una VM a ~78 ciclos por opcode tiene mucho margen: traducir a C,
-cachear los triggers constantes en el tick y descartar antes los `triggerall` falsos.
+opcodes. Lo dominan los estados especiales (-2 y -1), que se evalúan siempre. El par más pesado del juego,
+Shin Golden Freeza contra Jiren (625 y 509 controladores en -2), cuesta un 40 % más.
+
+Tiempo por tick en Flycast:
+
+| Prueba | VM sin optimizar | VM optimizada |
+|---|---|---|
+| Goku-Krillin sin IA | 7,09 ms | 4,01 ms |
+| Goku-Krillin IA 8 | 5,22 ms | 2,66 ms |
+| Freeza-Jiren sin IA | ~9 ms (estimado) | 5,47 ms (peor tick 8,0) |
+
+Con la VM optimizada (ver el apartado anterior) la lógica cabe holgada en un frame de 16,7 ms.
 
 Truco útil: compilar la misma VM para PC (MinGW, con un `kos.h` mínimo que traduce `fs_open` y el temporizador)
 y fijar la semilla aleatoria. Los resultados son idénticos a los de la consola y cada prueba tarda segundos en
 lugar de minutos.
+
+Ese arnés de PC sirve también como red de seguridad para optimizar:
+- **Huella del mundo:** un hash FNV-1a de estados, tiempos, animaciones, posiciones y variables de todos los
+  actores, encadenado tick a tick y comparado cada 300 ticks con una referencia guardada. Una optimización que
+  cambie un solo bit de la simulación se detecta, y se sabe en qué tramo empezó a divergir.
+- **Personaje sintético:** un `.cns` cuyos controladores dejan en variables el resultado de cada regla de este
+  artículo (`:=`, cortocircuito, intervalos, `persistent`, grupos de triggers, guardas...), comparado con los
+  valores esperados.
+
+### Optimizar la VM: qué funcionó
+
+Medido con una batería de QA que compara una huella del estado del mundo tick a tick: todas las optimizaciones
+dejan la simulación idéntica bit a bit. Por orden de impacto en Hyper DBZ:
+
+1. **Guardas constantes por actor.** Muchos controladores de -2 y -1 llevan condiciones que no cambian en todo
+   el combate para un actor dado: `AILevel`, `IsHelper`, `IsHelper(id)`, `TeamSide`, `Name`, `Const(...)`. El
+   compilador extrae las partes de un `&&` que solo dependen de ellas (las *guardas*). La VM las evalúa una vez
+   al crear el actor y monta la lista de controladores vivos de -3, -2 y -1, compartida entre actores
+   equivalentes. Con IA se descarta entre el 20 y el 55 % del -2 y la mitad del -1.
+   - **Trampa:** solo es seguro si esa línea de triggers y las anteriores no tienen efectos (`:=` o `Random`).
+     Una guarda falsa detiene la evaluación en su línea, así que las de después nunca se habrían evaluado; las
+     de antes, sí.
+2. **Cortocircuito seguro.** MUGEN no cortocircuita `&&` ni `||`, pero si el lado derecho no tiene efectos, el
+   resultado es el mismo saltándoselo: `a && b` pasa a ser `a ? bool(b) : 0`. Expresiones como
+   `NumExplod(x) && Anim = y && AnimElemTime(...) >= z` dejan de evaluarse enteras cuando `NumExplod` vale 0.
+3. **Superinstrucciones.** El 25 % de los opcodes eran constantes que se empujaban a la pila para un trigger o
+   una comparación. `TRIGK` lleva el argumento dentro (de **32 bits**: Hyper DBZ usa ids de explod y de helper
+   como 90000005) y `EQK`, `LTK`... comparan con una constante de 16 bits.
+4. **Triggers caros.**
+   - `NumExplod(id)`: Hyper DBZ usa los explods como banderas y lo consulta miles de veces por tick. Un filtro
+     de 32 bits por actor (bit `id & 31`) responde 0 sin recorrer la lista casi siempre.
+   - `NumHelper(id)` y `helper(id)`: una lista compacta de helpers vivos (slot, root, id) en vez de recorrer
+     los 64 actores, cada uno en una línea de caché distinta.
+5. **Detalles de la VM.** Despacho por tabla de saltos (*computed goto* de GCC), triggers que escriben
+   directamente en la pila en vez de devolver una estructura de 8 bytes, y contadores de coste solo en la
+   versión de PC.
+
+Los helpers **no** ejecutan los estados -3 ni -2, y el -1 solo con `keyctrl = 1`
+([documentación de Elecbyte](https://www.elecbyte.com/mugendocs/cns.html)). Un helper que ejecutara el -2
+completo de su personaje duplicaría el coste, porque son los estados más grandes.
 
 ### Diseño del bytecode usado
 
