@@ -11,6 +11,10 @@ fecha: 2026-07-21
 
 Conceptos que aparecen en varias plataformas retro. Cuando un concepto tenga particularidades importantes en una consola concreta, se documenta aquí en general y se enlaza el detalle específico desde la carpeta de esa plataforma.
 
+## Reglas de proceso
+
+- [Reglas comunes a todo proyecto](GLOSARIO/reglas-comunes-de-proyecto.md) — RetroPedia como consulta, herramientas en `Desktop\Tools`, ROADMAP, diario de builds, nombre de build visible en el juego, savestate como log y QR en hardware real
+
 ## Fundamentos de programación de juegos (carpeta `GLOSARIO/`)
 
 Extraídos de [plutiedev.com](https://plutiedev.com) — no son específicos de Mega Drive, aplican a cualquier plataforma retro con CPU sin FPU:

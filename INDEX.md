@@ -7,6 +7,7 @@ Contenido inicial extraído de [plutiedev.com](https://plutiedev.com) (2026-07-2
 ## General
 
 - [GLOSARIO.md](GLOSARIO.md) — conceptos transversales a varias plataformas
+- **[Reglas comunes a todo proyecto](GLOSARIO/reglas-comunes-de-proyecto.md)** — RetroPedia como consulta y destino de los avances reales, herramientas compartidas en `Desktop\Tools`, `ROADMAP.md` con fases, `DIARIO.md` de builds, nombre de build `Nombre.[Fase].[Build].ext` visible en el juego, savestate como log y QR en hardware real. Se aplican desde el primer día (skill `nuevo-proyecto-retro`).
 
 ### GLOSARIO/ — fundamentos de programación de juegos
 
