@@ -35,7 +35,7 @@ Contenido extraído de [SNESdev Wiki](https://snes.nesdev.org/wiki/SNESdev_Wiki)
 | Categoría | Nº entradas |
 |---|---|
 | cpu/ | 9 |
-| graficos/ | 18 |
+| graficos/ | 17 |
 | sonido/ | 7 |
 | memoria/ | 7 |
 | perifericos/ | 10 |

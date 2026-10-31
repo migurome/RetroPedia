@@ -7,7 +7,8 @@ Contenido inicial extraído de [plutiedev.com](https://plutiedev.com) (2026-07-2
 ## General
 
 - [GLOSARIO.md](GLOSARIO.md) — conceptos transversales a varias plataformas
-- **[Reglas comunes a todo proyecto](GLOSARIO/reglas-comunes-de-proyecto.md)** — RetroPedia como consulta y destino de los avances reales, herramientas compartidas en `Desktop\Tools`, `ROADMAP.md` con fases, `DIARIO.md` de builds, nombre de build `Nombre.[Fase].[Build].ext` visible en el juego, savestate como log y QR en hardware real. Se aplican desde el primer día (skill `nuevo-proyecto-retro`).
+- **[Reglas comunes a todo proyecto](GLOSARIO/reglas-comunes-de-proyecto.md)** — RetroPedia como consulta y destino de los avances reales, herramientas compartidas en `Desktop\Tools`, `ROADMAP.md` con fases, `DIARIO.md` de builds, nombre de build `Nombre.[Fase].[Build].ext` visible en el juego, savestate como log, QR en hardware real, marcador con Start, regresión con partidas de referencia y script único de publicación, pantalla de cuelgue con QR; tabla de ideas pendientes. Se aplican desde el primer día (skill `nuevo-proyecto-retro`).
+- **[Depuración avanzada dentro del juego](GLOSARIO/depuracion-avanzada-en-el-juego.md)** — flight recorder, invariantes de estado, cápsula de fallo, replay diferencial con huellas por subsistema, telemetría en pantalla, watchpoints virtuales, canarios de memoria, perfilado por percentiles, comparación visual, huella del hardware y monitor de anomalías; priorización y flujo de depuración sin intervención (pendiente de implementar).
 
 ### GLOSARIO/ — fundamentos de programación de juegos
 
@@ -305,6 +306,7 @@ Segunda tanda (2026-10-30, `estado: borrador`): documentación de la comunidad. 
 - [DreamSDK R4 en Windows — instalación y problemas resueltos](Dreamcast/herramientas/dreamsdk-windows.md) — compilar desde scripts, `DREAMSDK_HOME`, wrappers de `kos-cc`, kos-ports (zlib), rutas con espacios
 - [Imagen de disco autoarrancable (CDI)](Dreamcast/herramientas/imagen-cdi.md) — objcopy, scramble, campos y CRC de IP.BIN en Python, `mkisofs -C 0,11702`, cdi4dc
 - [Flycast automatizado — buzón en RAM con Lua y capturas](Dreamcast/herramientas/flycast-automatizado.md) — consola serie en Windows, API Lua de memoria, botones del mando desde Lua, PrintWindow con DPI, límites de los tiempos del emulador
+- [Registro de partida — VMU y códigos QR](Dreamcast/herramientas/registro-de-partida-y-qr.md) ⭐ — reproducir en PC lo que pasó en la consola: cabecera con build y semilla, entradas, huellas periódicas, salida por VMU o por QR en hardware real
 - [Toolchain de KallistiOS en Linux, macOS y WSL](Dreamcast/herramientas/toolchain-kos.md) — dc-chain/kos-chain, variables y flags de `environ.sh`, Makefile tipo, `KOS_ROMDISK_DIR` (y `KOS_INIT_ROMDISK` obsoleto), romdisks por nivel, mkdcdisc, ejemplos de KOS
 - [Carga en consola y depuración](Dreamcast/herramientas/carga-y-depuracion.md) — BBA/LAN/coder's cable, `dc-tool -x/-c/-g`, `/pc`, GDB en el puerto 2159, DHCP de dcload-ip, emuladores para desarrollo
 - [Bibliotecas, motores y recursos](Dreamcast/herramientas/bibliotecas-motores-y-recursos.md) — software vs GLdc vs API PVR, lista de kos-ports, Simulant, DolmexicaInfinite (tipo MUGEN), SH4ZAM, documentación y comunidad
@@ -330,6 +332,7 @@ Segunda tanda (2026-10-30, `estado: borrador`): documentación de la comunidad. 
 
 **avanzado/**
 - [Arranque — IP.BIN, 1ST_READ.BIN y syscalls](Dreamcast/avanzado/arranque-ip-bin-y-syscalls.md) — estructura de IP.BIN en `0x8C008000`, regiones, carga en `0x8C010000`, vectores SYSINFO/ROMFONT/FLASHROM/GDROM
+- [Leer archivos del CD con KOS — el cuelgue del modo stream de fs_iso9660](Dreamcast/avanzado/lectura-del-cd-kos.md)
 
 ## Motores — arquitectura y diseño (multiplataforma)
 

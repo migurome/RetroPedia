@@ -2,7 +2,7 @@
 titulo: Reglas comunes a todo proyecto — RetroPedia, Tools, ROADMAP, diario de builds, nombre de build, savestate como log y QR
 plataforma: [General]
 categoria: [herramientas]
-tags: [proceso, herramientas-compartidas, build, version, roadmap, diario, depuracion, savestate, log, qr, hardware-real, checklist]
+tags: [proceso, herramientas-compartidas, build, version, roadmap, diario, depuracion, savestate, log, qr, hardware-real, checklist, marcador, regresion, publicacion, ideas-pendientes]
 estado: revisado
 fecha: 2026-10-31
 fuentes: [proyecto SSB Port (SmashLandMD_B056, SSB_BUILD en core/gen_data.h, PLAN_PORT_MEGADRIVE.md), proyecto hyperdbz-dreamcast-port (dc/proto/src/replay.c, qr.c, tools/replay.py), decisión del usuario 2026-10-31]
@@ -25,6 +25,17 @@ que sea. Existe la skill de usuario `nuevo-proyecto-retro` que las monta en un p
 6. **En hardware real, el log sale en uno o varios códigos QR** en pantalla, que se fotografían con el móvil.
 7. **Las herramientas son compartidas y viven en `C:\Users\migur\Desktop\Tools`**: emuladores, SDK, editores y
    trackers se usan desde ahí y no se copian a cada proyecto.
+8. **Marcador manual en el registro**: mantener **Start pulsado más de un segundo** deja una marca en el registro,
+   y el reproductor del PC salta a ella.
+9. **Partidas de referencia como regresión**: cada build reproduce los registros de `regresion/` y no se publica
+   si alguna huella no coincide.
+10. **Un único script de publicación** (`publicar.py`) que sube el número, compila, nombra, pasa la regresión,
+    mide, etiqueta en git y deja la entrada del diario preparada.
+11. **Pantalla de cuelgue con QR**: si la CPU salta a una excepción, el juego no se queda negro; enseña en QR
+    la build, los registros de la CPU, la pila y los últimos ticks de entradas (caja negra).
+
+Las reglas 8 a 11 están **pendientes de implementar en un proyecto real**; el resto de ideas para agilizar el
+desarrollo está en [Ideas pendientes de implementar](#ideas-pendientes-de-implementar).
 
 La idea común: cualquier informe (una captura, un savestate, una foto de un QR, una entrada del diario) dice **de
 qué build viene** y contiene **información de primera mano** que se pasa al PC sin cables; y lo que se aprende no
@@ -168,6 +179,92 @@ Cómo se aplica:
 - Las herramientas **propias** de cada proyecto (conversores `tools/*.py`) siguen dentro del proyecto; si una
   sirve para varios, se saca a un repositorio propio en el escritorio, como `PXDraw` o `PXExtractor`.
 
+### 8. Marcador manual: Start pulsado más de un segundo
+
+> Pendiente de implementar en un proyecto real (decisión del usuario 2026-10-31).
+
+Quien prueba ve algo raro y lo marca en el momento, sin parar la partida ni apuntar el minuto:
+
+- **Gesto**: mantener **Start más de un segundo**. Se cuenta en ticks de lógica (60 en NTSC, 50 en PAL; mejor una
+  constante `MARCA_TICKS` que salga de la frecuencia del juego que un número suelto).
+- **Convivencia con la pausa**: la pausa pasa a activarse **al soltar** Start, y solo si se soltó antes del
+  segundo. Si se llega al segundo, se graba la marca y la pausa **no** se activa al soltar.
+- **Determinismo**: la marca es un evento del registro y no toca la simulación. La decisión pausa/marca se
+  calcula solo a partir de las entradas grabadas, así la reproducción hace exactamente lo mismo.
+- **Aviso visual**: un destello o un icono pequeño durante medio segundo, para saber que la marca entró. No
+  cambia el estado del juego.
+- **En el registro**: tipo de evento nuevo `MARCA` con el tick y un número correlativo (`#1`, `#2`...). Viaja en
+  el savestate/registro y en los QR como cualquier otro dato.
+- **En el reproductor del PC**: lista las marcas y salta a una de ellas, parando unos segundos antes (p. ej. 5 s)
+  para ver qué lleva al fallo. En el diario se cita así: `B057, registro X, marca #2`.
+
+### 9. Partidas de referencia como pruebas de regresión
+
+> Pendiente de implementar en un proyecto real.
+
+- Carpeta `regresion/` en el proyecto con **registros de referencia**: un combate, un nivel completo, los casos
+  límite que ya fallaron alguna vez. Cada uno con un `.txt` o un comentario que diga qué cubre.
+- **Cada build** los reproduce en el arnés de PC (o en el emulador sin ventana: `flycast.lua`, BlastEm) y
+  compara las huellas del estado tick a tick. Si alguna se separa, se informa del registro y del primer tick
+  distinto, y **la build no se publica**.
+- Un cambio que altera la simulación **a propósito** (nuevo balance, nueva física) obliga a regenerar las
+  referencias afectadas; se apunta en el diario de esa build qué referencias se regeneraron y por qué.
+- Un fallo arreglado deja su registro en `regresion/` para que no vuelva.
+
+### 10. Un único script de publicación
+
+> Pendiente de implementar en un proyecto real.
+
+`tools/publicar.py` (o el equivalente de la plataforma) hace en orden lo que piden las reglas 3, 4 y 9, para que
+no dependa de acordarse:
+
+1. Sube el número de build en la constante única; la fase sale del ROADMAP.
+2. Compila y nombra la salida `Nombre.[Fase].[Build].ext`.
+3. Pasa la regresión (regla 9); si falla, se para y no deja nada a medias.
+4. Mide: tamaño de ROM e imagen, RAM/VRAM libre sacada del `.map`, y la **diferencia con la build anterior**.
+5. Crea la etiqueta git con el identificador de build (`B057`).
+6. Añade al `DIARIO.md` la entrada **pre-rellenada**: fase, medidas, resultado de la regresión y el `git log`
+   desde la etiqueta anterior. Quien publica solo completa el porqué, dónde se probó y los fallos conocidos.
+
+### 11. Pantalla de cuelgue con QR (caja negra)
+
+> Pendiente de implementar en un proyecto real.
+
+Un cuelgue en hardware real es lo más caro de diagnosticar: no hay savestate ni depurador. La regla es que **un
+cuelgue también deja log**:
+
+- **Caja negra**: el juego guarda siempre en un búfer circular en RAM los **últimos N ticks de entradas** (p. ej.
+  los últimos 10 s) y el tick actual. Cuesta poca memoria y no toca la simulación.
+- **Manejador de excepciones** propio en vez del de por defecto del SDK: en Mega Drive, los vectores de bus
+  error, address error, instrucción ilegal y división por cero del 68000; en Dreamcast, el manejador de
+  excepciones del SH-4 (KOS permite instalar uno); en SNES y Neo Geo, el BRK/COP o el vigilante que corresponda.
+  También un `assert` propio que acabe en la misma pantalla.
+- **Qué sale en el QR** (el primero, como siempre, con la build y `n/total`): tipo de excepción, PC y dirección
+  que falló, registros de la CPU, un trozo de la pila, el tick, la semilla y la caja negra de entradas.
+- **Lo mínimo también en texto**: tipo de excepción, PC y build pintados con la fuente del juego, por si el QR
+  no se lee bien en la foto.
+- **En el PC**: la herramienta que lee los QR traduce el PC a función y línea con el `.map`/`.elf` **de esa misma
+  build** (por eso va la build en la cabecera), y con la semilla y las entradas intenta reproducir el cuelgue en
+  el arnés o en el emulador.
+- El manejador tiene que funcionar **con el estado roto**: sin depender del heap ni de interrupciones, con su
+  propia pila pequeña reservada, reiniciando el vídeo a un modo conocido antes de pintar.
+
+## Ideas pendientes de implementar
+
+Ideas para agilizar el desarrollo que **todavía no se han hecho** en ningún proyecto. Cuando una se pruebe, pasa a
+regla numerada (con su sección arriba) o a entrada propia en la carpeta `herramientas/` de la plataforma.
+
+| Idea | Qué hace | Por qué agiliza |
+|---|---|---|
+| Del móvil al PC automático | Las fotos de los QR van a una carpeta sincronizada (OneDrive, Google Fotos); un script la vigila, decodifica con zxing-cpp, une `1/3`, `2/3`..., comprueba la build y lanza el reproductor | Hacer la foto ya es abrir el fallo en el PC |
+| Fuzzing con mandos aleatorios | El arnés de PC juega miles de partidas con entradas aleatorias desde una semilla, a toda velocidad, buscando cuelgues, asserts o desincronías | Cada semilla que falla ya es un registro reproducible; va a `regresion/` |
+| Bisección automática | `git bisect run` con el reproductor y un registro de referencia | Encuentra solo el commit que rompió algo |
+| Arranque directo en un escenario | Opción de build o menú de depuración para arrancar en la escena X con personajes y semilla concretos, o desde el estado de un registro | No repetir menús en cada prueba |
+| Revisión automática de assets | El conversor comprueba límites de la plataforma (colores por paleta, tiles únicos, VRAM, sprites por línea) y un vigilante reconvierte al guardar desde Aseprite o Furnace | El error sale con el nombre del fichero, no como basura en pantalla |
+| Carga directa al hardware | Mega EverDrive Pro por USB, `dcload-ip`/`dcload-serial` en Dreamcast, FXPAK con usb2snes en SNES, llamados desde `publicar.py` | Probar en hardware real cuesta casi lo mismo que en emulador |
+| Depuración avanzada dentro del juego | Flight recorder, invariantes, cápsula de fallo, replay diferencial por subsistema, canarios, perfilado; detalle en [su entrada](depuracion-avanzada-en-el-juego.md) | El juego detecta el fallo y entrega solo el contexto |
+| Medidores en pantalla y en el registro | Barras de raster por sistema (color de fondo según tiempo de CPU), contadores de sprites y DMA; los picos se guardan en el registro/QR | Las medidas del diario salen del juego, no de estimaciones |
+
 ## Checklist para arrancar un proyecto nuevo
 
 - [ ] Consultado RetroPedia para la plataforma y el tipo de juego; el `CLAUDE.md` del proyecto dice qué carpetas usar.
@@ -181,6 +278,12 @@ Cómo se aplica:
 - [ ] Registro de partida: cabecera con build + semilla, entradas, huellas periódicas.
 - [ ] Herramienta de PC que lee el savestate/registro y reproduce la partida.
 - [ ] Salida del registro por QR en pantalla para el hardware real, con la build en el primero.
+- [ ] Marcador manual: Start pulsado más de un segundo graba `MARCA` en el registro; pausa al soltar si fue menos.
+- [ ] Reproductor del PC que lista las marcas y salta a ellas.
+- [ ] Carpeta `regresion/` con registros de referencia que se reproducen en cada build.
+- [ ] `tools/publicar.py`: número, compilación, nombre, regresión, medidas, etiqueta git y entrada del diario.
+- [ ] Caja negra de entradas en RAM y manejador de excepciones que muestra el cuelgue en QR (y PC + build en texto).
+- [ ] Herramienta de PC que traduce el PC del cuelgue con el `.map`/`.elf` de la build.
 - [ ] Al cerrar cada fase: avances reales volcados a RetroPedia.
 
 ## Notas / gotchas
@@ -198,3 +301,4 @@ Cómo se aplica:
 - [Registro de partida — VMU y códigos QR](../Dreamcast/herramientas/registro-de-partida-y-qr.md)
 - [Coma flotante determinista](../Dreamcast/cpu/coma-flotante-determinista.md)
 - [Flycast automatizado](../Dreamcast/herramientas/flycast-automatizado.md)
+- [Depuración avanzada dentro del juego](depuracion-avanzada-en-el-juego.md)

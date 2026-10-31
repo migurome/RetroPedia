@@ -28,7 +28,7 @@ Los bits que no son usados por el YM2612 son *obligatoriamente* 0. Los drivers d
 
 - Longitud fija: 29 bytes.
 - Los bits no usados por el YM2612 deben ser 0 de forma obligatoria — algunos drivers de sonido pueden asumir esto y comportarse mal si no se respeta.
-- Es esencialmente un volcado 1:1 de registros del YM2612, por lo que para interpretarlo hace falta conocer el [mapa de registros del YM2612](ym2612-registers) (orden `$B0+`, luego `$30+`, `$34+`, `$38+`… hasta `$9C+`).
+- Es esencialmente un volcado 1:1 de registros del YM2612, por lo que para interpretarlo hace falta conocer el [mapa de registros del YM2612](ym2612-registers.md) (orden `$B0+`, luego `$30+`, `$34+`, `$38+`… hasta `$9C+`).
 
 ## Referencias cruzadas
 

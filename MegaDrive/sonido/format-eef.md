@@ -55,7 +55,7 @@ Los valores `$F0` a `$FD` no son válidos en la versión actual.
 - Para un instrumento sin loop real, se usa un punto de loop de un solo valor; para que el instrumento acabe en silencio, la convención es terminar con `$FE $0F $FF`.
 - El rango `$F0` a `$FD` está reservado/no es válido en la versión actual del formato.
 - El desplazamiento de tono no es lineal en semitonos en la parte alta de la tabla (salta de +4 a +6, y de +8 a +12), a diferencia de la parte negativa que es simétrica en magnitud.
-- Este formato es usado, entre otros casos, para los instrumentos de [silbido](psg-whistle) y [guitarra](psg-guitar) de PSG documentados en Plutiedev.
+- Este formato es usado, entre otros casos, para los instrumentos de [silbido](psg-whistle.md) y [guitarra](psg-guitar.md) de PSG documentados en Plutiedev.
 
 ## Referencias cruzadas
 

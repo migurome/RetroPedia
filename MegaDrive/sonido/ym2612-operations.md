@@ -16,7 +16,7 @@ Guía práctica de los pasos necesarios para realizar operaciones habituales con
 
 ## Detalle técnico
 
-Nota del original: revisar la [referencia de registros del YM2612](ym2612-registers) para más detalles, y recordar respetar los retardos necesarios después de cada escritura a un registro.
+Nota del original: revisar la [referencia de registros del YM2612](ym2612-registers.md) para más detalles, y recordar respetar los retardos necesarios después de cada escritura a un registro.
 
 ### Cargar un instrumento
 

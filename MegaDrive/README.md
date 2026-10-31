@@ -37,7 +37,7 @@ Contenido inicial extraído de [plutiedev.com](https://plutiedev.com) (2026-07-2
 |---|---|
 | cpu/ | 17 |
 | graficos/ | 35 |
-| sonido/ | 16 |
+| sonido/ | 18 |
 | perifericos/ | 12 |
 | memoria/ | 13 |
 | avanzado/ | 4 |
