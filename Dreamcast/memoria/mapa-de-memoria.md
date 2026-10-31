@@ -85,6 +85,7 @@ El AICA tiene 2 MB propios, que el SH-4 solo ve a través del bus G2 (lento). Lo
 
 ## Notas / gotchas
 
+- **El compilador mete `memset` sin pedirlo.** Un bucle que rellena la VRAM con un valor constante (`for(...) p[i] = 0;` sobre `vram_s`) lo convierte GCC en `memset`. El de newlib escribe byte a byte los trozos pequeños (unos 8 bytes), y en VRAM esas escrituras se pierden. Pasó al pintar un QR: el blanco (0xFFFF) salía y los módulos negros (0) no. Solución: puntero `volatile uint16_t *` para la VRAM, o escrituras de 32 bits o store queues.
 - Un puntero a RAM cacheada (`0x8C...`) que se pasa a un DMA sin vaciar antes la caché envía datos viejos. Pasa lo mismo al revés: tras un DMA de entrada hay que invalidar (`ocbi`) antes de leer.
 - KOS deja libres unos **15,4 MB** de RAM principal y unos **5,4 MB** de VRAM tras `pvr_init` a 640×480. Son cifras medidas en este proyecto, ver el [overview](../README.md).
 

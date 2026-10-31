@@ -66,8 +66,11 @@ ip[0x20:0x24] = f'{crc(ip[0x40:0x50]):04X}'.encode()
 - KOS lee la ISO9660 sin distinguir mayúsculas: `fs_open("/cd/gokuz2.hdb")` encuentra `GOKUZ2.HDB`.
 - Para versionar builds conviene poner la versión en el campo 0x4A, en el título y en el nombre del archivo (`juego.0.001.cdi`), además de dentro del propio programa.
 - La imagen de 25 MB con ~7 MB de datos tarda unos segundos en generarse; `mkisofs` y `cdi4dc` no son el cuello de botella.
+- El `mkisofs` de DreamSDK ya deja 150 sectores de relleno al final (`-pad` no cambia nada).
+- Si una carga de `/cd` se cuelga según el tamaño del archivo, no es la imagen: ver [Leer archivos del CD con KOS](../avanzado/lectura-del-cd-kos.md).
 
 ## Referencias cruzadas
 
 - [DreamSDK R4 en Windows](dreamsdk-windows.md)
 - [Flycast automatizado](flycast-automatizado.md)
+- [Leer archivos del CD con KOS](../avanzado/lectura-del-cd-kos.md)

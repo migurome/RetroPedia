@@ -39,6 +39,7 @@ Lo marcado con ✔ se comprobó en un proyecto real (`hyperdbz-dreamcast-port`, 
 - [DreamSDK R4 en Windows — instalación y problemas resueltos](herramientas/dreamsdk-windows.md)
 - [Imagen de disco autoarrancable (CDI) — 1ST_READ.BIN, IP.BIN, mkisofs y cdi4dc](herramientas/imagen-cdi.md)
 - [Flycast automatizado — buzón en RAM con Lua y capturas](herramientas/flycast-automatizado.md)
+- [Registro de partida — reproducir en PC lo que pasó en la consola, con la VMU o códigos QR](herramientas/registro-de-partida-y-qr.md)
 - [Toolchain de KallistiOS en Linux, macOS y WSL — dc-chain, environ.sh, Makefile y romdisk](herramientas/toolchain-kos.md)
 - [Carga en consola y depuración — dcload-ip/serial, dc-tool, GDB y emuladores](herramientas/carga-y-depuracion.md)
 - [Bibliotecas, motores y recursos — kos-ports, GLdc, Simulant, SH4ZAM y comunidad](herramientas/bibliotecas-motores-y-recursos.md)
@@ -63,3 +64,4 @@ Lo marcado con ✔ se comprobó en un proyecto real (`hyperdbz-dreamcast-port`, 
 
 **avanzado/**
 - [Arranque — estructura de IP.BIN, carga de 1ST_READ.BIN y syscalls de la BIOS](avanzado/arranque-ip-bin-y-syscalls.md)
+- [Leer archivos del CD con KOS — el cuelgue del modo stream de fs_iso9660](avanzado/lectura-del-cd-kos.md)

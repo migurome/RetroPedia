@@ -97,6 +97,7 @@ En Dreamcast la CPU hace la transformación y la iluminación, y suele ser el cu
 - Cambiar `-m4-single` (por ejemplo a `-m4-single-only`, como hace DreamSDK R4) exige que KOS y todos los ports se compilen igual (ver [DreamSDK en Windows](../herramientas/dreamsdk-windows.md)).
 - La página "GCC-SH4 tips" de la wiki no trata *flags* de compilación: las opciones (LTO, `-ffast-math`, etc.) están comentadas en `environ.sh`.
 - Las latencias vienen de la documentación del SH-4 citada por la wiki, no de mediciones de este proyecto.
+- **Perfilar el C portable en PC (Windows):** con el GCC de MinGW, `gprof` (`-pg`) genera `gmon.out` pero sin muestras. Y `-finstrument-functions` infla las funciones pequeñas que se llaman millones de veces: el reparto sale distorsionado. Lo que sí funcionó es un **perfilador por muestreo** de ~40 líneas, enlazado con el programa. Un hilo creado en un `__attribute__((constructor))` hace `Sleep(1)` (con `timeBeginPeriod(1)`), `SuspendThread` del hilo principal, `GetThreadContext` (`CONTEXT_CONTROL`) para leer `Rip`, y `ResumeThread`. Al salir se vuelcan las direcciones. Se reparten por función con la salida de `nm` (búsqueda binaria) y por línea con `addr2line` (compilar con `-g -no-pie`). Ojo: con *computed goto*, GCC en x86 junta el salto indirecto del despacho en un solo punto, que `addr2line` atribuye a la llave de cierre de la función. En el SH-4 el código es otro: el PC sirve para saber *qué* es caro, no *cuánto* lo será en la consola.
 
 ## Referencias cruzadas
 

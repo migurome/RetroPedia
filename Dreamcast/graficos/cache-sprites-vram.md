@@ -2,7 +2,7 @@
 titulo: Caché de sprites en VRAM — texturas PVR, subida y asignador buddy
 plataforma: [Dreamcast]
 categoria: [graficos, memoria]
-tags: [powervr, pvr, texturas, vram, cache, buddy, argb1555, zlib, sprites, 2d]
+tags: [powervr, pvr, texturas, vram, cache, buddy, argb1555, zlib, sprites, 2d, precarga, fragmentacion]
 estado: revisado
 fecha: 2026-10-30
 fuentes: [cabeceras de KOS (dc/pvr.h, pvr/pvr_txr.h, pvr/pvr_mem.h), proyecto hyperdbz-dreamcast-port (dc/proto/src/sprcache.c y vram.c)]
@@ -28,12 +28,14 @@ Un juego 2D con miles de sprites por personaje (un luchador de MUGEN tiene 2.000
 
 | Paso | Tiempo |
 |---|---|
-| zlib `inflate` (~22 KB de índices) | 0,67 ms (≈15 MB/s) |
-| Índice → ARGB1555 con la paleta | 0,42 ms (≈15 Mpx/s) |
-| Reserva de VRAM (buddy propio) | 0,06 ms |
+| zlib `inflate` (~22 KB de índices) | 0,67–0,71 ms (≈15 MB/s) |
+| Índice → ARGB1555 con la paleta | 0,42–0,53 ms → **0,28 ms** con el bucle de 4 píxeles (abajo) |
+| Reserva de VRAM (buddy propio, con expulsiones) | 0,06–0,12 ms |
 | Subida con `pvr_txr_load` (store queues) | 0,05 ms |
 
-Con dos personajes a velocidad real hay como mucho 2 fallos por frame: 0,26 ms de CPU media y 3,6 ms en el peor frame.
+Con dos personajes animándose sin más hay como mucho 2 fallos por frame. En un combate real (helpers, explods, intros) los fallos se juntan: en 90 s de Goku contra Krillin, 1654 fallos y un frame de 29 ms.
+
+**Conversión de paleta más rápida:** leer 4 índices por vuelta y escribir dos palabras de 32 bits (`pal[a] | pal[b] << 16`) en vez de un `uint16_t` por píxel. Cada fila de la textura empieza alineada (ancho × 2 es múltiplo de 16). Para escribir con `uint32_t*` en un búfer de `uint16_t` sin romper el *strict aliasing* de GCC, usar un tipo con `__attribute__((may_alias))`. Mitad de tiempo en Flycast.
 
 ### El problema de `pvr_mem_malloc`
 
@@ -52,11 +54,60 @@ Como cada textura mide `ancho × alto × 2` con lados potencia de dos, su tamañ
 
 Resultado: una sola expulsión por reserva fallida, sin cascadas. El peor frame de la prueba de estrés bajó de 650 ms a 34 ms (dos sprites grandes nuevos en el mismo frame).
 
+### Reservar solo las filas del sprite
+
+Redondear el alto a potencia de dos casi duplica la VRAM: en los sprites de dos personajes de Hyper DBZ, ×1,9 y ×2,2 sobre lo que ocupan de verdad, frente a ×1,4–1,5 con el ancho en potencia de dos y el alto real. El PVR no lee filas que no use: con filtro `PVR_FILTER_NONE` y la V máxima en `alto / alto_textura`, las filas sobrantes no hacen falta.
+
+Con el buddy se puede: se toma el bloque potencia de dos de siempre, pero solo se marca como usado el prefijo necesario, partido en piezas buddy contiguas de tamaño decreciente (los bits del número de unidades). El resto vuelve a las listas de libres. Para liberar, se recorren las mismas piezas leyendo el nivel de cada una en la tabla de estado.
+
+```c
+static void mark_used(pool_t *p, int u, int lvl, int n) {   /* n unidades de un bloque de 2^lvl */
+    while(n < (1 << lvl)) {
+        lvl--;
+        if(n > (1 << lvl)) { p->state[u] = lvl + 1; u += 1 << lvl; n -= 1 << lvl; }  /* mitad baja entera */
+        else list_push(p, lvl, u + (1 << lvl));                                      /* mitad alta sobra */
+    }
+    p->state[u] = lvl + 1;
+}
+```
+
+**Ojo:** con piezas más pequeñas la VRAM se fragmenta más. Con la expulsión LRU de siempre (expulsar y reintentar hasta que algo se fusione) los fallos *aumentaron* (1654 → 1703) y apareció una reserva imposible. Hace falta cambiar también la expulsión.
+
+### Expulsar por región, no por LRU
+
+Cuando no hay bloque libre de tamaño B, se buscan todas las **regiones alineadas de tamaño B** de la VRAM gestionada. A cada una se le asigna el `last_frame` más reciente de las texturas que la tocan, o «intocable» si alguna se ha usado en este frame o en el anterior. Se vacía la región más antigua: al quedar libre entera, el buddy la fusiona en un bloque de tamaño B y la reserva sale a la primera. Una textura que ocupa varias regiones cuenta en todas ellas.
+
+Junto con la reserva por filas, en el mismo combate: 1554 fallos (−6 %), 918 reintentos en vez de 1491, 0 reservas imposibles y hasta 173 sprites en caché en vez de ~160.
+
+La búsqueda recorre la tabla de entradas: dimensionarla a lo que de verdad se usa. Con 2048 entradas (72 KB, no caben en los 16 KB de caché de datos del SH-4) la reserva costaba 0,19 ms; con 512, 0,12 ms. En combate nunca hubo más de ~175 a la vez.
+
+### Precarga con el tiempo que sobra del frame
+
+Las animaciones dicen qué sprite viene después. Si la lógica expone, para cada actor, el primer sprite distinto que mostrará en los próximos 2 ticks (si la animación sigue), se puede descomprimir **después de enviar la escena**, mientras el CPU esperaría el vblank. Antes de cada sprite se estima su coste (~60 ns por píxel en Flycast + 0,2 ms) y no se empieza si se pasaría de un límite (12 ms desde el inicio del frame). El sprite precargado se marca como usado **en este frame**: la protección normal («ni este frame ni el anterior») ya lo guarda durante el siguiente. Marcarlo como usado en el frame siguiente lo protegía un frame más. Con efectos enormes, esos sprites precargados que al final no se usaban dejaban sin VRAM al que sí hacía falta: una reserva imposible en 90 s, que desapareció al quitarlo.
+
+Resultado: los fallos al dibujar bajan de 1554 a 442, la CPU media de 3,59 a 3,32 ms y el peor frame de 29,5 a 16,6 ms, con 0 vblanks perdidos.
+
+### El límite que no se arregla con caché: efectos enormes
+
+Algunos efectos usan un sprite distinto **en cada tick** y de hasta 100.000 píxeles (el Taiyoken de Krillin: 2–3 sprites de ~368×283 por tick durante ~12 ticks; el aura del súper de Goku: 16 fotogramas de 416×256). Son ~15 ms de descompresión por tick, sostenidos: la precarga solo reparte trabajo y no añade capacidad, y los fotogramas no caben todos en VRAM (~290 KB cada uno). Opciones:
+
+- **Media resolución** al convertir el banco (bloques de 2×2 al color más cercano de la paleta) y dibujarlos al doble: 4 veces menos de todo, pero los rayos finos se ven escalonados. En Hyper DBZ se probó y se descartó por cómo quedaba.
+- **Texturas de 8 bpp con paleta** (sin conversión y con la mitad de VRAM, pero el PVR las quiere *twiddled* y solo hay 4 bancos de 256 colores) o **VQ**.
+- Un `inflate` más rápido que el de zlib.
+
 ## Notas / gotchas
 
 - `pvr_txr_load` usa store queues: tamaño y direcciones alineados a 32 bytes. Basta con subir `ancho_textura × alto_sprite × 2` redondeado a 32, no la textura entera.
 - Las paletas paletizadas del PVR (8 bpp) ahorrarían la conversión y la mitad de VRAM para los sprites que comparten la paleta del personaje. Es una optimización pendiente de medir.
 - Las cifras de CPU vienen de Flycast; falta medirlas en la consola.
+- Para contar frames perdidos, usar el contador de vblanks del PVR y no el periodo medido con el reloj: en Flycast el reloj se adelanta al vblank (ver [Flycast automatizado](../herramientas/flycast-automatizado.md)).
+- Un `printf` por la consola o el buzón dentro del frame falsea la medida: con el registro de cada fallo activo, un frame de 16 ms pasaba a 24.
+- **Probarla en PC:** un `<dc/pvr.h>` sustituto con una VRAM simulada en RAM (`pvr_mem_malloc` que avanza un puntero, `pvr_txr_load` como `memcpy`), un banco sintético con píxeles calculables y miles de frames de un combate simulado. En cada frame se comprueba que:
+  - lo usado en este frame y en el anterior sigue en su sitio y con sus píxeles;
+  - ninguna textura viva solapa a otra;
+  - la VRAM ocupada cuadra con las entradas.
+
+  Al vaciarlo todo, cada bloque debe volver a fusionarse. **Hace falta una fase de presión**, en la que lo de dos frames seguidos no quepa: con una carga normal, la región más antigua nunca contiene nada reciente. Así, un error que ignoraba la protección de los frames en uso pasaba todos los tests hasta que se añadió la presión.
 
 ## Referencias cruzadas
 

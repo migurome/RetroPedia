@@ -40,6 +40,7 @@ make -C /home/proyecto'
 | `makeip.exe` no arranca (código 127 o se queda colgado) | Falta una DLL; desde un script puede salir un diálogo invisible | Generar `IP.BIN` con un script propio (ver [imagen CDI](imagen-cdi.md)) |
 | `WARNING: Toolchain does not support m4-single ABI` | El GCC 13.2 de DreamSDK se compiló sin ese ABI | Inofensivo: usa `m4-single-only` |
 | Herramientas que se quedan esperando | Algunas `.exe` leen la entrada estándar | Lanzarlas con `</dev/null` |
+| La compilación no empieza nunca (sin errores, sin salida) | `environ.sh` hace `KOS_GCCVER="`kos-cc -dumpversion`"` (en `env/gcc/environ_toolchain.sh`), y el `kos-cc.exe` de DreamSDK **a veces se queda colgado ahí** | Mientras se carga el entorno, definir una función de shell `kos-cc() { sh-elf-gcc "$@"; }` y quitarla después con `unset -f kos-cc`. Así el entorno carga en menos de 1 s |
 
 ### Rutas con espacios
 

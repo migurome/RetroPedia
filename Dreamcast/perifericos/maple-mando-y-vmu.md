@@ -101,6 +101,36 @@ Para leer, se carga el fichero entero y se llama a `vmu_pkg_parse(buf, tam, &pkg
 
 Gotchas del ejemplo de la wiki: no comprueba ningún valor de retorno, borra la partida antigua **antes** de escribir la nueva (si la escritura falla, no queda ninguna) y descomprime a un buffer fijo de 64 KB. En un juego real conviene escribir en un fichero temporal y renombrar, o al menos comprobar `fs_write`.
 
+También se puede escribir un fichero de una vez con `vmufs_write(dev, "NOMBRE", buf, tam, VMUFS_OVERWRITE)`
+(`dc/vmufs.h`, `dev` de `maple_enum_type(0, MAPLE_FUNC_MEMCARD)`); el nombre tiene hasta 12 caracteres. En
+Flycast, 5 bloques tardaron ~835 ms.
+
+### Leer la VMU desde el PC
+
+Una VMU es una flash de 128 KB: 256 bloques de 512 bytes, en little endian. Flycast la guarda tal cual en un
+archivo, `data/<Game ID>_vmu_save_A1.bin` si `PerGameVmu = yes` (si no, `data/vmu_save_A1.bin`). El Game ID
+es el número de producto del IP.BIN. Para leer un fichero:
+
+| Dónde | Qué |
+|---|---|
+| Bloque 255 (raíz), `+0x46` / `+0x48` | bloque y tamaño de la FAT (normalmente 254, 1) |
+| Raíz, `+0x4A` / `+0x4C` | último bloque y tamaño del directorio (normalmente 253, 13): se recorre **hacia abajo** |
+| FAT | un `uint16` por bloque: el siguiente del fichero (`0xFFFA` fin, `0xFFFC` libre) |
+| Entrada de directorio (32 bytes) | `+0` tipo (`0x33` datos, `0xCC` juego de VMU, 0 vacío), `+2` primer bloque, `+4` nombre (12 bytes), `+0x10` fecha BCD, `+0x18` tamaño en bloques, `+0x1A` bloque de la cabecera (juegos) |
+
+El fichero de datos empieza por la cabecera VMS que construye `vmu_pkg_build`:
+
+| Desplazamiento | Campo |
+|---|---|
+| `0x00` / `0x10` / `0x30` | descripción corta (16), larga (32), id de la aplicación (16) |
+| `0x40` / `0x42` / `0x44` | iconos, velocidad de la animación, tipo de *eyecatch* (`uint16`) |
+| `0x46` / `0x48` | CRC (`uint16`), bytes de datos (`uint32`) |
+| `0x60` | paleta del icono (16 × ARGB4444) |
+| `0x80` | iconos (512 bytes cada uno), *eyecatch* (0, 8064, 4544 o 2048 bytes según el tipo) y los datos |
+
+Así se lee en Python el registro de partida de [este proyecto](../herramientas/registro-de-partida-y-qr.md)
+(`tools/replay.py`, funciones `vmu_files` y `vms_payload`).
+
 ### Programar la propia VMU
 
 La VMU tiene su propia CPU (Sanyo LC86K, 8 bits) y puede ejecutar minijuegos. Recursos: la documentación de Marcus Comstedt (firmware, flash de 128 KB, cabecera de fichero, iconos `ICONDATA_VMS`), el ensamblador `aslc86k` y el emulador `softvms`, más los de [awesome-dreamcast](https://github.com/dreamcastdevs/awesome-dreamcast) (Waterbear, libevmu, tutoriales de Candle-Electric). Desde la Dreamcast, KOS permite dibujar en la pantalla de la VMU (`dc/vmu_fb.h`, ejemplo `vmu/vmu_lcd`) y hacerla pitar (`vmu_beep_raw`).
