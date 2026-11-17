@@ -2,8 +2,9 @@
 titulo: NTT Data Keypad (NDK10) de Super Famicom
 plataforma: [SNES]
 categoria: [perifericos]
-tags: [ntt-data-keypad, teclado-numerico, modem, io, protocolo]
+tags: [perifericos, registros]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://snes.nesdev.org/wiki/NTT_Data_Keypad]
 ---

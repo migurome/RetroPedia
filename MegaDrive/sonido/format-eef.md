@@ -2,8 +2,9 @@
 titulo: Formato EEF (Echo Envelope Format)
 plataforma: [MegaDrive]
 categoria: [sonido]
-tags: [formato, eef, echo, psg, envolvente, instrumento]
+tags: [formatos, fm, audio, psg]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://plutiedev.com/format-eef]
 ---

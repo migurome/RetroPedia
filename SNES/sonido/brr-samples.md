@@ -2,8 +2,9 @@
 titulo: Formato de muestras BRR
 plataforma: [SNES]
 categoria: [sonido]
-tags: [brr, s-dsp, adpcm, audio, compresion, muestras]
+tags: [spc700, audio, formatos]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://snes.nesdev.org/wiki/BRR_samples]
 ---

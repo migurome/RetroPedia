@@ -2,8 +2,9 @@
 titulo: Identificación de periféricos (Peripheral ID) en Mega Drive
 plataforma: [MegaDrive]
 categoria: [perifericos]
-tags: [peripheral-id, io, deteccion, protocolo]
+tags: [perifericos, registros]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://plutiedev.com/peripheral-id]
 ---

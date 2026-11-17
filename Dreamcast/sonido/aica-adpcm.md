@@ -2,9 +2,11 @@
 titulo: ADPCM del AICA — formato, codificador y límites
 plataforma: [Dreamcast]
 categoria: [sonido]
-tags: [aica, adpcm, yamaha, sfxmgr, wav2adpcm, sonido, memoria]
+tags: [audio, memoria]
 estado: borrador
-fecha: 2026-10-30
+comprobado: pc
+comprobado_en: "conversión y tamaños con los sonidos de Hyper DBZ, hyperdbz-dreamcast-port"
+fecha: 2026-11-13
 fuentes: [KOS utils/wav2adpcm/wav2adpcm.c, KOS kernel/arch/dreamcast/sound/snd_sfxmgr.c, proyecto hyperdbz-dreamcast-port]
 ---
 
@@ -46,7 +48,17 @@ Una senoidal de 440 Hz da unos 24 dB de relación señal/ruido al decodificarla 
 
 - **Límite de longitud:** un efecto de más de **65.534 muestras** (≈3 s a 22.050 Hz) provoca un aviso en `snd_sfx_load_raw_buf`, porque el contador del canal es de 16 bits. Las voces largas necesitan streaming (`snd_stream_*`).
 - **Medido en un caso real:** dos personajes de MUGEN suman 613 sonidos y 11 MB en ADPCM a 22 kHz mono. Solo caben 143 a la vez, y 71 superan el límite de longitud. Hay que cargarlos bajo demanda.
+- **Streams contados:** KOS tiene `SND_STREAM_MAX = 4` (`stream.h`). Con la música en uno, solo quedan 3 voces de stream: un súper de MUGEN lanza 4-5 sonidos largos a la vez y, si todos van por stream, cada nuevo corta otro (hyperdbz-dreamcast-port, marca de la 7.110). Mejor así: lo de hasta 65.534 muestras se sube **entero a la RAM de audio al pedirlo** (por trozos con `snd_mem_malloc` + `spu_memload`, sin búfer grande en la RAM principal) y se toca en un canal reservado con `snd_sfx_chn_alloc` y un `AICA_CMD_CHAN` como el de `snd_sfx_play_ex` (tipo `AICA_SM_ADPCM`, `length` en muestras); al acabar, `snd_sfx_stop`, `snd_sfx_chn_free` y `snd_mem_free`. El stream queda solo para lo más largo. Pico en un súper de Vegeta SSJ: 96 KB de RAM de audio.
 - El remuestreo previo importa tanto como el ADPCM. Un filtro de caja con interpolación lineal sirve para medir tamaños, pero para la calidad final hay que usar herramientas dedicadas (sox, ffmpeg) y escuchar el resultado. En el port de Mega Drive el audio hecho sin método acabó siendo un cuello de botella.
+
+### Bucles y saltos en streaming (música)
+
+El AICA **no olvida el estado** del ADPCM (`history` y `step_size`) ni lo decae (Flycast, `DecodeADPCM`). Si un stream salta en los datos (el `bgmloopend` → `bgmloopstart` de MUGEN), el decodificador sigue con el estado del punto de salida y queda un desfase de continua que no desaparece.
+
+Solución medida en hyperdbz-dreamcast-port (paso 4.4): codificar otra vez el principio del bucle **desde el estado del final**, muestra a muestra, hasta que el estado coincida exactamente con el de la codificación original en la misma muestra (la «costura»). Desde ahí los bytes son idénticos. En la consola: datos hasta el final del bucle → costura → seguir en `inicio + longitud de la costura`. En 42 temas de música, la costura convergió siempre (de 0,01 a 22 s). Con ruido blanco fuerte puede no converger: hay que comprobarlo al convertir.
+
+- Estéreo en `snd_stream` de KOS: un byte por muestra estéreo (izquierdo en el nibble alto), que `snd_adpcm_split` separa; tramos y saltos alineados a 32 bytes.
+- Reanudar un stream ADPCM a mitad (una pausa con `snd_stream_stop`) tiene el mismo problema: el canal arranca con el estado inicial.
 
 ## Referencias cruzadas
 

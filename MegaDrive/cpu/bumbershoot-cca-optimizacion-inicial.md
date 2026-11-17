@@ -2,8 +2,9 @@
 titulo: Optimización del bucle principal del CCA en 68000 (2018)
 plataforma: [MegaDrive]
 categoria: [cpu]
-tags: [cca, optimizacion, 68000, variables-de-induccion, punteros, benchmark, bucle]
+tags: [optimizacion, 68000, memoria, asm]
 estado: borrador
+comprobado: no
 fecha: 2026-07-24
 fuentes: [https://bumbershootsoft.wordpress.com/2018/04/21/optimizing-the-cca/]
 ---

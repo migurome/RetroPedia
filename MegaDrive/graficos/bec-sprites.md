@@ -2,8 +2,9 @@
 titulo: Big Evil Corporation — sprites, "Scary Monsters and Nice Sprites" (serie Tanglewood)
 plataforma: [MegaDrive]
 categoria: [graficos]
-tags: [bigevilcorporation, tanglewood, sprites, sprite-table, vdp, vram]
+tags: [sprites, vdp, vram]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://blog.bigevilcorporation.co.uk/2012/04/24/sega-megadrive-6-scary-monsters-and-nice-sprites/]
 ---

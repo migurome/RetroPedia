@@ -2,8 +2,9 @@
 titulo: Formatos de archivo de ROM
 plataforma: [SNES]
 categoria: [memoria]
-tags: [rom, formatos-archivo, copier-header, lorom, hirom]
+tags: [rom, formatos, memoria]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://snes.nesdev.org/wiki/ROM_file_formats]
 ---

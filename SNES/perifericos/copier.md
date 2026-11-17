@@ -2,8 +2,9 @@
 titulo: Copiers de cartuchos SNES
 plataforma: [SNES]
 categoria: [perifericos]
-tags: [copier, roms, dumping, backup-unit, smc, swc]
+tags: [rom]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://snes.nesdev.org/wiki/Copier]
 ---

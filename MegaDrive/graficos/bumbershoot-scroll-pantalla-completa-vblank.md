@@ -2,8 +2,9 @@
 titulo: Bumbershoot Software — scroll de pantalla completa dirigido por interrupción VBLANK
 plataforma: [MegaDrive]
 categoria: [graficos]
-tags: [bumbershoot, scroll, vblank, hblank, interrupciones, vdp, dma]
+tags: [scroll, interrupciones, vdp, dma]
 estado: borrador
+comprobado: no
 fecha: 2026-07-24
 fuentes: [https://bumbershootsoft.wordpress.com/2018/04/11/genesis-scrolling-and-interrupts/]
 ---

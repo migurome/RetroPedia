@@ -2,8 +2,9 @@
 titulo: PPU de SNES para desarrolladores de NES
 plataforma: [SNES]
 categoria: [graficos]
-tags: [ppu, comparativa, nes, registros, vram, oam, dma]
+tags: [ppu, port, registros, vram, sprites, dma]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://snes.nesdev.org/wiki/SNES_PPU_for_NES_developers]
 ---

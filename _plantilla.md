@@ -2,8 +2,10 @@
 titulo: 
 plataforma: [MegaDrive]   # MegaDrive | SNES | General | ...
 categoria: [graficos]     # graficos | sonido | cpu | memoria | herramientas | ...
-tags: []
+tags: []                  # solo de ETIQUETAS.md
 estado: borrador          # borrador | revisado
+comprobado: no            # no | pc | emulador | hardware: lo más alto que hemos probado nosotros
+# comprobado_en: "Flycast 2.7, proyecto X"   # obligatorio si no es "no"; empieza por "parcial:" si solo cubre una parte
 fecha: 
 fuentes: []               # enlaces o referencias usadas (manuales, docs, foros...)
 ---

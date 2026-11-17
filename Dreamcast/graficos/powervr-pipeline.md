@@ -2,8 +2,9 @@
 titulo: PowerVR2 — render por tiles, listas OP/TR/PT, bucle de escena y fillrate
 plataforma: [Dreamcast]
 categoria: [graficos]
-tags: [powervr, pvr, tile-accelerator, ta, isp, tsp, listas, punch-through, fillrate, direct-rendering, framebuffer, registros]
+tags: [powervr, optimizacion, vram, registros]
 estado: borrador
+comprobado: no
 fecha: 2026-10-30
 fuentes: [https://mc.pp.se/dc/pvr.html, https://www.dreamcast.wiki/PowerVR_Introduction, https://www.dreamcast.wiki/Notes_on_fillrate_and_drawing_large_textures, https://www.dreamcast.wiki/2D_Rendering_Without_PVR, https://www.dreamcast.wiki/Graphics_APIs, ejemplos y cabeceras de KOS (dc/pvr.h)]
 ---

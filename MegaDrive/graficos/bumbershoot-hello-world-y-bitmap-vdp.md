@@ -2,8 +2,9 @@
 titulo: Bumbershoot Software — VDP desde cero: "Hello World" y bitmap con ASM puro
 plataforma: [MegaDrive]
 categoria: [graficos]
-tags: [bumbershoot, vdp, tiles, paletas, dma, blast-processing, texto, fuente, asm68000]
+tags: [vdp, tiles, paletas, dma, optimizacion, 68000]
 estado: borrador
+comprobado: no
 fecha: 2026-07-24
 fuentes: [https://bumbershootsoft.wordpress.com/2018/02/27/genesis-graphical-basics/]
 ---

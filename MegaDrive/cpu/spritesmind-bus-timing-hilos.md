@@ -2,8 +2,9 @@
 titulo: Hilos de SpritesMind sobre timing de bus, DMA y Z80
 plataforma: [MegaDrive]
 categoria: [cpu]
-tags: [spritesmind, foro, bus, dma, z80, 68000, timing, referencia-indirecta]
+tags: [referencia, rom, dma, z80, 68000, interrupciones]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://gendev.spritesmind.net/forum/viewtopic.php?t=2943, https://gendev.spritesmind.net/forum/viewtopic.php?t=2470, https://gendev.spritesmind.net/forum/viewtopic.php?t=1842, https://gendev.spritesmind.net/forum/viewtopic.php?t=1661, https://gendev.spritesmind.net/forum/viewtopic.php?t=1091]
 ---

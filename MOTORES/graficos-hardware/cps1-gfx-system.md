@@ -2,8 +2,9 @@
 titulo: Estudio del sistema gráfico de la Capcom CPS-1
 plataforma: [General]
 categoria: [graficos-hardware]
-tags: [cps1, arcade, street-fighter-2, capcom, sprites, tilemap]
+tags: [arquitectura, historia, sprites, tiles]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://fabiensanglard.net/cps1_gfx/index.html]
 ---

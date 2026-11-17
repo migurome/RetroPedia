@@ -2,8 +2,9 @@
 titulo: Bumbershoot Software — panorama de hardware y elección de herramientas para Genesis/Mega Drive
 plataforma: [MegaDrive]
 categoria: [herramientas]
-tags: [bumbershoot, 68000, z80, asmx, sgdk, gendev, toolchain, hardware-overview]
+tags: [68000, z80, asm, sgdk, toolchain, referencia]
 estado: borrador
+comprobado: no
 fecha: 2026-07-24
 fuentes: [https://bumbershootsoft.wordpress.com/2018/02/24/getting-ready-for-genesis-development/]
 ---

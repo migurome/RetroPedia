@@ -2,8 +2,9 @@
 titulo: Más allá de 4MB (bank switching / mappers)
 plataforma: [MegaDrive]
 categoria: [memoria]
-tags: [bank-switching, mapper, a130xx, rom, ssf2]
+tags: [memoria, rom, historia]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://plutiedev.com/beyond-4mb]
 ---

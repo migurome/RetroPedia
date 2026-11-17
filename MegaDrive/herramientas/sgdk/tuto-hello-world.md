@@ -2,8 +2,9 @@
 titulo: SGDK — Tutorial Hello World
 plataforma: [MegaDrive]
 categoria: [herramientas]
-tags: [sgdk, tutorial, hello-world, vdp, vblank]
+tags: [sgdk, tutorial, vdp, interrupciones]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://github.com/Stephane-D/SGDK/wiki/Tuto-Hello-World]
 ---

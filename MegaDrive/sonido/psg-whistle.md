@@ -2,8 +2,9 @@
 titulo: Silbido (whistle) con el PSG
 plataforma: [MegaDrive]
 categoria: [sonido]
-tags: [psg, silbido, eef, envolvente, instrumento]
+tags: [psg, fm]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://plutiedev.com/psg-whistle]
 ---

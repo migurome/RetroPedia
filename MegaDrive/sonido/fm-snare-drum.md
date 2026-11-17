@@ -2,8 +2,9 @@
 titulo: Caja (snare drum) FM con el YM2612
 plataforma: [MegaDrive]
 categoria: [sonido]
-tags: [ym2612, fm, percusion, snare, algoritmo, instrumento]
+tags: [fm]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://plutiedev.com/fm-snare-drum]
 ---

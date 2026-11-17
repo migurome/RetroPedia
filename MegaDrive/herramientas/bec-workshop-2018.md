@@ -2,8 +2,9 @@
 titulo: Taller de ensamblador Mega Drive y ejemplo "hello world" (2018) — Big Evil Corporation
 plataforma: [MegaDrive]
 categoria: [herramientas]
-tags: [bigevilcorporation, tanglewood, taller, hello-world, asm68k, recursos-educativos]
+tags: [tutorial, asm]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://blog.bigevilcorporation.co.uk/2018/03/03/mega-drive-assembly-workshop-and-hello-world-sample/]
 ---

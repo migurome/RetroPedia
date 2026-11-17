@@ -2,8 +2,9 @@
 titulo: Registros del S-DSP
 plataforma: [SNES]
 categoria: [sonido]
-tags: [s-dsp, spc700, audio, registros, echo, adsr]
+tags: [spc700, audio, registros, fm]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://snes.nesdev.org/wiki/S-DSP_registers]
 ---

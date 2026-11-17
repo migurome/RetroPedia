@@ -2,8 +2,9 @@
 titulo: Los polígonos de Another World — el port a Super Nintendo (SNES)
 plataforma: [General]
 categoria: [arquitectura]
-tags: [another-world, snes, ppu, polígonos-2d, dma, modo-1]
+tags: [arquitectura, ppu, dma]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://fabiensanglard.net/another_world_polygons_SNES/index.html]
 ---

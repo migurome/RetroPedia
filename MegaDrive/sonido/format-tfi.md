@@ -2,8 +2,9 @@
 titulo: Formatos TFI y VGI (instrumentos FM de TFM Maker y VGM Maker)
 plataforma: [MegaDrive]
 categoria: [sonido]
-tags: [formato, tfi, vgi, fm, instrumento, ym2612]
+tags: [formatos, audio, fm]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://plutiedev.com/format-tfi]
 ---

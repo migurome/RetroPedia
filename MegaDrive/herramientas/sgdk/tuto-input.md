@@ -2,8 +2,9 @@
 titulo: SGDK — Tutorial de Input (mandos)
 plataforma: [MegaDrive]
 categoria: [herramientas]
-tags: [sgdk, tutorial, input, joypad, joy, multitap]
+tags: [sgdk, tutorial, mando]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://github.com/Stephane-D/SGDK/wiki/Tuto-Input]
 ---

@@ -2,8 +2,9 @@
 titulo: Padding de la ROM
 plataforma: [MegaDrive]
 categoria: [memoria]
-tags: [rom, padding, romfix, checksum, mdtools]
+tags: [rom, audio]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://plutiedev.com/rom-padding]
 ---

@@ -4,6 +4,7 @@ plataforma: [General]
 categoria: [glosario]
 tags: []
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://plutiedev.com, proyectos SSB Port y hyperdbz-dreamcast-port]
 ---
@@ -15,6 +16,7 @@ Conceptos que aparecen en varias plataformas retro. Cuando un concepto tenga par
 ## Reglas de proceso
 
 - [Reglas comunes a todo proyecto](GLOSARIO/reglas-comunes-de-proyecto.md) — RetroPedia como consulta, herramientas en `Desktop\Tools`, ROADMAP, diario de builds, nombre de build visible en el juego, savestate como log, QR en hardware real, marcador con Start, regresión, `publicar.py`, pantalla de cuelgue con QR e ideas pendientes
+- [Herramientas compartidas](GLOSARIO/herramientas-compartidas.md), [decisiones de proyectos](GLOSARIO/decisiones-de-proyectos.md) y [comparativa entre plataformas](GLOSARIO/comparativa-plataformas.md)
 - [Depuración avanzada dentro del juego](GLOSARIO/depuracion-avanzada-en-el-juego.md) — flight recorder, invariantes, cápsula de fallo, replay diferencial y demás técnicas para que el juego genere sus propias pruebas en hardware real
 
 ## Fundamentos de programación de juegos (carpeta `GLOSARIO/`)

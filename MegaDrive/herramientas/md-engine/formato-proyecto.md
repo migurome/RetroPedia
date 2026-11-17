@@ -2,8 +2,10 @@
 titulo: MD Engine — formato de proyecto (.mdep / .mderes)
 plataforma: [MegaDrive]
 categoria: [herramientas]
-tags: [md-engine, formato, json, sprites, colisiones, rle, png-indexado]
+tags: [md-engine, formatos, sprites, colisiones, paletas]
 estado: borrador
+comprobado: pc
+comprobado_en: "proyectos generados y compilados: Akane, Carrion y Retrovania"
 fecha: 2026-10-15
 fuentes: [plantillas de MD Engine 1.0.9 (/appData/mde/templates), proyectos generados y compilados (Akane, Carrion, Retrovania)]
 ---

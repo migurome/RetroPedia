@@ -2,8 +2,10 @@
 titulo: MD Engine — generar proyectos por código y depurar el C generado
 plataforma: [MegaDrive]
 categoria: [herramientas]
-tags: [md-engine, generador, node, asar, depuracion, flujo-de-trabajo, validacion, pruebas-automaticas, perfilado]
+tags: [md-engine, herramientas, asm, depuracion, proceso, optimizacion]
 estado: borrador
+comprobado: emulador
+comprobado_en: "emulador WASM de MD Engine y BlastEm; generadores propios y port de Super Smash Land"
 fecha: 2026-10-15
 actualizado: 2026-10-22
 fuentes: [experiencia directa generando Akane, Carrion y Retrovania con Node.js (Desktop/Engine/*-generator)]

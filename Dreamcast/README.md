@@ -2,13 +2,39 @@
 titulo: Dreamcast — overview
 plataforma: [Dreamcast]
 categoria: [general]
-tags: [hardware, overview, kallistios, dreamsdk, sh4, powervr, aica]
+tags: [referencia, kos, sh4, powervr, audio]
 estado: borrador
+comprobado: emulador
+comprobado_en: "Flycast 2.7, hyperdbz-dreamcast-port; solo lo marcado con ✔"
 fecha: 2026-10-30
 fuentes: [cabeceras de KallistiOS (master del 27-10-2026), proyecto hyperdbz-dreamcast-port (Fase 0), dreamcast.wiki (Development), mc.pp.se/dc (Marcus Comstedt), repos KallistiOS/kos-ports/GLdc, awesome-dreamcast]
 ---
 
 # Dreamcast
+
+## Empieza aquí
+
+[Límites y presupuestos](LIMITES.md) · [Síntomas y causas](SINTOMAS.md)
+
+| Si vas a... | Lee |
+|---|---|
+| Instalar el entorno en Windows | [DreamSDK R4](herramientas/dreamsdk-windows.md) |
+| Ver un sprite en pantalla, de principio a fin | [del PNG al sprite](herramientas/receta-png-a-sprite.md) y [snippet](../snippets/README.md) |
+| Compilar en Linux, macOS o WSL | [toolchain de KOS](herramientas/toolchain-kos.md) |
+| Generar un disco que arranque | [imagen CDI](herramientas/imagen-cdi.md) y [arranque](avanzado/arranque-ip-bin-y-syscalls.md) |
+| Automatizar pruebas | [Flycast automatizado](herramientas/flycast-automatizado.md) |
+| Probar en la consola | [carga y depuración](herramientas/carga-y-depuracion.md) |
+| Dibujar en 2D | [PowerVR](graficos/powervr-pipeline.md) y [texturas](graficos/texturas-paletas-y-sprites.md) |
+| Mover muchos sprites | [caché de sprites](graficos/cache-sprites-vram.md) |
+| Montar fondos | [escenarios 2D](graficos/escenarios-2d-paletas-y-baldosas.md) |
+| Leer archivos del disco | [lectura del CD](avanzado/lectura-del-cd-kos.md) |
+| Un hilo de fondo (audio, CD) sin frenar el juego | [hilos de KOS](avanzado/hilos-kos-prioridad.md) |
+| Añadir sonido | [ADPCM del AICA](sonido/aica-adpcm.md) |
+| Leer el mando o guardar en VMU | [Maple y VMU](perifericos/maple-mando-y-vmu.md) |
+| Optimizar | [SH-4](cpu/sh4-optimizacion.md) y [mapa de memoria](memoria/mapa-de-memoria.md) |
+| Reproducir partidas | [registro de partida](herramientas/registro-de-partida-y-qr.md) y [coma flotante](cpu/coma-flotante-determinista.md) |
+| Portar un juego de MUGEN | [sección MUGEN](../MOTORES/mugen/README.md) |
+| Elegir bibliotecas | [bibliotecas y motores](herramientas/bibliotecas-motores-y-recursos.md) |
 
 ## Resumen de hardware
 
@@ -65,3 +91,4 @@ Lo marcado con ✔ se comprobó en un proyecto real (`hyperdbz-dreamcast-port`, 
 **avanzado/**
 - [Arranque — estructura de IP.BIN, carga de 1ST_READ.BIN y syscalls de la BIOS](avanzado/arranque-ip-bin-y-syscalls.md)
 - [Leer archivos del CD con KOS — el cuelgue del modo stream de fs_iso9660](avanzado/lectura-del-cd-kos.md)
+- [Hilos de KOS — prioridad, envejecimiento y trabajo de fondo](avanzado/hilos-kos-prioridad.md)

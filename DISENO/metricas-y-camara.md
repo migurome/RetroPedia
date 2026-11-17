@@ -2,8 +2,9 @@
 titulo: Métricas del personaje y cámara en plataformas 2D
 plataforma: [General]
 categoria: [diseno]
-tags: [metricas, salto, huecos, camara, deadzone, legibilidad]
+tags: [diseno, colisiones, scroll]
 estado: borrador
+comprobado: no
 fecha: 2026-10-15
 fuentes:
   - https://www.gamedeveloper.com/design/lessons-from-suzy-cube-measuring-up

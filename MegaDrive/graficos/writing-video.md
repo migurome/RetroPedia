@@ -2,8 +2,9 @@
 titulo: Escritura en memoria de vídeo (VRAM/CRAM/VSRAM)
 plataforma: [MegaDrive]
 categoria: [graficos]
-tags: [vdp, vram, cram, vsram, dma, puerto-control]
+tags: [vdp, vram, paletas, scroll, dma, registros]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://plutiedev.com/writing-video]
 ---

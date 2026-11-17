@@ -2,8 +2,9 @@
 titulo: "Bumbershoot Software — descompresor LZ4 en ensamblador 68000"
 plataforma: [MegaDrive]
 categoria: [herramientas]
-tags: [bumbershoot, lz4, compresion, descompresion, 68000, asm, vdp, dma]
+tags: [formatos, 68000, asm, vdp, dma]
 estado: borrador
+comprobado: no
 fecha: 2026-07-24
 fuentes: [https://bumbershootsoft.wordpress.com/2025/07/12/lz4-decompression-on-the-68000/]
 ---

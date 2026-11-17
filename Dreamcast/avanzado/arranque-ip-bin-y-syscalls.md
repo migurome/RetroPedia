@@ -2,8 +2,9 @@
 titulo: Arranque — estructura de IP.BIN, carga de 1ST_READ.BIN y syscalls de la BIOS
 plataforma: [Dreamcast]
 categoria: [avanzado]
-tags: [arranque, ip.bin, 1st_read.bin, bootstrap, scramble, region, syscalls, bios, gdrom, flashrom, romfont]
+tags: [arranque, interrupciones, rom, tiles]
 estado: borrador
+comprobado: no
 fecha: 2026-10-30
 fuentes: [https://mc.pp.se/dc/ip.bin.html, https://mc.pp.se/dc/sw.html, https://mc.pp.se/dc/syscalls.html]
 ---

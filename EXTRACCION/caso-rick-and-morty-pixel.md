@@ -2,8 +2,10 @@
 titulo: Caso práctico — extraer sprites y fondos de un corto pixel art en 4K (Rick and Morty)
 plataforma: [General]
 categoria: [extraccion]
-tags: [caso-practico, rick-and-morty, adult-swim, 4k, vp9, beat-em-up, lecciones]
+tags: [caso-practico, extraccion]
 estado: borrador
+comprobado: pc
+comprobado_en: "proyecto Extractor"
 fecha: 2026-10-22
 fuentes: [proyecto Extractor (C:\Users\migur\Desktop\Extractor), scripts en Extractor\tools\]
 ---

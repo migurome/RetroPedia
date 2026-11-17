@@ -2,8 +2,9 @@
 titulo: Modo 7 — transformación afín y efectos de perspectiva
 plataforma: [SNES]
 categoria: [graficos]
-tags: [modo7, ppu, hdma, rotacion, escalado, perspectiva, matriz]
+tags: [efectos, ppu, dma, matematicas]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://snes.nesdev.org/wiki/Mode_7_perspective_effects, https://snes.nesdev.org/wiki/Mode_7_transform, https://snes.nesdev.org/wiki/Backgrounds, https://snes.nesdev.org/wiki/Tilemaps, https://snes.nesdev.org/wiki/Tiles, https://snes.nesdev.org/wiki/Registers]
 ---

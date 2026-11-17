@@ -2,8 +2,9 @@
 titulo: Matemáticas BCD en el 68000
 plataforma: [MegaDrive]
 categoria: [cpu]
-tags: [68000, asm, bcd, abcd, sbcd, decimal-codificado-en-binario]
+tags: [68000, asm, matematicas]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://plutiedev.com/bcd-math]
 ---

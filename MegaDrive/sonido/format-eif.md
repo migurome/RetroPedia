@@ -2,8 +2,9 @@
 titulo: Formato EIF (Echo Instrument Format)
 plataforma: [MegaDrive]
 categoria: [sonido]
-tags: [formato, eif, echo, fm, instrumento, ym2612]
+tags: [formatos, audio, fm]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://plutiedev.com/format-eif]
 ---

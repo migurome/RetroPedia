@@ -2,8 +2,9 @@
 titulo: Glosario de términos de desarrollo SNES
 plataforma: [SNES]
 categoria: [herramientas]
-tags: [glosario, terminologia, ppu, cpu, audio, definiciones]
+tags: [referencia, ppu, audio]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://snes.nesdev.org/wiki/Glossary]
 ---

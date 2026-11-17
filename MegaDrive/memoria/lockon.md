@@ -2,8 +2,9 @@
 titulo: Cartucho Lock-On (Sonic & Knuckles)
 plataforma: [MegaDrive]
 categoria: [memoria]
-tags: [lock-on, sonic-knuckles, mapeo-memoria, a130f1, cartucho]
+tags: [efectos, memoria, rom]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://plutiedev.com/lockon]
 ---

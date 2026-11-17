@@ -2,8 +2,9 @@
 titulo: "Bumbershoot Software — un bug de offset de canal en los registros $B0/$B4 del YM2612, diagnosticado con Gens KGen"
 plataforma: [MegaDrive]
 categoria: [sonido]
-tags: [bumbershoot, ym2612, fm, algoritmo, feedback, panning, debugging, gens-kgen]
+tags: [fm, audio, depuracion, emuladores]
 estado: borrador
+comprobado: no
 fecha: 2026-07-24
 fuentes: [https://bumbershootsoft.wordpress.com/2024/10/19/a-musical-interlude/]
 ---

@@ -2,8 +2,10 @@
 titulo: Simulación idéntica en PC y Dreamcast — libm, fmac y -ffp-contract
 plataforma: [Dreamcast]
 categoria: [cpu, herramientas]
-tags: [sh4, float, ieee754, determinismo, fmac, ffp-contract, libm, newlib, mingw, qa, huella, mugen]
+tags: [sh4, matematicas, kos, toolchain, depuracion, mugen]
 estado: borrador
+comprobado: emulador
+comprobado_en: "Flycast 2.7 y MinGW-w64 de DreamSDK R4, hyperdbz-dreamcast-port"
 fecha: 2026-10-30
 fuentes: [proyecto hyperdbz-dreamcast-port (dc/proto/src/logic.c, tools/qa/), medido en Flycast 2.7 y MinGW-w64 de DreamSDK R4]
 ---

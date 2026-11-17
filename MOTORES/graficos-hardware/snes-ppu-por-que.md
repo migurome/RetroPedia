@@ -2,8 +2,9 @@
 titulo: Por qué el sistema PPU de la SNES se diseñó así
 plataforma: [General]
 categoria: [graficos-hardware]
-tags: [snes, ppu, vram, sprites, line-buffer, arquitectura-hardware]
+tags: [ppu, vram, sprites, arquitectura]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://fabiensanglard.net/snes_ppus_why/index.html]
 ---

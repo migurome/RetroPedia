@@ -2,8 +2,9 @@
 titulo: Another World en Atari ST - Rasterizado de polígonos por software sin Blitter
 plataforma: [General]
 categoria: [arquitectura]
-tags: [another-world, atari-st, motorola-68000, poligonos-2d, rasterizado-software, bresenham]
+tags: [arquitectura, historia, 68000, matematicas]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://fabiensanglard.net/another_world_polygons_atariST/index.html]
 ---

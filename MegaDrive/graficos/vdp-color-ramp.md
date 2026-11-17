@@ -2,8 +2,9 @@
 titulo: Rampa de color del VDP
 plataforma: [MegaDrive]
 categoria: [graficos]
-tags: [vdp, referencia, cram, paletas, color]
+tags: [vdp, referencia, paletas]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://plutiedev.com/vdp-color-ramp]
 ---

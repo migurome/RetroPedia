@@ -2,8 +2,9 @@
 titulo: Sprites en el VDP
 plataforma: [MegaDrive]
 categoria: [graficos]
-tags: [vdp, sprites, sprite-table, vram, dma]
+tags: [vdp, sprites, vram, dma]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://plutiedev.com/sprites]
 ---

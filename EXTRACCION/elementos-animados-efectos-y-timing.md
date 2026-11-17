@@ -2,8 +2,9 @@
 titulo: Elementos animados del fondo, efectos (explosiones, brillos) y timing de la animación desde vídeo
 plataforma: [General]
 categoria: [extraccion]
-tags: [bucles, video-textures, tiles-animados, efectos, fusion-aditiva, screen, timing, fotogramas-repetidos, animacion]
+tags: [asm, efectos, tiles, fm, interrupciones, animacion, extraccion]
 estado: borrador
+comprobado: no
 fecha: 2026-10-23
 fuentes: [Szeliski "Video Textures", Liao/Finch/Hoppe "Fast computation of seamless video loops", Durrant & Brostow "Seam hiding for looping videos", extracción de fluidos (SIGGRAPH 2012), documentación de modos de fusión (Autodesk, Boris FX), detector de repeticiones de Fora Soft]
 ---

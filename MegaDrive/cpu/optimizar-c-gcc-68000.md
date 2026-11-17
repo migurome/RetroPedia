@@ -2,8 +2,10 @@
 titulo: Optimizar C compilado con gcc para el 68000 (lecciones de un port con SGDK)
 plataforma: [MegaDrive]
 categoria: [cpu]
-tags: [gcc, sgdk, optimizacion, perfil, 68000, md-engine]
+tags: [toolchain, sgdk, optimizacion, 68000, md-engine]
 estado: revisado
+comprobado: emulador
+comprobado_en: "perfilador del emulador de MD Engine, port de Super Smash Land B044"
 fecha: 2026-10-23
 fuentes: ["Port de Super Smash Land (B044): medido con el perfilador por funciones del emulador de MD Engine"]
 ---

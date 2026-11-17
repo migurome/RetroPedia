@@ -2,8 +2,10 @@
 titulo: Sprites en Neo Geo — tablas SCB1-SCB4, cadenas sticky, espejo y orden de dibujo
 plataforma: [NeoGeo]
 categoria: [graficos]
-tags: [sprites, vram, scb1, scb2, scb3, scb4, sticky, metasprite, hflip, profundidad, capa-fix]
+tags: [sprites, vram, tiles]
 estado: revisado
+comprobado: emulador
+comprobado_en: "GnGeo y ngdevkit 0.5, RickAndMorty/neogeo"
 fecha: 2026-10-23
 fuentes: [ngdevkit registers.h y ejemplo 03-sprite-animation, proyecto RickAndMorty/neogeo (src/actor.c) probado en GnGeo]
 ---

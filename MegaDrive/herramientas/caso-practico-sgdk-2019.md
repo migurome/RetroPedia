@@ -2,8 +2,9 @@
 titulo: Caso práctico — hacer un juego de Mega Drive en 2019 (Doctor Ludos / SGDK)
 plataforma: [MegaDrive]
 categoria: [herramientas]
-tags: [sgdk, caso-practico, workflow, vram, sprites, paleta, homebrew]
+tags: [sgdk, caso-practico, proceso, vram, sprites, paletas]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://www.gamedeveloper.com/design/making-a-sega-mega-drive-genesis-game-in-2019]
 ---
@@ -47,6 +48,7 @@ Artículo de Doctor Ludos (Gamedeveloper.com, 19/10/2019) contando su experienci
 
 ## Notas / gotchas
 
+- **7.524 bytes es el máximo teórico en H40:** otra fuente da 7.380, y SGDK 2.11 reserva 7.200. Ver [límites](../LIMITES.md).
 - El límite de ~7KB/frame de transferencia a VRAM es probablemente el dato más accionable de este artículo para diseñar un juego: condiciona cuánta variedad de tiles nuevos puedes cargar por frame sin ralentizar el juego.
 - El logro de hacer un juego jugable completo en 60 minutos (limitado por el cambio de hora de verano) ilustra bien cuánto simplifica SGDK el desarrollo frente a la Mega Drive "cruda" en ensamblador de las entradas de plutiedev.com.
 

@@ -4,6 +4,7 @@ plataforma: [MegaDrive]
 categoria: [graficos]
 tags: [vdp, referencia, depuracion, z80, psg, sprites]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://plutiedev.com/vdp-debug]
 ---

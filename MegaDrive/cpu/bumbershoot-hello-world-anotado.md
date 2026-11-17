@@ -2,8 +2,9 @@
 titulo: "Hello World en código máquina puro para Mega Drive (anotado)"
 plataforma: [MegaDrive]
 categoria: [cpu]
-tags: [68000, asm, hello-world, vasm, rom-header, vdp, dma, tmss, fundamentos]
+tags: [68000, asm, tutorial, rom, vdp, dma, arranque, referencia]
 estado: borrador
+comprobado: no
 fecha: 2026-07-24
 fuentes: [https://bumbershootsoft.wordpress.com/platform-guide-sega-genesis-mega-drive/]
 ---

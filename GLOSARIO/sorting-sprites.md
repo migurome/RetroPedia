@@ -2,8 +2,9 @@
 titulo: Ordenación de sprites (Sorting Sprites)
 plataforma: [General]
 categoria: [fundamentos]
-tags: [sprites, orden-de-dibujado, sorting, rendimiento]
+tags: [sprites, optimizacion]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://plutiedev.com/sorting-sprites]
 ---

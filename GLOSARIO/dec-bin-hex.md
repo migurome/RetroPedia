@@ -2,8 +2,9 @@
 titulo: Sistemas numéricos — decimal, binario y hexadecimal
 plataforma: [General]
 categoria: [fundamentos]
-tags: [numeros, binario, hexadecimal, decimal, conversion]
+tags: [matematicas]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://plutiedev.com/dec-bin-hex]
 ---

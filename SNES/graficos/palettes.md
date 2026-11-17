@@ -2,8 +2,9 @@
 titulo: Paletas y CGRAM
 plataforma: [SNES]
 categoria: [graficos]
-tags: [ppu, cgram, paletas, color, bgr555]
+tags: [ppu, paletas]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://snes.nesdev.org/wiki/Palettes]
 ---

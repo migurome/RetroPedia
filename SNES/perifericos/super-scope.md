@@ -2,8 +2,9 @@
 titulo: Super Scope (pistola de luz de SNES)
 plataforma: [SNES]
 categoria: [perifericos]
-tags: [super-scope, pistola-de-luz, io, protocolo, ppu]
+tags: [perifericos, registros, ppu]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://snes.nesdev.org/wiki/Super_Scope]
 ---

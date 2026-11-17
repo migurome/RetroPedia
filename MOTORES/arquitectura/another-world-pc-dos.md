@@ -2,8 +2,9 @@
 titulo: Los polígonos de Another World — el port a IBM PC/DOS
 plataforma: [General]
 categoria: [arquitectura]
-tags: [another-world, pc-dos, vga, ega, polígonos-2d, rendimiento]
+tags: [arquitectura, optimizacion]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://fabiensanglard.net/another_world_polygons_PC_DOS/index.html]
 ---

@@ -2,8 +2,10 @@
 titulo: Bus Maple, mando y VMU — protocolo, lectura del mando con KOS y partidas guardadas
 plataforma: [Dreamcast]
 categoria: [perifericos]
-tags: [maple, mando, controller, vmu, vms, partidas, vmu_pkg, puru-puru, input]
+tags: [mando, memoria]
 estado: borrador
+comprobado: emulador
+comprobado_en: "parcial: tiempos y fichero de la VMU en Flycast; el resto viene de la documentación"
 fecha: 2026-10-30
 fuentes: [https://mc.pp.se/dc/maplebus.html, https://mc.pp.se/dc/controller.html, https://mc.pp.se/dc/sw.html, https://www.dreamcast.wiki/Save/Load_file, cabeceras de KOS (dc/maple.h, dc/maple/controller.h, dc/vmu_pkg.h)]
 ---

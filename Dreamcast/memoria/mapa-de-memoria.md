@@ -2,8 +2,9 @@
 titulo: Mapa de memoria — regiones P0-P4, áreas físicas, VRAM de 32/64 bits y SDRAM
 plataforma: [Dreamcast]
 categoria: [memoria]
-tags: [mapa-de-memoria, sh4, p1, p2, cache, vram, sdram, store-queues, ta]
+tags: [memoria, sh4, vram, dma, powervr]
 estado: borrador
+comprobado: no
 fecha: 2026-10-30
 fuentes: [https://mc.pp.se/dc/memory.html, https://mc.pp.se/dc/pvr.html, https://mc.pp.se/dc/hw.html, https://www.dreamcast.wiki/Efficient_usage_of_the_Dreamcast_RAM]
 ---

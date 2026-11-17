@@ -2,8 +2,9 @@
 titulo: El 65C816 para desarrolladores que ya conocen 6502
 plataforma: [SNES]
 categoria: [cpu]
-tags: [cpu, 65816, 6502, migracion, registros, modos-direccionamiento]
+tags: [65816, port, registros, ppu]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://snes.nesdev.org/wiki/65c816_for_6502_developers]
 ---

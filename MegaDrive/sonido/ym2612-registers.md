@@ -2,8 +2,9 @@
 titulo: Mapa de registros del YM2612
 plataforma: [MegaDrive]
 categoria: [sonido]
-tags: [ym2612, registros, fm, algoritmo, lfo, hardware]
+tags: [fm, registros, referencia]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://plutiedev.com/ym2612-registers]
 ---

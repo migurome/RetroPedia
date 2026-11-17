@@ -2,8 +2,9 @@
 titulo: Usar el Sub-CPU de Mega CD en modo 1
 plataforma: [MegaDrive]
 categoria: [avanzado]
-tags: [mega-cd, sub-cpu, modo-1, gate-array, prg-ram]
+tags: [rom]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://plutiedev.com/subcpu-in-mode1]
 ---

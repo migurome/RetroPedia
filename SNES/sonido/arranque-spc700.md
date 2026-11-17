@@ -2,8 +2,9 @@
 titulo: Arranque del SPC700 (protocolo IPL)
 plataforma: [SNES]
 categoria: [sonido]
-tags: [spc700, s-smp, ipl, boot, arranque, audio, apuio]
+tags: [spc700, arranque, audio]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://snes.nesdev.org/wiki/Booting_the_SPC700]
 ---

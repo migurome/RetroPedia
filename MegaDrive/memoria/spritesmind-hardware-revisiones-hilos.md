@@ -2,8 +2,9 @@
 titulo: Hilos de SpritesMind sobre diferencias entre revisiones de hardware
 plataforma: [MegaDrive]
 categoria: [memoria]
-tags: [spritesmind, foro, revisiones, hardware, vdp, referencia-indirecta]
+tags: [referencia, vdp]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://gendev.spritesmind.net/forum/viewtopic.php?t=977, https://gendev.spritesmind.net/forum/viewtopic.php?t=3175, https://gendev.spritesmind.net/forum/viewtopic.php?t=2604]
 ---

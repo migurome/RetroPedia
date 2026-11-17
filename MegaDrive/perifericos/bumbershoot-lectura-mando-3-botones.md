@@ -2,8 +2,9 @@
 titulo: Bumbershoot Software — lectura de mando de 3 botones en ASM puro
 plataforma: [MegaDrive]
 categoria: [perifericos]
-tags: [bumbershoot, mando, joypad, controller, asm68000, io]
+tags: [mando, 68000, registros]
 estado: borrador
+comprobado: no
 fecha: 2026-07-24
 fuentes: [https://bumbershootsoft.wordpress.com/2018/03/17/genesis-sprites-and-controllers/]
 ---

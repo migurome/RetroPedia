@@ -2,8 +2,9 @@
 titulo: Fondos y modos de BG
 plataforma: [SNES]
 categoria: [graficos]
-tags: [ppu, backgrounds, bgmode, prioridad, mosaico, modo7]
+tags: [ppu, tiles, sprites, efectos]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://snes.nesdev.org/wiki/Backgrounds]
 ---

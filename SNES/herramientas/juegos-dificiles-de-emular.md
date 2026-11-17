@@ -2,8 +2,9 @@
 titulo: Juegos de SNES difíciles de emular con precisión
 plataforma: [SNES]
 categoria: [herramientas]
-tags: [emulacion, mesen-s, bugs, ppu, dma, hdma, spc]
+tags: [emuladores, depuracion, ppu, dma, spc700]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://snes.nesdev.org/wiki/Tricky-to-emulate_games]
 ---

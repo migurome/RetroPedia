@@ -2,8 +2,9 @@
 titulo: Sega Retro — wiki de documentación técnica (overview y limitaciones)
 plataforma: [MegaDrive]
 categoria: [herramientas]
-tags: [segaretro, wiki, referencia, hardware, referencia-indirecta]
+tags: [referencia]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://segaretro.org/Category:Mega_Drive_technical_information]
 ---

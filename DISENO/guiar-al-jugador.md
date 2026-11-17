@@ -2,8 +2,9 @@
 titulo: Guiar al jugador — señalización, landmarks y colocación de elementos
 plataforma: [General]
 categoria: [diseno]
-tags: [level-design, signposting, breadcrumbs, landmarks, affordance, lynch]
+tags: [diseno]
 estado: borrador
+comprobado: no
 fecha: 2026-10-15
 fuentes:
   - https://gamedev.net/blogs/entry/2277800-should-players-be-hand-held

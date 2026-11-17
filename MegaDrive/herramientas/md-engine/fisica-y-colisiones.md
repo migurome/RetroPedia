@@ -2,8 +2,9 @@
 titulo: MD Engine — física, grupos de colisión y gotchas de hitbox
 plataforma: [MegaDrive]
 categoria: [herramientas]
-tags: [md-engine, fisica, colisiones, hitbox, plataformas, gravedad, bug-conocido]
+tags: [md-engine, colisiones, depuracion]
 estado: borrador
+comprobado: no
 fecha: 2026-10-15
 fuentes: [TBCE_Physics.c, TBCE_Actor.h/.c, TBCE_Collisions_Advanced.c y TBCE_Collisions_Simple.c de MD Engine 1.0.9; C generado de la escena]
 ---

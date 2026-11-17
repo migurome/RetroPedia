@@ -2,10 +2,12 @@
 titulo: Barra de vida (fight.def), fuentes .fnt y asaltos de MUGEN 1.0
 plataforma: [General]
 categoria: [motores]
-tags: [mugen, fight.def, lifebar, hud, fnt, fuentes, roundstate, intro, ko, asaltos]
-estado: borrador
+tags: [mugen, tiles]
+estado: revisado
+comprobado: emulador
+comprobado_en: "parcial: Flycast 2.7, hyperdbz-dreamcast-port hdbz.1.014; HUD, asaltos y KO con Goku y Krillin, huella igual a la del PC"
 fecha: 2026-10-30
-fuentes: [fight.def y fuentes de Hyper DBZ Wicked Ambition, código de Ikemen GO (lifebar.go) como referencia del recorte de las barras, proyecto hyperdbz-dreamcast-port (tools/build_hud.py, dc/proto/src/hud.c, logic.c)]
+fuentes: [https://network.mugenguild.com/justnopoint/1.0docs/fonts.html, CHANGELOG de hyperdbz-dreamcast-port (hdbz.1.014), fight.def y fuentes de Hyper DBZ Wicked Ambition, código de Ikemen GO (lifebar.go) como referencia del recorte de las barras, proyecto hyperdbz-dreamcast-port (tools/build_hud.py, dc/proto/src/hud.c, logic.c)]
 ---
 
 # Barra de vida, fuentes y asaltos de MUGEN 1.0
@@ -40,6 +42,29 @@ dibujarlo con el mismo código que los personajes. Los asaltos (RoundState) son 
 - **Referencia a una fuente:** `font = n, banco, alineación`. Alineación 1 = desde x, 0 = centrado,
   −1 = hasta x; la y es la línea de base (se resta la altura de la fuente).
 
+### Formato FNT v2
+
+MUGEN 1.0 admite también fuentes v2: un `.def` de texto con un `.sff` (mapa de bits) o un `.ttf`/`.ttc` (TrueType). Sale de
+la documentación: no se ha probado, porque el HUD de Hyper DBZ usa v1.
+
+```ini
+[FNT v2]
+fntversion = 2,00     ; no cambiarla
+name = "Mi fuente"
+[Def]
+Type = bitmap         ; o truetype
+Size = 8,8            ; ancho (para los espacios), alto; en TrueType solo cuenta el alto
+Spacing = 1,1         ; en TrueType solo cuenta el alto
+Offset = 0,0
+File = fuente.sff     ; SFF v2, o .ttf/.ttc
+Blend = 0             ; solo TrueType: 0 ninguno, 1 suavizado
+```
+
+- **Glifos en mapa de bits:** el sprite `0,<código ASCII>`; la A es `0,65`. Si falta, no se dibuja. Solo de 32 a 126.
+- **Bancos de color:** la paleta `0,<banco>` del SFF. Si no existe, la del primer sprite.
+- **TrueType:** texto ASCII o UTF-8. Si el fichero no está junto al `.def`, se busca en las fuentes de Windows. Un port tiene
+  que convertirlo antes a sprites.
+
 ### Barras de vida y energía
 
 - **Elementos:** `bg0`, `bg1`, `mid` (la parte roja, que baja con retraso) y `front`. Cada uno es `anim` (acción
@@ -62,7 +87,7 @@ dibujarlo con el mismo código que los personajes. Los asaltos (RoundState) son 
 | 1 | solo en el asalto 1, los personajes van al estado **190** (intro), y dura **mientras alguno mantenga `AssertSpecial flag = intro`**; luego «Round N» (`round.default.displaytime`) |
 | 2 | «Fight»; el control llega `ctrl.time` ticks después y corre el tiempo (`framespercount`) |
 | 3 | KO (alguien sin vida), doble KO o fin de tiempo (gana el que tiene más vida) |
-| 4 | a los `over.waittime`, poses: **180** al ganador y **170** al que pierde por tiempo, cuando vuelven al estado 0 |
+| 4 | a los `over.waittime`, **si los dos están listos** (tumbados en el 5150, o de pie, quietos y con control); si no, la 3 sigue, como mucho `over.forcewintime` (900, fijo en MUGEN) ticks desde el KO (Ikemen GO, `system.go`). Poses: **180** al ganador y **170** al que pierde por tiempo. Hay poses que dependen de esa espera: la 188 de Vegeta SSJ solo pasa a la 180 si a los 48 ticks la RoundState sigue en 3 (port de Hyper DBZ, marca de la 7.110) |
 
 A los `over.time` ticks del KO empieza otro asalto. Con `match.wins` victorias, se acaba el combate.
 

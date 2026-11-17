@@ -2,8 +2,9 @@
 titulo: Envolventes del S-DSP (ADSR y GAIN)
 plataforma: [SNES]
 categoria: [sonido]
-tags: [s-dsp, adsr, gain, envolvente, audio, volumen]
+tags: [spc700, fm, audio]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://snes.nesdev.org/wiki/DSP_envelopes]
 ---

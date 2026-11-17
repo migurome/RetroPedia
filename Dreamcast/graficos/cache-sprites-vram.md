@@ -2,8 +2,10 @@
 titulo: Caché de sprites en VRAM — texturas PVR, subida y asignador buddy
 plataforma: [Dreamcast]
 categoria: [graficos, memoria]
-tags: [powervr, pvr, texturas, vram, cache, buddy, argb1555, zlib, sprites, 2d, precarga, fragmentacion]
+tags: [powervr, vram, memoria, paletas, formatos, sprites]
 estado: revisado
+comprobado: emulador
+comprobado_en: "Flycast 2.7, hyperdbz-dreamcast-port"
 fecha: 2026-10-30
 fuentes: [cabeceras de KOS (dc/pvr.h, pvr/pvr_txr.h, pvr/pvr_mem.h), proyecto hyperdbz-dreamcast-port (dc/proto/src/sprcache.c y vram.c)]
 ---
@@ -94,6 +96,15 @@ Algunos efectos usan un sprite distinto **en cada tick** y de hasta 100.000 píx
 - **Media resolución** al convertir el banco (bloques de 2×2 al color más cercano de la paleta) y dibujarlos al doble: 4 veces menos de todo, pero los rayos finos se ven escalonados. En Hyper DBZ se probó y se descartó por cómo quedaba.
 - **Texturas de 8 bpp con paleta** (sin conversión y con la mitad de VRAM, pero el PVR las quiere *twiddled* y solo hay 4 bancos de 256 colores) o **VQ**.
 - Un `inflate` más rápido que el de zlib.
+
+### Sprites que no caben: VQ (medido en Hyper DBZ)
+
+Sprites de hasta 2116×2131 no caben sin comprimir: el lado máximo es 1024 y un sprite de 1024×1024 pide 2 MB. Reducir a 2:3 no ayuda: el ancho sigue siendo potencia de dos (769 → 1024, 1,54 MB, en un bloque buddy de 2 MB).
+
+- **VQ del PVR:** libro de 256 bloques de 2×2 ARGB1555 (2 KB) con los texels en orden `(y0,x0) (y1,x0) (y0,x1) (y1,x1)` y un índice por bloque, twiddled. Una textura de 1024×1024 ocupa 264 KB y no hay conversión al subirla. Se entrena al generar el banco (k-medias, con la entrada 0 reservada al bloque transparente para que el fondo no se tiña). En un disco de 1154×1154 se ve casi igual que el original. Comprobado en Flycast, también rectangular (1024×512); falta en consola real.
+- **Lleva la paleta dentro:** cambiar de paleta exige otro libro. El negativo y el gris se pueden aplicar al libro.
+- **Sprites de un solo color:** los destellos a pantalla completa son enormes y planos. Con una textura de 8×8 estirada, 128 bytes.
+- **Reservar antes de descomprimir:** un sprite grande sin sitio se reintenta en cada frame. Con el orden inverso, cada intento costaba unos 10 ms: de 2 a 6 vblanks perdidos, y de vuelta a 1 al corregirlo.
 
 ## Notas / gotchas
 

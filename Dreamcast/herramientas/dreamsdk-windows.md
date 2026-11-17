@@ -2,8 +2,10 @@
 titulo: DreamSDK R4 en Windows — instalación y problemas resueltos
 plataforma: [Dreamcast]
 categoria: [herramientas]
-tags: [dreamsdk, kallistios, kos-ports, msys2, gcc, zlib, windows]
+tags: [kos, toolchain, formatos]
 estado: revisado
+comprobado: pc
+comprobado_en: "DreamSDK R4 build 4.0.11.2508, hyperdbz-dreamcast-port"
 fecha: 2026-10-30
 fuentes: [DreamSDK R4 build 4.0.11.2508, KallistiOS master (27-10-2026), proyecto hyperdbz-dreamcast-port]
 ---

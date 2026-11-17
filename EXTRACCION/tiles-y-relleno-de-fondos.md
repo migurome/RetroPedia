@@ -2,8 +2,9 @@
 titulo: Completar fondos tapados — detección de tiles y relleno por ejemplos
 plataforma: [General]
 categoria: [extraccion]
-tags: [tiles, tileset, tilemap, tiled, inpainting, criminisi, resynthesizer, propainter, e2fgvi, fondos]
+tags: [tiles, extraccion, scroll]
 estado: borrador
+comprobado: no
 fecha: 2026-10-23
 fuentes: [Map-Tiler, TileMap2TileSet, Tile Extractor (retrospec), Criminisi et al. (CVPR 2003 / IEEE TIP 2004), Buyssens et al. (2015), Resynthesizer (GIMP), ProPainter (ICCV 2023), E2FGVI (CVPR 2022)]
 ---

@@ -2,8 +2,9 @@
 titulo: DMA/HDMA — ejemplos de uso
 plataforma: [SNES]
 categoria: [memoria]
-tags: [dma, hdma, ejemplos, oam, vram, tilemap]
+tags: [dma, tutorial, sprites, vram, tiles]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://snes.nesdev.org/wiki/DMA_examples]
 ---

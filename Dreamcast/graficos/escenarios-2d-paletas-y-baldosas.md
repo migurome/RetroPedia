@@ -2,8 +2,10 @@
 titulo: Escenarios 2D en el PVR — paletas de 4/8 bpp, baldosas potencia de 2, twiddling en PC y direct rendering
 plataforma: [Dreamcast]
 categoria: [graficos, memoria]
-tags: [powervr, escenarios, parallax, pal4bpp, pal8bpp, twiddled, baldosas, direct-rendering, pvr_dr, uv-clamp, mugen, fsin]
+tags: [powervr, scroll, paletas, tiles, mugen, sh4]
 estado: borrador
+comprobado: emulador
+comprobado_en: "Flycast 2.7, hyperdbz-dreamcast-port"
 fecha: 2026-10-30
 fuentes: [proyecto hyperdbz-dreamcast-port (tools/build_stage.py, dc/proto/src/stage.c, medido en Flycast 2.7), cabeceras y ejemplos de KOS (pvr_txr.h, pvr_texture.c, pvr.h, examples/dreamcast/pvr/fb_tex), Texturas del PVR (esta wiki)]
 ---
@@ -84,6 +86,23 @@ vértice (32 bytes) en `pvr_dr_target()` y enviarlo con `pvr_dr_commit()`. `pvr_
 obsoletos. El `sinf` de newlib es caro; `fsin` de `dc/fmath.h` usa la instrucción FSCA, pero solo admite
 ángulos entre 0 y 2π.
 
+### Streaming de baldosas (lo que no cabe en la VRAM)
+
+Para escenas que piden más VRAM de la que hay (las cinemáticas de MUGEN: hasta 15 MB en VQ por escena), el banco se queda
+**comprimido en la RAM** y cada baldosa se sube cuando se ve:
+
+1. Después de calcular dónde va cada capa y **antes de `pvr_scene_begin`** (no dentro del direct rendering: `pvr_txr_load` también
+   usa las store queues), se recorren las baldosas que caen en pantalla y se suben las que falten (`uncompress` +
+   `pvr_txr_load`), compilando su cabecera de polígono al subirla.
+2. Sin sitio, se expulsa la menos usada que **no se haya dibujado en este frame ni en el anterior** (el PVR puede estar pintándolo);
+   si no queda ninguna, `pvr_wait_render_done` y entonces sí las del anterior.
+3. **Baldosas pequeñas (256):** con las de 1024 de un fondo de 2000×2000 se sube entero aunque se vea un trozo, y faltó VRAM.
+4. **Adelantar:** el guion se conoce, así que con el tiempo que sobra del frame (un presupuesto de 4 ms) se sube el sprite siguiente
+   de cada animación. En la intro de Hyper DBZ, los frames perdidos bajaron de 5 a 1 en Flycast.
+
+Coste medido en Flycast 2.7: ~0,7 ms por baldosa VQ de 256×256 (casi todo el `inflate`); 3,1 MB de VRAM libres fuera del combate
+(con 2 MB reservados para el escenario).
+
 ## Notas / gotchas
 
 - Subir todo el escenario de una vez, **antes** de crear la caché de sprites de los personajes, y en un solo
@@ -93,7 +112,8 @@ obsoletos. El `sinf` de newlib es caro; `fsin` de `dc/fmath.h` usa la instrucci�
   tampoco tiene equivalente exacto.
 - Cifras de los 47 escenarios de Hyper DBZ con esta conversión: la mayoría ocupa 0,5–1,5 MB y 38 caben en 3,5 MB.
   Los 9 restantes piden de 4 a 15 MB por capas animadas con muchos fotogramas grandes. Esos fotogramas
-  tendrán que pasar por una caché, o comprimirse con VQ.
+  tendrán que pasar por una caché, o comprimirse con VQ. Para las cinemáticas se hizo con el
+  [streaming de baldosas](#streaming-de-baldosas-lo-que-no-cabe-en-la-vram).
 
 ## Referencias cruzadas
 

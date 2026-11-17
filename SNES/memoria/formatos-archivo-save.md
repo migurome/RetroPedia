@@ -2,8 +2,9 @@
 titulo: Formatos de archivo de guardado (SRM y savestates)
 plataforma: [SNES]
 categoria: [memoria]
-tags: [save, srm, sram, savestate, emuladores]
+tags: [memoria, depuracion, emuladores]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://snes.nesdev.org/wiki/Save_file_formats]
 ---

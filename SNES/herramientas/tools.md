@@ -2,8 +2,9 @@
 titulo: Herramientas recomendadas para desarrollo en SNES
 plataforma: [SNES]
 categoria: [herramientas]
-tags: [ensambladores, compiladores, emuladores, debugging, toolchain, graficos]
+tags: [asm, toolchain, emuladores, depuracion]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://snes.nesdev.org/wiki/Tools]
 ---

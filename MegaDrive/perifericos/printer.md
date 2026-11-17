@@ -2,8 +2,9 @@
 titulo: Interfaz de impresora en Mega Drive
 plataforma: [MegaDrive]
 categoria: [perifericos]
-tags: [impresora, printer, esc-p, mega-anser, io, cmyk]
+tags: [perifericos, paletas, registros]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://plutiedev.com/printer]
 ---

@@ -2,8 +2,9 @@
 titulo: Cabecera de la ROM (SNES)
 plataforma: [SNES]
 categoria: [memoria]
-tags: [rom-header, checksum, region, chipset, mapa-memoria]
+tags: [rom, interrupciones, referencia, memoria]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://snes.nesdev.org/wiki/ROM_header]
 ---

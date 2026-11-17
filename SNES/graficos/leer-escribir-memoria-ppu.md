@@ -2,8 +2,9 @@
 titulo: Leer y escribir memoria de la PPU (VRAM, CGRAM, OAM)
 plataforma: [SNES]
 categoria: [graficos]
-tags: [ppu, vram, cgram, oam, vmain, dma, registros]
+tags: [ppu, vram, paletas, sprites, dma, registros]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://snes.nesdev.org/wiki/Reading_and_writing_PPU_memory]
 ---

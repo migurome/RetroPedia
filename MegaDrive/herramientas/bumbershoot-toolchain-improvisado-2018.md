@@ -2,8 +2,9 @@
 titulo: Bumbershoot Software — el toolchain improvisado de 2018 para Genesis (ASMX + conversión manual)
 plataforma: [MegaDrive]
 categoria: [herramientas]
-tags: [bumbershoot, asmx, dgen, gens-kmod, objcopy, imagemagick, s-record, toolchain, build]
+tags: [asm, emuladores, toolchain, herramientas]
 estado: borrador
+comprobado: no
 fecha: 2026-07-24
 fuentes: [https://bumbershootsoft.wordpress.com/2018/03/04/an-improvised-sega-genesis-toolchain/]
 ---

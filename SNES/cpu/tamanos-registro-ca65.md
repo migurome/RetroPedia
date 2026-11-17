@@ -2,8 +2,9 @@
 titulo: Gestión de tamaños de registro (8/16 bits) en ca65
 plataforma: [SNES]
 categoria: [cpu]
-tags: [cpu, ca65, ensamblador, registros, flags-m-x]
+tags: [asm, registros, 65816]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://snes.nesdev.org/wiki/Register_sizes_in_ca65]
 ---

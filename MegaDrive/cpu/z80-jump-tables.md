@@ -2,8 +2,9 @@
 titulo: Tablas de salto en Z80
 plataforma: [MegaDrive]
 categoria: [cpu]
-tags: [z80, jump-table, ensamblador, optimizacion]
+tags: [z80, asm, optimizacion]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://plutiedev.com/z80-jump-tables]
 ---

@@ -2,8 +2,10 @@
 titulo: Reglas comunes a todo proyecto — RetroPedia, Tools, ROADMAP, diario de builds, nombre de build, savestate como log y QR
 plataforma: [General]
 categoria: [herramientas]
-tags: [proceso, herramientas-compartidas, build, version, roadmap, diario, depuracion, savestate, log, qr, hardware-real, checklist, marcador, regresion, publicacion, ideas-pendientes]
+tags: [proceso, herramientas, toolchain, depuracion]
 estado: revisado
+comprobado: emulador
+comprobado_en: "aplicadas en SSB Port y hyperdbz-dreamcast-port"
 fecha: 2026-10-31
 fuentes: [proyecto SSB Port (SmashLandMD_B056, SSB_BUILD en core/gen_data.h, PLAN_PORT_MEGADRIVE.md), proyecto hyperdbz-dreamcast-port (dc/proto/src/replay.c, qr.c, tools/replay.py), decisión del usuario 2026-10-31]
 ---
@@ -56,7 +58,7 @@ RetroPedia está en `C:\Users\migur\Desktop\RetroPedia`.
   el proyecto, los ficheros y la build en `fuentes:`, y se dice explícitamente dónde se comprobó.
 - También se corrige lo que resulte falso: una entrada de RetroPedia que el proyecto desmiente se arregla, no se
   esquiva.
-- Buen momento para volcar: al cerrar una fase del ROADMAP o al publicar una build con un hallazgo técnico.
+- Buen momento para volcar: al cerrar una fase del ROADMAP o al publicar una build con un hallazgo técnico. Lo que no se vuelca al momento espera en la sección «Pendiente de volcar» del [diario](#3-diario-de-builds).
 
 ### 2. ROADMAP con las fases
 
@@ -88,6 +90,18 @@ audio → IA → optimización y pruebas en hardware real → publicación.
 **Logs de referencia:** savestates o QR guardados de esta build (ruta).
 **RetroPedia:** entradas creadas o revisadas a raíz de esta build.
 ```
+
+Al principio del diario, antes de las builds, va una sección fija:
+
+```markdown
+## Pendiente de volcar a RetroPedia
+
+- [ ] B057: el DMA a mitad de frame corrompe X. Entrada afectada: `MegaDrive/graficos/dma-transfer.md`. Comprobado en BlastEm.
+```
+
+- Cada hallazgo se apunta **en el momento**, con la build, la entrada afectada y dónde se comprobó.
+- Se revisa **al cerrar cada fase**: cada línea acaba en una entrada nueva o corregida, en un pase a `revisado`, en una subida de `comprobado` o en una fila de `SINTOMAS.md` o `LIMITES.md`. Hecho el volcado, la línea se borra.
+- Una fase no se cierra con esta sección llena.
 
 - Se escribe **al publicar la build**, no de memoria semanas después.
 - Es lo que se consulta para saber cuándo entró un cambio, qué build reproducir o qué contar en unas notas de
@@ -153,7 +167,7 @@ uno o varios códigos QR** que se fotografían con el móvil:
 
 ### 7. Directorio `Tools` compartido
 
-Las herramientas de terceros están en `C:\Users\migur\Desktop\Tools`, una sola vez para todos los proyectos:
+Las herramientas de terceros están en `C:\Users\migur\Desktop\Tools`, una sola vez para todos los proyectos. Comandos típicos y limitaciones, en el [inventario](herramientas-compartidas.md):
 
 | Herramienta | Carpeta | Para qué |
 |---|---|---|
@@ -284,7 +298,8 @@ regla numerada (con su sección arriba) o a entrada propia en la carpeta `herram
 - [ ] `tools/publicar.py`: número, compilación, nombre, regresión, medidas, etiqueta git y entrada del diario.
 - [ ] Caja negra de entradas en RAM y manejador de excepciones que muestra el cuelgue en QR (y PC + build en texto).
 - [ ] Herramienta de PC que traduce el PC del cuelgue con el `.map`/`.elf` de la build.
-- [ ] Al cerrar cada fase: avances reales volcados a RetroPedia.
+- [ ] `DIARIO.md` con la sección «Pendiente de volcar a RetroPedia».
+- [ ] Al cerrar cada fase: esa sección vacía, con los avances reales volcados a RetroPedia.
 
 ## Notas / gotchas
 
@@ -299,6 +314,8 @@ regla numerada (con su sección arriba) o a entrada propia en la carpeta `herram
 ## Referencias cruzadas
 
 - [Registro de partida — VMU y códigos QR](../Dreamcast/herramientas/registro-de-partida-y-qr.md)
+- [Herramientas compartidas](herramientas-compartidas.md)
+- [Registro de decisiones de proyectos](decisiones-de-proyectos.md)
 - [Coma flotante determinista](../Dreamcast/cpu/coma-flotante-determinista.md)
 - [Flycast automatizado](../Dreamcast/herramientas/flycast-automatizado.md)
 - [Depuración avanzada dentro del juego](depuracion-avanzada-en-el-juego.md)

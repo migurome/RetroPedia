@@ -2,8 +2,9 @@
 titulo: Sonidos chiptune con el YM2612 (onda seno, cuadrada, sierra, triángulo, tono NES)
 plataforma: [MegaDrive]
 categoria: [sonido]
-tags: [ym2612, fm, chiptune, ondas, algoritmo, instrumento]
+tags: [fm, psg, audio]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://plutiedev.com/chiptune-sounds]
 ---

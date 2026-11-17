@@ -2,8 +2,9 @@
 titulo: SMPS — driver de sonido de Sega para Mega Drive
 plataforma: [MegaDrive]
 categoria: [sonido]
-tags: [smps, driver-sonido, sega, ym2612, psg, referencia-indirecta]
+tags: [audio, fm, psg, referencia]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://github.com/sonicretro/smps-rips]
 ---

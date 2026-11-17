@@ -2,8 +2,9 @@
 titulo: Tiles y paletas
 plataforma: [MegaDrive]
 categoria: [graficos]
-tags: [vdp, tiles, paletas, cram, vram, color]
+tags: [vdp, tiles, paletas, vram]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://plutiedev.com/tiles-and-palettes]
 ---

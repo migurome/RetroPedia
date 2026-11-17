@@ -2,8 +2,10 @@
 titulo: Flycast automatizado — buzón en RAM con Lua y capturas
 plataforma: [Dreamcast]
 categoria: [herramientas]
-tags: [flycast, emulador, lua, pruebas, automatizacion, printwindow, benchmark]
+tags: [emuladores, herramientas, depuracion, optimizacion]
 estado: revisado
+comprobado: emulador
+comprobado_en: "Flycast 2.7, hyperdbz-dreamcast-port"
 fecha: 2026-10-30
 fuentes: [código de Flycast (core/lua/lua.cpp, core/hw/sh4/modules/serial.cpp, core/log/LogManager.cpp), Flycast 2.7 win64, proyecto hyperdbz-dreamcast-port]
 ---
@@ -87,6 +89,7 @@ se escribió en la ejecución, se busca el `*_vmu_save_A1.bin` más nuevo que un
   con una ruta relativa: Flycast se ejecuta desde su carpeta). El emulador sigue hasta el tiempo límite sin
   buzón. Las rutas que se pasan por variables de entorno tienen que ser absolutas (`cygpath -aw`).
 - El color de fondo de `pvr_set_bg_color()` salió verde en Flycast 2.7 aunque KOS envía bien el color. Pendiente de comprobar en la consola.
+- **Dos Flycast a la vez se confunden:** comparten carpeta, y buscar la ventana por el título `Flycast - ` puede capturar la de otro proyecto (2026-11-06: `hdbz.2.053` en vez de un snippet). Mira antes `Get-Process flycast`, y busca la ventana por el PID que has lanzado.
 - En la consola real con GDEMU no hay serie: el programa debe mostrar los resultados **también en pantalla** (fuente de la BIOS con `bfont_draw_str_ex` sobre `vram_s` tras `pvr_shutdown()`).
 
 ## Referencias cruzadas

@@ -2,8 +2,9 @@
 titulo: Formato de compresión SLZ
 plataforma: [MegaDrive]
 categoria: [herramientas]
-tags: [compresion, slz, lz, mdtools, homebrew]
+tags: [formatos, audio, caso-practico]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://plutiedev.com/format-slz]
 ---

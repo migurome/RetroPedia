@@ -2,8 +2,9 @@
 titulo: "Street Fighter II: Health Bar"
 plataforma: [General]
 categoria: [graficos-hardware]
-tags: [cps1, arcade, street-fighter-2, sprites, ui, health-bar]
+tags: [arquitectura, historia, sprites, mugen]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://fabiensanglard.net/sf2_health_bar/index.html]
 ---

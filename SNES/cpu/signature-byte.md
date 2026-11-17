@@ -2,8 +2,9 @@
 titulo: Signature byte en BRK, COP y WDM
 plataforma: [SNES]
 categoria: [cpu]
-tags: [cpu, brk, cop, wdm, interrupciones]
+tags: [65816, interrupciones]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://snes.nesdev.org/wiki/Signature_byte]
 ---

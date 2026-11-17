@@ -2,8 +2,9 @@
 titulo: Big Evil Corporation — bases del ensamblador 68000 (serie Tanglewood)
 plataforma: [MegaDrive]
 categoria: [cpu]
-tags: [bigevilcorporation, tanglewood, 68000, asm, registros, fundamentos]
+tags: [68000, asm, registros, referencia]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://blog.bigevilcorporation.co.uk/2012/03/01/sega-megadrive-2-so-assembly-language-then/]
 ---

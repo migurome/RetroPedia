@@ -2,8 +2,9 @@
 titulo: Formato del Tile ID (nametable / sprites)
 plataforma: [MegaDrive]
 categoria: [graficos]
-tags: [vdp, tile-id, nametable, sprites, flip, paleta, prioridad]
+tags: [vdp, tiles, sprites, paletas]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://plutiedev.com/tile-id]
 ---

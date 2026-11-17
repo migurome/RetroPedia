@@ -2,8 +2,9 @@
 titulo: "Bumbershoot Software — presupuesto de ancho de banda a VRAM y la \"venganza\" de las badlines del C64"
 plataforma: [MegaDrive]
 categoria: [graficos]
-tags: [bumbershoot, vdp, dma, vram, timing, contencion-de-bus, c64, badlines]
+tags: [vdp, dma, vram, interrupciones]
 estado: borrador
+comprobado: no
 fecha: 2026-07-24
 fuentes: [https://bumbershootsoft.wordpress.com/2018/04/08/genesis-badlines-revenge/]
 ---
@@ -54,6 +55,7 @@ El autor necesitaba refrescar del orden de 16KB de datos de patrón por frame pa
 
 ## Notas / gotchas
 
+- **La cifra de vblank varía según la fuente:** aquí salen 7.380 bytes (36 líneas × 205). La tabla de Sega Retro y otro artículo dan 7.524 en H40, y SGDK 2.11 reserva 7.200 (`DMA_TRANSFER_CAPACITY_NTSC`). No se ha medido: para planificar, usar 7.200 ([límites](../LIMITES.md)).
 - El mecanismo es distinto en su naturaleza al de las badlines del C64 (allí se detiene la CPU; aquí se limita el caudal de DMA), pero el efecto práctico es el mismo tipo de dolor de cabeza: hay que presupuestar cuántos bytes caben en cada tramo del frame antes de diseñar una estructura de datos que dependa de refrescos grandes y frecuentes.
 - Las tasas de 205/18 bytes por línea (320px) y 167/16 (256px) no aparecen documentadas con esa granularidad en la entrada general de [Transferencias DMA](dma-transfer.md) de esta base (que cubre registros y el límite de 128KB, pero no un presupuesto de bytes-por-línea); esta entrada aporta ese dato concreto que falta allí.
 - La recomendación ya existente en `dma-transfer.md` de encolar los comandos DMA durante el frame y lanzarlos todos en VBLANK cobra más sentido con estos números: en pantalla activa el margen es tan estrecho (18 bytes/línea) que cualquier DMA no trivial debe reservarse casi por completo para VBLANK.

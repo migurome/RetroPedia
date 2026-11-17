@@ -2,8 +2,9 @@
 titulo: Interrupciones VBlank (NMI)
 plataforma: [SNES]
 categoria: [graficos]
-tags: [ppu, nmi, interrupciones, vblank, timing, registros]
+tags: [ppu, interrupciones, registros]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://snes.nesdev.org/wiki/VBlank_interrupts]
 ---

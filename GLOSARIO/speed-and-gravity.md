@@ -2,8 +2,9 @@
 titulo: Velocidad y gravedad en plataformas (Speed and Gravity)
 plataforma: [General]
 categoria: [fundamentos]
-tags: [fisica, plataformas, gravedad, velocidad, subpixels, sonic]
+tags: [colisiones, matematicas, historia]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://plutiedev.com/speed-and-gravity]
 ---

@@ -2,8 +2,9 @@
 titulo: Separar las capas de parallax de un vídeo por su movimiento (capas de Wang y Adelson)
 plataforma: [General]
 categoria: [extraccion]
-tags: [parallax, capas, movimiento, mosaico, panorama, correlacion-de-fase, kmeans, fondos]
+tags: [scroll, extraccion, colisiones, tiles, paletas]
 estado: borrador
+comprobado: no
 fecha: 2026-10-23
 fuentes: [Wang & Adelson "Representing Moving Images with Layers" (IEEE TIP 1994), Kumar/Torr/Zisserman "Learning Layered Motion Segmentations of Video" (IJCV 2007), tesis de mosaicos por capas (U. Tennessee 2003, McGill)]
 ---

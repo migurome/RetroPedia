@@ -2,8 +2,9 @@
 titulo: Transferencias DMA
 plataforma: [MegaDrive]
 categoria: [graficos]
-tags: [vdp, dma, vram, z80, rendimiento]
+tags: [vdp, dma, vram, z80, optimizacion]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://plutiedev.com/dma-transfer, board.mddc.dev (vía CLAUDE.md del proyecto motor-cenital)]
 ---

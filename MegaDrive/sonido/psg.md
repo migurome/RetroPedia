@@ -2,8 +2,9 @@
 titulo: PSG (Programmable Sound Generator)
 plataforma: [MegaDrive]
 categoria: [sonido]
-tags: [psg, sn76489, atenuacion, ruido, canales, z80]
+tags: [psg, audio, z80]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://plutiedev.com/psg]
 ---

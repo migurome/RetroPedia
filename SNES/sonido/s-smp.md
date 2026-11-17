@@ -2,8 +2,9 @@
 titulo: S-SMP — el procesador de sonido del SNES
 plataforma: [SNES]
 categoria: [sonido]
-tags: [s-smp, spc700, audio, timers, apu, memoria]
+tags: [spc700, audio, interrupciones, memoria]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://snes.nesdev.org/wiki/S-SMP]
 ---

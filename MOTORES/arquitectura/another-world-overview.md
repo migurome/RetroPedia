@@ -2,8 +2,9 @@
 titulo: Another World - Arquitectura general del motor de polígonos (VM y bytecode)
 plataforma: [General]
 categoria: [arquitectura]
-tags: [another-world, out-of-this-world, maquina-virtual, bytecode, poligonos-2d, eric-chahi]
+tags: [arquitectura, historia]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://fabiensanglard.net/another_world_polygons/index.html]
 ---

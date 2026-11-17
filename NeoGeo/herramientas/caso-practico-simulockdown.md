@@ -2,8 +2,10 @@
 titulo: Caso práctico — personajes de Rick and Morty SimuLockdown (Godot 3) en Neo Geo
 plataforma: [NeoGeo, General]
 categoria: [herramientas]
-tags: [port, godot, gdscript, tscn, pixel-art, escala, paleta, punto-fijo, ngdevkit, caso-practico]
+tags: [port, herramientas, formatos, extraccion, paletas, matematicas, ngdevkit, caso-practico]
 estado: revisado
+comprobado: emulador
+comprobado_en: "GnGeo y ngdevkit 0.5, RickAndMorty/neogeo"
 fecha: 2026-10-23
 fuentes: [proyecto RickAndMorty/neogeo (ROM rmneo, probada en GnGeo), proyecto de Godot reconstruido de SimuLockdown (RickAndMorty/extraido/simulockdown_godot)]
 ---

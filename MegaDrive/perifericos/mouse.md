@@ -2,8 +2,9 @@
 titulo: Sega Mouse (ratón) en Mega Drive
 plataforma: [MegaDrive]
 categoria: [perifericos]
-tags: [raton, mouse, io, protocolo, peripheral-id, cursor]
+tags: [perifericos, registros]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://plutiedev.com/mouse]
 ---

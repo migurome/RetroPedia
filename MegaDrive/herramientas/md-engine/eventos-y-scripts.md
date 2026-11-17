@@ -2,8 +2,10 @@
 titulo: MD Engine — eventos, valores y variables en los scripts
 plataforma: [MegaDrive]
 categoria: [herramientas]
-tags: [md-engine, eventos, scripts, variables, expresiones, json]
+tags: [md-engine, arquitectura, mugen, formatos]
 estado: borrador
+comprobado: emulador
+comprobado_en: "parcial: lo que cita el port de Super Smash Land (MD Engine 1.1.0)"
 fecha: 2026-10-15
 actualizado: 2026-10-22
 fuentes: [/src/lib/events/*.js de MD Engine 1.0.9, plantillas, C generado en %TEMP%/_MDEngine/src, port de Super Smash Land (MD Engine 1.1.0)]

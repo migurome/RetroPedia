@@ -2,8 +2,9 @@
 titulo: SGDK — Sega Genesis Development Kit (overview)
 plataforma: [MegaDrive]
 categoria: [herramientas]
-tags: [sgdk, c, sdk, toolchain, gcc, rescomp]
+tags: [sgdk, toolchain]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://github.com/Stephane-D/SGDK, https://github.com/Stephane-D/SGDK/wiki]
 ---

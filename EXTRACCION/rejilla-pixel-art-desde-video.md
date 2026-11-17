@@ -2,8 +2,10 @@
 titulo: Detectar la rejilla de pixel art en un vídeo y bajar a resolución nativa
 plataforma: [General]
 categoria: [extraccion]
-tags: [pixel-art, rejilla, escala, fft, ffmpeg, vp9, submuestreo, deteccion-de-planos]
+tags: [extraccion, herramientas]
 estado: borrador
+comprobado: pc
+comprobado_en: "proyecto Extractor"
 fecha: 2026-10-22
 fuentes: [proyecto Extractor (vídeo 3840x2160 VP9, 232 planos), proper-pixel-art (Hough), perfect-pixel (FFT), Pixel Snapper]
 ---

@@ -2,8 +2,9 @@
 titulo: Rotación de sprites (técnicas para simularla)
 plataforma: [MegaDrive]
 categoria: [graficos]
-tags: [sprites, efecto, rotacion, tecnica-visual, sonic]
+tags: [sprites, efectos, historia]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://plutiedev.com/rotating-sprites]
 ---

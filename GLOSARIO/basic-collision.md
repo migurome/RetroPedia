@@ -2,8 +2,9 @@
 titulo: Detección de colisiones básica (Basic Collision)
 plataforma: [General]
 categoria: [fundamentos]
-tags: [colisiones, matematicas, punto-fijo, circulos, cajas]
+tags: [colisiones, matematicas]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://plutiedev.com/basic-collision]
 ---

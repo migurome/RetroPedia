@@ -2,8 +2,9 @@
 titulo: Toolchain de KallistiOS en Linux, macOS y WSL — dc-chain, environ.sh, Makefile y romdisk
 plataforma: [Dreamcast]
 categoria: [herramientas]
-tags: [kallistios, kos, dc-chain, kos-chain, environ.sh, kos-ports, makefile, romdisk, genromfs, mkdcdisc, gcc]
+tags: [kos, toolchain, arranque]
 estado: borrador
+comprobado: no
 fecha: 2026-10-30
 fuentes: [https://www.dreamcast.wiki/Getting_Started_with_Dreamcast_development, https://kos-docs.dreamcast.wiki/md_doc_2README.html, https://github.com/KallistiOS/KallistiOS, https://github.com/KallistiOS/kos-ports, https://www.dreamcast.wiki/Romdisk_Swapping, KOS instalado con DreamSDK R4 (environ.sh, Makefile.rules, include/kos/init.h)]
 ---

@@ -2,8 +2,9 @@
 titulo: Hilos de SpritesMind sobre internals del VDP
 plataforma: [MegaDrive]
 categoria: [graficos]
-tags: [spritesmind, foro, vdp, fifo, timing, referencia-indirecta]
+tags: [referencia, vdp, interrupciones]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://gendev.spritesmind.net/forum/viewtopic.php?t=1291, https://gendev.spritesmind.net/forum/viewtopic.php?t=740, https://gendev.spritesmind.net/forum/viewtopic.php?t=851, https://gendev.spritesmind.net/forum/viewtopic.php?t=2036, https://gendev.spritesmind.net/forum/viewtopic.php?t=291, https://gendev.spritesmind.net/forum/viewtopic.php?t=1206, https://gendev.spritesmind.net/forum/viewtopic.php?t=1420, https://gendev.spritesmind.net/forum/viewtopic.php?t=1368]
 ---

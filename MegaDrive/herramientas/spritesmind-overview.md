@@ -2,8 +2,9 @@
 titulo: SpritesMind.Net — foro de referencia para desarrollo en Mega Drive
 plataforma: [MegaDrive]
 categoria: [herramientas]
-tags: [spritesmind, foro, comunidad, referencia, hardware]
+tags: [referencia]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://www.spritesmind.net/, https://gendev.spritesmind.net/forum/]
 ---

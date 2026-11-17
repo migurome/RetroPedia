@@ -2,8 +2,9 @@
 titulo: Efecto de agua translúcida de Sonic
 plataforma: [MegaDrive]
 categoria: [graficos]
-tags: [sonic, efecto, raster, cram, paletas, tecnica-visual]
+tags: [historia, efectos, interrupciones, paletas]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://plutiedev.com/sonic-water]
 ---

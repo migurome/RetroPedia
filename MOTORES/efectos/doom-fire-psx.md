@@ -2,8 +2,9 @@
 titulo: Cómo se hizo el efecto de fuego de DOOM (PSX)
 plataforma: [General]
 categoria: [efectos]
-tags: [doom, playstation, psx, fuego, efectos-visuales, framebuffer]
+tags: [historia, efectos, vram]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://fabiensanglard.net/doom_fire_psx/index.html]
 ---

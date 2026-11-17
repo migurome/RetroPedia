@@ -2,8 +2,9 @@
 titulo: Turbo File Twin (ASCII Corporation)
 plataforma: [SNES]
 categoria: [perifericos]
-tags: [turbo-file-twin, guardado, memoria, io, protocolo]
+tags: [memoria, registros]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://snes.nesdev.org/wiki/Turbo_File_Twin]
 ---

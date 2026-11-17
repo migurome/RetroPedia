@@ -2,8 +2,9 @@
 titulo: Multitap de SNES
 plataforma: [SNES]
 categoria: [perifericos]
-tags: [multitap, mando, multijugador, io, protocolo]
+tags: [mando, registros]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://snes.nesdev.org/wiki/Multitap]
 ---

@@ -2,8 +2,9 @@
 titulo: "Bumbershoot Software — modo pseudo-bitmap mediante dos planos de scroll superpuestos"
 plataforma: [MegaDrive]
 categoria: [graficos]
-tags: [bumbershoot, vdp, tiles, planos-de-scroll, bitmap, vram, nametable]
+tags: [vdp, tiles, vram]
 estado: borrador
+comprobado: no
 fecha: 2026-07-24
 fuentes: [https://bumbershootsoft.wordpress.com/2018/04/07/genesis-designing-a-pseudo-bitmap-mode/]
 ---

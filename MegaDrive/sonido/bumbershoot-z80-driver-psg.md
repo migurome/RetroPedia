@@ -2,8 +2,9 @@
 titulo: Driver de música PSG en Z80 con decaimiento de subframe (Bumbershoot)
 plataforma: [MegaDrive]
 categoria: [sonido]
-tags: [psg, sn76489, z80, driver, interrupciones, envolvente, im1]
+tags: [psg, z80, interrupciones, fm]
 estado: borrador
+comprobado: no
 fecha: 2026-07-24
 fuentes: [https://bumbershootsoft.wordpress.com/2018/03/24/genesis-the-z80-and-the-sn76489/]
 ---

@@ -2,8 +2,9 @@
 titulo: Prioridad de capas (layer priority)
 plataforma: [MegaDrive]
 categoria: [graficos]
-tags: [vdp, capas, prioridad, sprites, plano-a, plano-b]
+tags: [vdp, extraccion, sprites, tiles]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://plutiedev.com/layer-priority]
 ---

@@ -2,12 +2,35 @@
 titulo: SNES — overview
 plataforma: [SNES]
 categoria: [general]
-tags: [hardware, overview]
+tags: [referencia]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
+fuentes: [resumen de las entradas de esta carpeta]
 ---
 
 # Super Nintendo (SNES)
+
+## Empieza aquí
+
+[Límites y presupuestos](LIMITES.md) · [Síntomas y causas](SINTOMAS.md)
+
+Todo viene de la documentación: ningún proyecto nuestro lo ha comprobado todavía.
+
+| Si vas a... | Lee |
+|---|---|
+| Elegir herramientas | [herramientas](herramientas/tools.md) y [tutoriales](herramientas/tutoriales.md) |
+| Aprender la CPU | [65C816 desde el 6502](cpu/65c816-para-desarrolladores-6502.md) |
+| Crear la ROM | [mapa de memoria](memoria/memory-map.md) y [cabecera](memoria/rom-header.md) |
+| Organizar el vblank | [interrupciones](graficos/vblank-interrupts.md) y [rutina de VBlank](graficos/vblank-routine.md) |
+| Calcular cuánto cabe por frame | [timing](herramientas/timing.md) |
+| Dibujar fondos | [fondos](graficos/backgrounds.md) y [tilemaps](graficos/tilemaps.md) |
+| Mostrar sprites | [sprites](graficos/sprites.md) |
+| Mover datos | [ejemplos de DMA](memoria/dma-ejemplos.md) |
+| Hacer efectos | [HDMA](graficos/hdma-ejemplos.md), [color math](graficos/color-math.md) y [modo 7](graficos/modo-7-efectos-perspectiva.md) |
+| Añadir sonido | [arranque del SPC700](sonido/arranque-spc700.md) y [muestras BRR](sonido/brr-samples.md) |
+| Leer el mando | [lectura de mando](perifericos/lectura-de-mando.md) |
+| Evitar fallos solo en consola | [erratas](herramientas/errata.md) |
 
 ## Resumen de hardware (a validar/ampliar durante el proyecto)
 

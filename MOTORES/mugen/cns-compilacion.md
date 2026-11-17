@@ -2,8 +2,10 @@
 titulo: Compilar la lógica CNS de MUGEN — semántica real y trampas
 plataforma: [General]
 categoria: [arquitectura, cpu]
-tags: [mugen, cns, cmd, triggers, bytecode, vm, compilador, statedef]
+tags: [mugen, mando, arquitectura, toolchain]
 estado: borrador
+comprobado: emulador
+comprobado_en: "Flycast y arnés de PC, hyperdbz-dreamcast-port"
 fecha: 2026-10-30
 fuentes: [documentación de Elecbyte (cns, exp, sctrls), proyecto hyperdbz-dreamcast-port (tools/cns/, compilado con Goku y Krillin de Hyper DBZ 6.0c)]
 ---
@@ -115,6 +117,21 @@ dejan la simulación idéntica bit a bit. Por orden de impacto en Hyper DBZ:
 5. **Detalles de la VM.** Despacho por tabla de saltos (*computed goto* de GCC), triggers que escriben
    directamente en la pila en vez de devolver una estructura de 8 bytes, y contadores de coste solo en la
    versión de PC.
+6. **Guardas de tick** (Fase 6). Como las de combate, pero con condiciones que no cambian **dentro de un tick**: `GameTime`,
+   `RoundState`, `RoundNo`, `RoundsExisted`, `MatchOver`, `Win`, `Lose`, `DrawGame` (en la VM solo las cambia la máquina de asaltos,
+   antes de los actores; `WinKO` no, porque mira el KO del rival). Cada actor recuerda su valor en el tick en curso; si alguna es
+   falsa, el controlador ni se mira. Hyper DBZ tiene decenas así en el -2 (80 con `GameTime%15 = 0` en Freeza). Caso pesimista de
+   Freeza-Jiren en Flycast: de 8,76 a 8,47 ms. Van en la misma lista que las de combate (una cuenta de 8 bits cada una): el
+   formato del controlador no crece.
+
+**Lo que no funcionó** (Flycast, mismo caso, partiendo de 8,47 ms):
+- Juntar las líneas de trigger de cada controlador en una sola expresión (`&&` y `||` que cortan siempre, como línea a línea):
+  7,89 ms, pero el código ya no se comparte entre controladores (las líneas repetidas se guardaban una vez) y la lógica de un
+  personaje crece unos 45 KB. Con dos personajes justos en la RAM no cabía.
+- Lo mismo con una instrucción `CALL` a las líneas ya guardadas: 9,11 ms (8,61 copiando solo las cortas). Un despacho de más por
+  línea cuesta más que la llamada a C que se ahorra.
+- Que `eval` encadene las líneas en la misma llamada: 9,16 ms, y peor también en los casos que no lo usan: el estado de más le quita
+  registros al SH-4 en el bucle más caliente.
 
 Los helpers **no** ejecutan los estados -3 ni -2, y el -1 solo con `keyctrl = 1`
 ([documentación de Elecbyte](https://www.elecbyte.com/mugendocs/cns.html)). Un helper que ejecutara el -2
@@ -132,6 +149,34 @@ completo de su personaje duplicaría el coste, porque son los estados más grand
 
 - Cifras de un personaje de Hyper DBZ: -2 tiene unos 320 controladores que se evalúan **en cada tick**, y -1 unos 150. Los triggers más usados son `time`, `enemy`, `stateno`, `NumExplod`, `name`, `anim`, `command`, `AnimElemTime`, `var` y `AILevel`.
 - Si una expresión no compila, mejor tratarla como falsa y registrarla que abortar: así se mide la cobertura.
+
+## Trampas de semántica (comprobadas con Ikemen GO)
+
+- **NotHitBy y HitBy no son simétricos.** `NotHitBy` protege si coincide la postura *o* el tipo: `value = SCA`, sin tipos, es
+  invulnerabilidad total, y es la forma más habitual. `HitBy` deja pasar solo si coinciden los dos: vacío, no pasa nada.
+- **`time = -1` es para siempre:** la protección se apaga con `time == 0` y solo se descuenta si `time > 0`.
+- **La primera parte de un attr es siempre la postura, aunque vaya vacía:** en `, AA, AT`, `AA` es un tipo.
+- **`Name` y `P2Name` comparan con `name`, no con `displayname`,** sin distinguir mayúsculas. Un helper sin `name` se llama
+  `"<padre>'s helper"`.
+- **En CNS, `animtype` se decide por la primera letra:** `low` es Light, `down` es DiagUp y `high` es Hard.
+- **Daño:** se redondea, un golpe hace al menos 1, y `LifeAdd` positivo fuerza `absolute`.
+- **ChangeState encadenados:** hay personajes que vuelven a su estado varias veces en un tick a propósito; el límite de Ikemen es 2.500.
+- **Un compilador que descarta lo que no entiende debe contarlo:** `, AT` parecía una palabra clave y desaparecía sin aviso.
+
+## Qué estado es cada técnica
+
+Para rotular una técnica con su nombre hay que saber a qué estado lleva. En personajes como los de Hyper DBZ, descifrar el `-1` es difícil: muchos `ChangeState` no usan
+`command =`, sino explods que hacen de búfer (`NumExplod(90030016)` es QCF×2 en Goku) y `value` calculados. Es más fácil **ejecutar la combinación en una VM y mirar a qué estado
+entra**, con el rival quieto y la energía llena. Reglas para no inventar nombres:
+
+- Si el botón solo o las direcciones solas dan ese estado, no es la técnica.
+- Si dos técnicas entran en el mismo estado, no se nombra ninguna. La excepción es activar un modo frente a lo que pide tenerlo activo: la prueba empieza sin modo.
+- Lo que pide un contexto (estar en SSJ3, recibir un golpe) no se prueba: se queda sin nombre.
+- No todo por encima de 5000 es recibir golpes: el Karaoke de Krillin es el 9993400. Solo 5000-5999 son de `common1.cns`.
+- Una técnica que solo crea un helper no cambia el estado del jugador y no se reconoce así.
+- Lo que siga a la técnica no es siempre suyo: si aterriza en el estado 53, ese estado es del sistema. Hay que descontar lo que hacen correr, saltar y los golpes normales.
+
+Con este método, 331 de 498 técnicas en 23 personajes (`tools/build_moves.py`).
 
 ## Referencias cruzadas
 

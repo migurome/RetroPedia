@@ -2,8 +2,9 @@
 titulo: Ratón de SNES (Super NES Mouse)
 plataforma: [SNES]
 categoria: [perifericos]
-tags: [raton, mouse, io, protocolo, mario-paint]
+tags: [perifericos, registros, historia]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://snes.nesdev.org/wiki/Mouse]
 ---

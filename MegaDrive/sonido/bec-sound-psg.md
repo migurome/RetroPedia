@@ -2,8 +2,9 @@
 titulo: Sonido, parte I — el chip PSG — enfoque Big Evil Corporation
 plataforma: [MegaDrive]
 categoria: [sonido]
-tags: [bigevilcorporation, tanglewood, psg, sn76489, secuenciador, atenuacion]
+tags: [psg, audio]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://blog.bigevilcorporation.co.uk/2012/09/03/sega-megadrive-10-sound-part-i-the-psg-chip/]
 ---

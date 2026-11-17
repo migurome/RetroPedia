@@ -2,8 +2,9 @@
 titulo: Registros del PPU ($2100-$213F)
 plataforma: [SNES]
 categoria: [graficos]
-tags: [ppu, registros, referencia, vram, oam, cgram]
+tags: [ppu, registros, referencia, vram, sprites, paletas]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://snes.nesdev.org/wiki/PPU_registers]
 ---

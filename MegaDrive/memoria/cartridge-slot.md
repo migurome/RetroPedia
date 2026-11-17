@@ -2,8 +2,9 @@
 titulo: Conector de cartucho (pinout)
 plataforma: [MegaDrive]
 categoria: [memoria]
-tags: [pinout, cartucho, cart-slot, m3, dtack, senales]
+tags: [rom]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://plutiedev.com/cartridge-slot]
 ---

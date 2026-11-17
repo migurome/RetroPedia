@@ -2,8 +2,10 @@
 titulo: Imagen de disco autoarrancable (CDI) — 1ST_READ.BIN, IP.BIN, mkisofs y cdi4dc
 plataforma: [Dreamcast]
 categoria: [herramientas]
-tags: [cdi, ip.bin, 1st_read.bin, scramble, mkisofs, cdi4dc, gdemu, selfboot]
+tags: [arranque]
 estado: revisado
+comprobado: emulador
+comprobado_en: "cdi4dc 0.3b y Flycast 2.7, hyperdbz-dreamcast-port"
 fecha: 2026-10-30
 fuentes: [KOS utils/makeip (field.c, crc.c, rsrc/templates/ip.tmpl), KOS utils/scramble, cdi4dc 0.3b, proyecto hyperdbz-dreamcast-port]
 ---

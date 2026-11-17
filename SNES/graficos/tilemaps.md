@@ -2,8 +2,9 @@
 titulo: Tilemaps
 plataforma: [SNES]
 categoria: [graficos]
-tags: [ppu, tilemap, nametable, vram, backgrounds]
+tags: [ppu, tiles, vram]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://snes.nesdev.org/wiki/Tilemaps]
 ---

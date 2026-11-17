@@ -2,8 +2,9 @@
 titulo: Formatos de compresión clásicos de Sega — Nemesis, Kosinski, Enigma
 plataforma: [MegaDrive]
 categoria: [herramientas]
-tags: [compresion, nemesis, kosinski, enigma, saxman, sega, referencia-indirecta]
+tags: [formatos, referencia]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://s3unlocked.blogspot.com/2017/06/mega-drive-compression-formats.html, https://clownacy.wordpress.com/2024/02/12/making-a-nemesis-compressor/, https://segaretro.org/Enigma_compression, https://github.com/sonicretro/KENSSharp]
 ---

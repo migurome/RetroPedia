@@ -2,8 +2,9 @@
 titulo: Depurando el AtGames Flashback — bug del emulador de Z80 en IYH (TANGLEWOOD)
 plataforma: [MegaDrive]
 categoria: [memoria]
-tags: [bigevilcorporation, tanglewood, atgames, flashback, z80, echo, debugging]
+tags: [port, historia, z80, audio, depuracion]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://blog.bigevilcorporation.co.uk/2018/04/22/taming-the-atgames-flashback/]
 ---

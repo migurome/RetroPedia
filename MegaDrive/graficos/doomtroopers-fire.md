@@ -2,8 +2,9 @@
 titulo: Efecto de fuego de Doom Troopers
 plataforma: [MegaDrive]
 categoria: [graficos]
-tags: [efecto, sprites, prioridad, tecnica-visual]
+tags: [efectos, sprites]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://plutiedev.com/doomtroopers-fire]
 ---

@@ -2,8 +2,9 @@
 titulo: División en SNES (hardware de división del 5A22)
 plataforma: [SNES]
 categoria: [cpu]
-tags: [cpu, division, hardware, registros]
+tags: [matematicas, referencia, registros]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://snes.nesdev.org/wiki/Division]
 ---

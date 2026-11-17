@@ -2,8 +2,9 @@
 titulo: Comparativa de toolchains de ensamblador para Mega Drive (SGDK, ASMX, Vasm, WLA-DX, ASMotor)
 plataforma: [MegaDrive]
 categoria: [herramientas]
-tags: [sgdk, asmx, vasm, wla-dx, asmotor, ensamblador, toolchain, referencia-indirecta]
+tags: [sgdk, asm, toolchain, referencia]
 estado: borrador
+comprobado: no
 fecha: 2026-07-24
 fuentes: [https://bumbershootsoft.wordpress.com/platform-guide-sega-genesis-mega-drive/]
 ---

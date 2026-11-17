@@ -2,8 +2,9 @@
 titulo: Multiplicación en SNES (hardware 5A22 y Modo 7 de la PPU)
 plataforma: [SNES]
 categoria: [cpu]
-tags: [cpu, multiplicacion, hardware, registros, mode7]
+tags: [matematicas, referencia, registros, efectos]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://snes.nesdev.org/wiki/Multiplication]
 ---

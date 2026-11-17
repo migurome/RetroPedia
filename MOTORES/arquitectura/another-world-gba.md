@@ -2,8 +2,9 @@
 titulo: Los polígonos de Another World — el port a Game Boy Advance
 plataforma: [General]
 categoria: [arquitectura]
-tags: [another-world, gba, modo4, arm7tdmi, polígonos-2d, dma]
+tags: [arquitectura, ppu, audio, dma]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://fabiensanglard.net/another_world_polygons_GBA/index.html]
 ---

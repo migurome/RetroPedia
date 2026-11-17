@@ -2,8 +2,9 @@
 titulo: Big Evil Corporation — primer "Hello World" en pantalla (serie Tanglewood)
 plataforma: [MegaDrive]
 categoria: [graficos]
-tags: [bigevilcorporation, tanglewood, vdp, cram, vram, tiles, hello-world]
+tags: [vdp, paletas, vram, tiles, tutorial]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://blog.bigevilcorporation.co.uk/2012/03/23/sega-megadrive-4-hello-world/]
 ---

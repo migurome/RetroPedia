@@ -2,8 +2,9 @@
 titulo: Build y debug de ASM puro para Mega Drive (sin SGDK)
 plataforma: [MegaDrive]
 categoria: [herramientas]
-tags: [asm, vasm, asm68k, wla-dx, blastem, gens-kmod, debug, build, referencia-indirecta]
+tags: [asm, emuladores, depuracion, toolchain, referencia]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://bumbershootsoft.wordpress.com/platform-guide-sega-genesis-mega-drive/, https://github.com/sroccaserra/learning-megadrive, https://github.com/libretro/blastem, https://documentation.help/Gens-KMod/]
 ---

@@ -2,8 +2,9 @@
 titulo: Big Evil Corporation — inicialización de hardware al arranque (serie Tanglewood)
 plataforma: [MegaDrive]
 categoria: [graficos]
-tags: [bigevilcorporation, tanglewood, vdp, tmss, z80, boot, inicializacion]
+tags: [vdp, arranque, z80]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://blog.bigevilcorporation.co.uk/2012/03/09/sega-megadrive-3-awaking-the-beast/]
 ---

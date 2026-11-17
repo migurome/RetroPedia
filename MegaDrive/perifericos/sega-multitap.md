@@ -2,8 +2,9 @@
 titulo: Sega Multitap (Team Player / Sega Tap)
 plataforma: [MegaDrive]
 categoria: [perifericos]
-tags: [multitap, team-player, io, protocolo, multijugador]
+tags: [mando, registros]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://plutiedev.com/sega-multitap]
 ---

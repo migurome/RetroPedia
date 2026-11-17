@@ -2,8 +2,9 @@
 titulo: Bumbershoot Software — pipeline de cuantización y compresión para un logo en Genesis
 plataforma: [MegaDrive]
 categoria: [graficos]
-tags: [bumbershoot, paleta, dithering, floyd-steinberg, cuantizacion, lz4, compresion, cram]
+tags: [paletas, formatos]
 estado: borrador
+comprobado: no
 fecha: 2026-07-24
 fuentes: [https://bumbershootsoft.wordpress.com/2025/07/05/genesis-refining-the-logo-graphics/]
 ---

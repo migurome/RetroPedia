@@ -2,8 +2,10 @@
 titulo: Reconstruir fondos y escenarios a partir de vídeo
 plataforma: [General]
 categoria: [extraccion]
-tags: [fondos, mediana-temporal, registro, parallax, panorama, inpainting, propainter, camara]
+tags: [scroll, extraccion]
 estado: borrador
+comprobado: pc
+comprobado_en: "proyecto Extractor: 73 y 27 fondos"
 fecha: 2026-10-22
 fuentes: [proyecto Extractor (73 y 27 fondos, varias versiones), CreateMap, Retro Game Cartography, ProPainter (ICCV 2023)]
 ---

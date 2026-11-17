@@ -2,8 +2,10 @@
 titulo: IA y descomposición de vídeo en capas para extraer sprites (qué sirve y qué no)
 plataforma: [General]
 categoria: [extraccion]
-tags: [ia, segmentacion, sam2, rembg, isnet-anime, marionette, sprite-from-sprite, deformable-sprites, omnimatte, propainter]
+tags: [arquitectura, extraccion, sprites]
 estado: borrador
+comprobado: pc
+comprobado_en: "parcial: rembg y flujo óptico en el proyecto Extractor"
 fecha: 2026-10-22
 fuentes: [proyecto Extractor (pruebas con rembg/isnet-anime y flujo óptico DIS), MarioNette (NeurIPS 2021), Sprite-from-Sprite (SIGGRAPH Asia 2022), Deformable Sprites (CVPR 2022), Generative Omnimatte (CVPR 2025), SAM 2 (ICLR 2025), ProPainter (ICCV 2023)]
 ---

@@ -2,8 +2,9 @@
 titulo: Lectura de mando en SNES (protocolo serie)
 plataforma: [SNES]
 categoria: [perifericos]
-tags: [mando, controller, lectura-automatica, io, protocolo, registros]
+tags: [mando, depuracion, registros]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://snes.nesdev.org/wiki/Controller_reading]
 ---

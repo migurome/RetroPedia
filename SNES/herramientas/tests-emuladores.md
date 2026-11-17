@@ -2,8 +2,9 @@
 titulo: ROMs de test para verificar precisión de emuladores de SNES
 plataforma: [SNES]
 categoria: [herramientas]
-tags: [test-roms, emuladores, precision, cpu, ppu, mando]
+tags: [emuladores, matematicas, ppu, mando]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://snes.nesdev.org/wiki/Emulator_tests]
 ---

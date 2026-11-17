@@ -2,8 +2,10 @@
 titulo: Transcribir chiptune (Game Boy) desde audio grabado sin oírlo
 plataforma: [General]
 categoria: [sonido]
-tags: [analisis, transcripcion, nnls, espectrograma, game-boy, chiptune, python]
+tags: [referencia, audio, extraccion, psg, herramientas]
 estado: borrador
+comprobado: pc
+comprobado_en: "experimentos propios, port de Super Smash Land"
 fecha: 2026-10-25
 fuentes: [experimentos propios con versus.ogg de Super Smash Land (musica_fm/herramientas)]
 ---

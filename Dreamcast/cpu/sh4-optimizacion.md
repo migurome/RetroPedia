@@ -2,8 +2,9 @@
 titulo: Optimización del SH-4 — caché, store queues, alineación, ABI, FIPR/FTRV y GCC
 plataforma: [Dreamcast]
 categoria: [cpu]
-tags: [sh4, optimizacion, cache, store-queues, pref, movca, alineacion, abi, fpu, fipr, ftrv, fsrra, sh4zam, gcc]
+tags: [sh4, optimizacion, dma, toolchain, vram]
 estado: borrador
+comprobado: no
 fecha: 2026-10-30
 fuentes: [https://mc.pp.se/dc/cpu.html, https://www.dreamcast.wiki/Useful_programming_tips, https://www.dreamcast.wiki/GCC-SH4_tips, https://www.dreamcast.wiki/Fast_SH4_Vertex_Processing, https://www.dreamcast.wiki/SH4_FTRV_Optimizations, https://www.dreamcast.wiki/SH4_FIPR_Optimizations, https://www.dreamcast.wiki/Efficient_usage_of_the_Dreamcast_RAM, environ.sh de KOS]
 ---

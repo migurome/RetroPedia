@@ -2,8 +2,9 @@
 titulo: Extender un valor de 8 bits a 16 bits en Z80
 plataforma: [MegaDrive]
 categoria: [cpu]
-tags: [z80, ensamblador, aritmetica, signo, 8-bit, 16-bit]
+tags: [z80, asm, matematicas]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://plutiedev.com/z80-extend-8bit-to-16bit]
 ---

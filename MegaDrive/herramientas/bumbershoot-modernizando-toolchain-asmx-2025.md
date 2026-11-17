@@ -2,8 +2,9 @@
 titulo: Bumbershoot Software — modernizando el toolchain de ASMX en 2025 (INCBIN, RORG/REND, smdfix)
 plataforma: [MegaDrive]
 categoria: [herramientas]
-tags: [bumbershoot, asmx, z80, incbin, makefile, smdfix, toolchain, migracion]
+tags: [asm, z80, toolchain, rom, port]
 estado: borrador
+comprobado: no
 fecha: 2026-07-24
 fuentes: [https://bumbershootsoft.wordpress.com/2025/05/31/polishing-the-improvised-genesis-toolchain/]
 ---

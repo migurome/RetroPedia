@@ -2,8 +2,9 @@
 titulo: Uso del rango $A130xx
 plataforma: [MegaDrive]
 categoria: [memoria]
-tags: [a130xx, time-signal, mapper, eeprom, cartucho]
+tags: [memoria, rom]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://plutiedev.com/a130xx-usage]
 ---

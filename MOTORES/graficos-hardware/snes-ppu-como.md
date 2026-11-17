@@ -2,8 +2,9 @@
 titulo: Cómo funciona el sistema gráfico de la SNES (PPU1/PPU2)
 plataforma: [General]
 categoria: [graficos-hardware]
-tags: [snes, ppu, vram, sram, oam, cgram, ingenieria-inversa]
+tags: [ppu, vram, memoria, sprites, paletas, historia]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://fabiensanglard.net/snes_ppus_how/index.html]
 ---

@@ -2,8 +2,10 @@
 titulo: SGDK — Tutorial del motor de Sprites
 plataforma: [MegaDrive]
 categoria: [herramientas]
-tags: [sgdk, tutorial, sprites, spr, vdp, recursos, animacion]
+tags: [sgdk, tutorial, sprites, vdp, proceso, animacion]
 estado: borrador
+comprobado: emulador
+comprobado_en: "parcial: solo los casos reales de Super Smash Land MD (BlastEm y FPGA)"
 fecha: 2026-07-21
 fuentes: [https://github.com/Stephane-D/SGDK/wiki/Tuto-Sprites]
 ---

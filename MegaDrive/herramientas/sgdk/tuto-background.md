@@ -2,8 +2,9 @@
 titulo: SGDK — Tutorial de Backgrounds (tiles, mapas y planos)
 plataforma: [MegaDrive]
 categoria: [herramientas]
-tags: [sgdk, tutorial, background, tilemap, vdp, recursos, map, tileset]
+tags: [sgdk, tutorial, tiles, vdp, proceso]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://github.com/Stephane-D/SGDK/wiki/Tuto-Background]
 ---

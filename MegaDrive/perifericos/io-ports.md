@@ -2,8 +2,9 @@
 titulo: Puertos de I/O de la Mega Drive
 plataforma: [MegaDrive]
 categoria: [perifericos]
-tags: [io, puertos, serial, paralelo, registros, interrupcion]
+tags: [registros, depuracion]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://plutiedev.com/io-ports]
 ---

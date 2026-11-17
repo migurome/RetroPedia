@@ -2,8 +2,9 @@
 titulo: Sumar y restar un valor de 8 bits a uno de 16 bits en Z80
 plataforma: [MegaDrive]
 categoria: [cpu]
-tags: [z80, ensamblador, aritmetica, signo, 8-bit, 16-bit]
+tags: [z80, asm, matematicas]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://plutiedev.com/z80-add-8bit-to-16bit]
 ---

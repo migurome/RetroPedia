@@ -2,8 +2,9 @@
 titulo: Texturas del PVR — formatos, twiddling, VQ, paletas de 4/8 bpp y modo sprite
 plataforma: [Dreamcast]
 categoria: [graficos]
-tags: [powervr, texturas, twiddled, vq, paletas, pal4bpp, pal8bpp, mipmaps, strided, sprites, spritesheet, texconv, kmg]
+tags: [powervr, paletas, vram, sprites, formatos]
 estado: borrador
+comprobado: no
 fecha: 2026-10-30
 fuentes: [https://www.dreamcast.wiki/Texture_Formats, https://www.dreamcast.wiki/Twiddling, https://www.dreamcast.wiki/Paletted_Textures, https://www.dreamcast.wiki/PVR_Spritesheets, https://mc.pp.se/dc/pvr.html, cabeceras de KOS (dc/pvr.h, pvr/pvr_pal.h, pvr/pvr_txr.h)]
 ---

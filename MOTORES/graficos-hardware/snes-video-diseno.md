@@ -2,8 +2,9 @@
 titulo: Diseñando el sistema de vídeo de la SNES
 plataforma: [General]
 categoria: [graficos-hardware]
-tags: [snes, ntsc, pal, crt, video-timing, overscan, modo-alta-resolucion]
+tags: [interrupciones, vdp]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://fabiensanglard.net/snes_video/index.html]
 ---

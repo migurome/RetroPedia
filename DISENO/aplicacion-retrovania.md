@@ -2,8 +2,9 @@
 titulo: Diseño de salas para Retrovania — métricas reales, procedimiento y checklist
 plataforma: [MegaDrive]
 categoria: [diseno]
-tags: [retrovania, md-engine, metricas, checklist, procedimiento]
+tags: [diseno, md-engine, proceso]
 estado: borrador
+comprobado: no
 fecha: 2026-10-15
 fuentes:
   - retrovania-generator/lib/actors.js   # JUMP 330, DOUBLE_JUMP 300, WALL_JUMP 300/110, GRACE 4

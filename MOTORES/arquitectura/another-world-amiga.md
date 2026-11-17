@@ -2,8 +2,9 @@
 titulo: Another World en Amiga 500 - Blitter, bitplanes y renderizado de polígonos
 plataforma: [General]
 categoria: [arquitectura]
-tags: [another-world, amiga-500, blitter, bitplanes, poligonos-2d, motorola-68000]
+tags: [arquitectura, historia, tiles, 68000]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://fabiensanglard.net/another_world_polygons_amiga500/index.html]
 ---

@@ -2,8 +2,9 @@
 titulo: Cabecera de la ROM
 plataforma: [MegaDrive]
 categoria: [memoria]
-tags: [rom-header, tmss, checksum, region, sram]
+tags: [rom, arranque, interrupciones, memoria]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://plutiedev.com/rom-header]
 ---

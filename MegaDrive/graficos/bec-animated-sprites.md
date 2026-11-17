@@ -2,8 +2,9 @@
 titulo: Animación de sprites — enfoque Big Evil Corporation
 plataforma: [MegaDrive]
 categoria: [graficos]
-tags: [bigevilcorporation, tanglewood, sprites, animacion, vram, dma]
+tags: [sprites, animacion, vram, dma]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://blog.bigevilcorporation.co.uk/2012/05/05/sega-megadrive-8-animated-sprites/]
 ---

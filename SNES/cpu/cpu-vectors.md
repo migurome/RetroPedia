@@ -2,8 +2,9 @@
 titulo: Vectores de interrupción y reset del 65816 en SNES
 plataforma: [SNES]
 categoria: [cpu]
-tags: [cpu, interrupciones, vectores, reset, nmi, irq]
+tags: [interrupciones, registros, arranque]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://snes.nesdev.org/wiki/CPU_vectors]
 ---

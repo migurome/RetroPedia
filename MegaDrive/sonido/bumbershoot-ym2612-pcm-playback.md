@@ -2,8 +2,9 @@
 titulo: Reproducción de PCM por el YM2612 con temporización por ciclos (Bumbershoot)
 plataforma: [MegaDrive]
 categoria: [sonido]
-tags: [ym2612, dac, pcm, z80, bankswitching, timing, ciclos]
+tags: [fm, audio, z80, memoria, interrupciones, optimizacion]
 estado: borrador
+comprobado: no
 fecha: 2026-07-24
 fuentes: [https://bumbershootsoft.wordpress.com/2018/04/01/genesis-digital-playback/]
 ---

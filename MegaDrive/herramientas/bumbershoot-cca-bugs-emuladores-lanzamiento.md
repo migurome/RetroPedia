@@ -2,8 +2,9 @@
 titulo: Bugs de compatibilidad entre emuladores detectados al lanzar CCA (Genesis)
 plataforma: [MegaDrive]
 categoria: [herramientas]
-tags: [emuladores, kega-fusion, exodus, dma, z80, mando, joypad, compatibilidad, release]
+tags: [emuladores, dma, z80, mando, port, proceso]
 estado: borrador
+comprobado: no
 fecha: 2026-07-24
 fuentes: [https://bumbershootsoft.wordpress.com/2018/04/29/release-the-cyclic-cellular-automaton-for-the-sega-genesis-mega-drive/]
 ---

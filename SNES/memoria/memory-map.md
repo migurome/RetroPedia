@@ -2,8 +2,9 @@
 titulo: Mapa de memoria (LoROM / HiROM / ExHiROM)
 plataforma: [SNES]
 categoria: [memoria]
-tags: [mapa-memoria, lorom, hirom, exhirom, bancos, direccionamiento]
+tags: [memoria, 68000]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://snes.nesdev.org/wiki/Memory_map]
 ---

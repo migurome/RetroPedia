@@ -2,8 +2,10 @@
 titulo: Portar un juego de Game Maker a una consola retro (caso Super Smash Land → Mega Drive)
 plataforma: [General, MegaDrive]
 categoria: [arquitectura]
-tags: [port, game-maker, gml, punto-fijo, sprites, escenarios, sonido, pruebas, md-engine, sgdk, ia]
+tags: [port, diseno, formatos, matematicas, sprites, scroll, audio, depuracion, md-engine, sgdk, arquitectura]
 estado: borrador
+comprobado: emulador
+comprobado_en: "BlastEm y emulador WASM de MD Engine, port de Super Smash Land B001-B040"
 fecha: 2026-10-23
 fuentes: [port de Super Smash Land (Game Maker 8, 4x sobre 160x144) a Mega Drive con SGDK y MD Engine 1.1.0, builds B001-B040; PLAN_PORT_MEGADRIVE.md del proyecto]
 ---

@@ -2,8 +2,9 @@
 titulo: Control de LEDs en Mega CD
 plataforma: [MegaDrive]
 categoria: [avanzado]
-tags: [mega-cd, leds, sub-cpu, bios, cdsubctrl]
+tags: [perifericos, arranque]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://plutiedev.com/megacd-leds]
 ---

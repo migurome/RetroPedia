@@ -2,8 +2,9 @@
 titulo: Problemas de hardware conocidos
 plataforma: [MegaDrive]
 categoria: [memoria]
-tags: [bugs-hardware, revisiones, dma, ym2612, emulacion]
+tags: [depuracion, dma, fm, emuladores]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://plutiedev.com/hardware-issues]
 ---

@@ -2,8 +2,9 @@
 titulo: Manual de desarrollo oficial de Nintendo para SNES
 plataforma: [SNES]
 categoria: [herramientas]
-tags: [documentacion-oficial, nintendo, manual, archive-org, historia]
+tags: [referencia, historia]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://snes.nesdev.org/wiki/SNES_Development_Manual]
 ---

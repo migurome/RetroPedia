@@ -2,3 +2,12 @@
 Thumbs.db
 *.tmp
 *.bak
+
+# Salidas de compilar snippets/
+snippets/**/out/
+snippets/**/*.o
+snippets/**/*.elf
+snippets/**/sprite_tex.h
+snippets/**/src/boot/
+snippets/**/res/*.h
+snippets/**/res/*.rs

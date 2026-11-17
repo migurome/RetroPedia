@@ -2,8 +2,9 @@
 titulo: Interrupciones del VDP y externas (VInt, HInt, external)
 plataforma: [MegaDrive]
 categoria: [graficos]
-tags: [interrupciones, vdp, vblank, hblank, vint, hint, segaretro, referencia-indirecta]
+tags: [interrupciones, vdp, referencia]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://segaretro.org/Category:Mega_Drive_technical_information, https://segaretro.org/images/1/18/GenesisTechnicalOverview.pdf]
 ---

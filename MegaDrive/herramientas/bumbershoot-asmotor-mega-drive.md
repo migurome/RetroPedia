@@ -2,8 +2,9 @@
 titulo: Bumbershoot Software — probando ASMotor para Mega Drive (2026)
 plataforma: [MegaDrive]
 categoria: [herramientas]
-tags: [bumbershoot, asmotor, xlink, wla-dx, asmx, seccion, linker, toolchain]
+tags: [asm, toolchain]
 estado: borrador
+comprobado: no
 fecha: 2026-07-24
 fuentes: [https://bumbershootsoft.wordpress.com/2026/04/11/mega-drive-development-with-asmotor/]
 ---

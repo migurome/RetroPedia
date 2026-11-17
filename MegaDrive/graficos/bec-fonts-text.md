@@ -2,8 +2,9 @@
 titulo: Big Evil Corporation — fuentes y renderizado de texto (serie Tanglewood)
 plataforma: [MegaDrive]
 categoria: [graficos]
-tags: [bigevilcorporation, tanglewood, fuentes, texto, ascii, plano-a, vdp]
+tags: [tiles, vdp]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://blog.bigevilcorporation.co.uk/2012/04/09/sega-megadrive-5-fonts-and-text/]
 ---

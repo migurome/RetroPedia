@@ -2,8 +2,9 @@
 titulo: MD Engine — overview (motor visual para Mega Drive)
 plataforma: [MegaDrive]
 categoria: [herramientas]
-tags: [md-engine, tbce, sgdk, electron, motor-visual, eventos, steam]
+tags: [md-engine, audio, sgdk, arquitectura]
 estado: borrador
+comprobado: no
 fecha: 2026-10-15
 fuentes: [análisis directo de MD Engine 1.0.9 instalado vía Steam (app.asar, plantillas, código C del motor)]
 ---

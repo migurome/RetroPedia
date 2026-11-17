@@ -2,8 +2,9 @@
 titulo: Dibujar formas con las ventanas (windows) de la PPU
 plataforma: [SNES]
 categoria: [graficos]
-tags: [ppu, ventanas, windows, hdma, mascaras, efectos]
+tags: [ppu, efectos, dma, colisiones]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://snes.nesdev.org/wiki/Drawing_window_shapes]
 ---

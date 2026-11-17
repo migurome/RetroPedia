@@ -2,8 +2,10 @@
 titulo: ngdevkit en Windows (MSYS2) — instalación, build de la ROM y GnGeo
 plataforma: [NeoGeo]
 categoria: [herramientas]
-tags: [ngdevkit, msys2, ucrt64, gcc, sdcc, gngeo, romtool, nullbios, nullsound, pruebas]
+tags: [ngdevkit, toolchain, rom, arranque, audio, depuracion]
 estado: revisado
+comprobado: emulador
+comprobado_en: "GnGeo y ngdevkit 0.5, RickAndMorty/neogeo"
 fecha: 2026-10-23
 fuentes: [README y README-msys2 de ngdevkit, repositorio https://dciabrin.net/msys2-ngdevkit/, ngdevkit-examples (00-template, 03-sprite-animation), código de GnGeo (rama ngdevkit), proyecto RickAndMorty/neogeo]
 ---

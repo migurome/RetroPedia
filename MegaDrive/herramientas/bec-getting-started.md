@@ -2,8 +2,9 @@
 titulo: Big Evil Corporation — puesta en marcha del toolchain (serie Tanglewood)
 plataforma: [MegaDrive]
 categoria: [herramientas]
-tags: [bigevilcorporation, tanglewood, asm68k, mess, toolchain, ensamblador]
+tags: [asm, emuladores, toolchain]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://blog.bigevilcorporation.co.uk/2012/02/28/sega-megadrive-1-getting-started/]
 ---

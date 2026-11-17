@@ -2,8 +2,9 @@
 titulo: "Bumbershoot Software — variaciones sobre el ABI/convención de llamada del 68000"
 plataforma: [MegaDrive]
 categoria: [cpu]
-tags: [bumbershoot, 68000, abi, calling-convention, stack, movem, link, unlk, gcc]
+tags: [68000, toolchain, memoria, sprites]
 estado: borrador
+comprobado: no
 fecha: 2026-07-24
 fuentes: [https://bumbershootsoft.wordpress.com/2018/03/10/variations-on-the-68000-abi/]
 ---

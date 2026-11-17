@@ -2,8 +2,9 @@
 titulo: Uso de SGDK — estructura de proyecto y build
 plataforma: [MegaDrive]
 categoria: [herramientas]
-tags: [sgdk, makefile, rescomp, build, proyecto]
+tags: [sgdk, toolchain, caso-practico]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://github.com/Stephane-D/SGDK/wiki/SGDK-Usage]
 ---

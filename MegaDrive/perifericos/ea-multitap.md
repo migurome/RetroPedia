@@ -2,8 +2,9 @@
 titulo: EA Multitap (4 Way Play)
 plataforma: [MegaDrive]
 categoria: [perifericos]
-tags: [multitap, ea, 4-way-play, io, multijugador]
+tags: [mando, registros]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://plutiedev.com/ea-multitap]
 ---

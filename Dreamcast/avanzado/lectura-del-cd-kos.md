@@ -2,8 +2,10 @@
 titulo: Leer archivos del CD con KOS — el cuelgue del modo stream de fs_iso9660
 plataforma: [Dreamcast]
 categoria: [avanzado]
-tags: [kos, fs_iso9660, fs_read, cdrom, stream, dma, gd-rom, flycast]
+tags: [kos, arranque, audio, dma, emuladores]
 estado: revisado
+comprobado: emulador
+comprobado_en: "Flycast 2.7, hyperdbz-dreamcast-port build 2.020"
 fecha: 2026-10-31
 fuentes: [kernel/arch/dreamcast/fs/fs_iso9660.c y hardware/cdrom.c de KOS (DreamSDK R4), proyecto hyperdbz-dreamcast-port (build 2.020)]
 ---

@@ -2,8 +2,9 @@
 titulo: Structs vs. registros — dónde guardar el "this" en 65816
 plataforma: [SNES]
 categoria: [cpu]
-tags: [cpu, optimizacion, structs, registros, arquitectura]
+tags: [optimizacion, memoria, registros, arquitectura]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://snes.nesdev.org/wiki/Struct_register_tradeoffs]
 ---

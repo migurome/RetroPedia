@@ -2,8 +2,9 @@
 titulo: Referencia de comandos del VDP
 plataforma: [MegaDrive]
 categoria: [graficos]
-tags: [vdp, referencia, registros, vram, cram, vsram, dma]
+tags: [vdp, referencia, registros, vram, paletas, scroll, dma]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://plutiedev.com/vdp-commands]
 ---

@@ -2,8 +2,9 @@
 titulo: Conector de cartucho de SNES (62 pines)
 plataforma: [SNES]
 categoria: [perifericos]
-tags: [pinout, cartucho, hardware, conector, cic]
+tags: [rom, referencia]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://snes.nesdev.org/wiki/Cartridge_connector]
 ---

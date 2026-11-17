@@ -2,8 +2,9 @@
 titulo: Disassemblies de Sonic Retro (código fuente real de juegos comerciales)
 plataforma: [MegaDrive]
 categoria: [herramientas]
-tags: [sonicretro, disassembly, sonic, github, codigo-real, referencia-indirecta]
+tags: [asm, historia, caso-practico, referencia]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://info.sonicretro.org/Disassemblies, https://github.com/orgs/sonicretro/repositories]
 ---

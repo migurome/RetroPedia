@@ -2,8 +2,10 @@
 titulo: Registro de partida — reproducir en PC lo que pasó en la consola, con la VMU o códigos QR
 plataforma: [Dreamcast]
 categoria: [herramientas]
-tags: [depuracion, replay, determinismo, qr, base45, vmu, telemetria, gdemu, flycast]
+tags: [depuracion, matematicas, memoria, arranque, emuladores]
 estado: revisado
+comprobado: emulador
+comprobado_en: "Flycast 2.7, hyperdbz-dreamcast-port"
 fecha: 2026-10-31
 fuentes: [ISO/IEC 18004 (QR), RFC 9285 (base45), implementación de referencia de Project Nayuki, zxing-cpp, proyecto hyperdbz-dreamcast-port (dc/proto/src/replay.c, qr.c, tools/replay.py)]
 ---

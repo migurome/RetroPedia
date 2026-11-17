@@ -2,13 +2,28 @@
 titulo: Neo Geo (AES / MVS) — overview
 plataforma: [NeoGeo]
 categoria: [general]
-tags: [hardware, overview, ngdevkit]
+tags: [referencia, ngdevkit]
 estado: borrador
+comprobado: emulador
+comprobado_en: "GnGeo y ngdevkit 0.5, RickAndMorty/neogeo; solo lo marcado con ✔"
 fecha: 2026-10-23
 fuentes: [ngdevkit 0.5 (cabeceras, crt0, linkscript), ngdevkit-examples, proyecto RickAndMorty/neogeo]
 ---
 
 # Neo Geo (AES / MVS)
+
+## Empieza aquí
+
+[Límites y presupuestos](LIMITES.md) · [Síntomas y causas](SINTOMAS.md)
+
+| Si vas a... | Lee |
+|---|---|
+| Instalar el entorno y compilar | [ngdevkit en Windows](herramientas/ngdevkit-windows.md) |
+| Dibujar y animar sprites | [sprites SCB](graficos/sprites-scb.md) |
+| Convertir gráficos | [ROM C, ROM S y paletas](graficos/rom-c-s-y-paletas.md) |
+| Ver un port de principio a fin | [caso SimuLockdown](herramientas/caso-practico-simulockdown.md) |
+
+Aún no hay entradas de sonido.
 
 ## Resumen de hardware
 

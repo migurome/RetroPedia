@@ -2,8 +2,9 @@
 titulo: Offset-per-tile
 plataforma: [SNES]
 categoria: [graficos]
-tags: [ppu, offset-per-tile, scroll, bg3, modos-2-4-6]
+tags: [ppu, scroll, tiles]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://snes.nesdev.org/wiki/Offset-per-tile]
 ---

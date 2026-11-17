@@ -2,8 +2,9 @@
 titulo: Mandos de Mega Drive (3 y 6 botones)
 plataforma: [MegaDrive]
 categoria: [perifericos]
-tags: [mando, controller, joypad, io, 6-botones, sacbrldu]
+tags: [mando, registros]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://plutiedev.com/controllers]
 ---

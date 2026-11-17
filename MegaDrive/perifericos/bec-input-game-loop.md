@@ -2,8 +2,9 @@
 titulo: Lectura de mando y bucle principal (game loop) — enfoque Big Evil Corporation
 plataforma: [MegaDrive]
 categoria: [perifericos]
-tags: [bigevilcorporation, tanglewood, mando, game-loop, vblank, interrupciones]
+tags: [mando, arquitectura, interrupciones]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://blog.bigevilcorporation.co.uk/2012/04/30/sega-megadrive-7-gamepad-input-and-the-game-loop/]
 ---

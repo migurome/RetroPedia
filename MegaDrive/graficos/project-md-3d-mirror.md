@@ -2,8 +2,9 @@
 titulo: Efecto de espejo 3D de Project MD
 plataforma: [MegaDrive]
 categoria: [graficos]
-tags: [efecto, pseudo-3d, prioridad, sprites, scroll, tecnica-visual]
+tags: [efectos, sprites, scroll]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://plutiedev.com/mirror/project-md-3d-mirror (mirror de un artículo original de Sik en Gamasutra, publicado el 2016-02-02: https://www.gamasutra.com/blogs/JavierDegirolmo/20160202/264791/Project_MDs_3D_mirror_effect.php)]
 ---

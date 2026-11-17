@@ -2,8 +2,9 @@
 titulo: Operaciones comunes del YM2612
 plataforma: [MegaDrive]
 categoria: [sonido]
-tags: [ym2612, fm, volumen, panning, pcm, registros]
+tags: [fm, audio, registros]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://plutiedev.com/ym2612-operations]
 ---

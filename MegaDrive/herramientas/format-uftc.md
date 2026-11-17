@@ -2,8 +2,9 @@
 titulo: Formato de compresión UFTC
 plataforma: [MegaDrive]
 categoria: [herramientas]
-tags: [compresion, uftc, tiles, mdtools, homebrew]
+tags: [formatos, tiles, audio, caso-practico]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://plutiedev.com/format-uftc]
 ---

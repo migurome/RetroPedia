@@ -2,8 +2,9 @@
 titulo: Notas de hardware de Kabuto (VDP en profundidad)
 plataforma: [MegaDrive]
 categoria: [memoria]
-tags: [vdp, timing, dma, ym2612, debug-register, overdrive2]
+tags: [vdp, interrupciones, dma, fm, depuracion, historia]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://plutiedev.com/mirror/kabuto-hardware-notes (mirror alojado por plutiedev.com de un documento de terceros; autor original: Kabuto/TiTAN, versión 1.5, escrito durante el desarrollo de la demo Overdrive 2)]
 ---

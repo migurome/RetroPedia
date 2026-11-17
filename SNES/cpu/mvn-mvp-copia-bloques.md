@@ -2,8 +2,9 @@
 titulo: MVN y MVP — copia de bloques de memoria en 65816
 plataforma: [SNES]
 categoria: [cpu]
-tags: [cpu, mvn, mvp, copia-memoria, ensamblador]
+tags: [dma, asm]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://snes.nesdev.org/wiki/MVN_and_MVP_block_copy]
 ---

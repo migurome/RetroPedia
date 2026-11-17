@@ -2,8 +2,9 @@
 titulo: Depurando el AtGames Firecore — bug de tono/pitch de audio (TANGLEWOOD)
 plataforma: [MegaDrive]
 categoria: [memoria]
-tags: [bigevilcorporation, tanglewood, atgames, firecore, clones, audio, debugging]
+tags: [port, audio, depuracion]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://blog.bigevilcorporation.co.uk/2018/04/18/taming-the-atgames-firecore/]
 ---

@@ -2,8 +2,9 @@
 titulo: Usando el Z80 en la Mega Drive
 plataforma: [MegaDrive]
 categoria: [cpu]
-tags: [z80, 68000, sonido, ym2612, dma, comunicacion-cpu]
+tags: [z80, 68000, audio, fm, dma]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://plutiedev.com/using-the-z80]
 ---

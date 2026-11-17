@@ -2,8 +2,9 @@
 titulo: HDMA — ejemplos prácticos
 plataforma: [SNES]
 categoria: [graficos]
-tags: [hdma, dma, ppu, registros, timing, tablas]
+tags: [dma, ppu, registros, interrupciones, matematicas]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://snes.nesdev.org/wiki/HDMA_examples]
 ---

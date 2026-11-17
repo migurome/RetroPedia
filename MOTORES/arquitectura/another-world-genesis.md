@@ -2,8 +2,9 @@
 titulo: Los polígonos de Another World — el port a Sega Genesis / Mega Drive
 plataforma: [General]
 categoria: [arquitectura]
-tags: [another-world, genesis, megadrive, vdp, polígonos-2d, dma]
+tags: [arquitectura, vdp, dma]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://fabiensanglard.net/another_world_polygons_Genesis/index.html]
 ---

@@ -4,6 +4,7 @@ plataforma: [MegaDrive]
 categoria: [graficos]
 tags: [vdp, referencia, sprites, vram, tiles]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://plutiedev.com/sprite-table]
 ---

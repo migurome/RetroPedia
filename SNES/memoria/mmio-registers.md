@@ -2,8 +2,9 @@
 titulo: Registros MMIO del CPU (fuera del PPU)
 plataforma: [SNES]
 categoria: [memoria]
-tags: [mmio, registros, joypad, interrupciones, matematicas]
+tags: [registros, interrupciones, matematicas, mando]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://snes.nesdev.org/wiki/MMIO_registers]
 ---

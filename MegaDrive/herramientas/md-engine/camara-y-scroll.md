@@ -2,8 +2,9 @@
 titulo: MD Engine — cámara, niveles largos con scroll y parallax
 plataforma: [MegaDrive]
 categoria: [herramientas]
-tags: [md-engine, camara, scroll, parallax, deadzone, h32, h40, niveles-largos]
+tags: [md-engine, scroll, diseno, vdp]
 estado: borrador
+comprobado: no
 fecha: 2026-10-15
 fuentes: [definiciones de eventos de MD Engine 1.0.9; plantillas camera-follow, squarebrothers, parallax, visual-novel]
 ---

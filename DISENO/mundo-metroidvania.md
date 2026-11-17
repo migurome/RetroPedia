@@ -2,8 +2,9 @@
 titulo: Diseño de mundo metroidvania — llaves, cerraduras, bucles y backtracking
 plataforma: [General]
 categoria: [diseno]
-tags: [metroidvania, gating, lock-and-key, dependency-graph, atajos, backtracking]
+tags: [diseno]
 estado: borrador
+comprobado: no
 fecha: 2026-10-15
 fuentes:
   - https://bugnet.io/blog/how-to-design-a-metroidvania-map

@@ -2,8 +2,9 @@
 titulo: Tutoriales recomendados para desarrollo en SNES
 plataforma: [SNES]
 categoria: [herramientas]
-tags: [tutoriales, aprendizaje, asm, comunidad, indice]
+tags: [tutorial, asm, referencia]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://snes.nesdev.org/wiki/Tutorials]
 ---

@@ -1,3 +1,14 @@
+---
+titulo: DISENO — diseño de niveles y de mundo
+plataforma: [General]
+categoria: [diseno]
+tags: [diseno, referencia]
+estado: borrador
+comprobado: no
+fecha: 2026-11-06
+fuentes: [resumen de las entradas de esta carpeta]
+---
+
 # DISENO — diseño de niveles y de mundo
 
 Teoría y práctica de diseño de niveles para plataformas 2D y metroidvanias. Leer en este orden:

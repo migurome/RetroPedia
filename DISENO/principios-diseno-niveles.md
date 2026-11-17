@@ -2,8 +2,9 @@
 titulo: Principios de diseño de niveles (teoría base)
 plataforma: [General]
 categoria: [diseno]
-tags: [level-design, kishotenketsu, tutorial, ritmo, riesgo-recompensa]
+tags: [diseno, tutorial]
 estado: borrador
+comprobado: no
 fecha: 2026-10-15
 fuentes:
   - https://80.lv/articles/gdc-ten-principles-for-good-level-design/   # Dan Taylor, GDC 2013

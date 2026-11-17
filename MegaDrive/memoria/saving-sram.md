@@ -2,8 +2,9 @@
 titulo: Guardado en SRAM
 plataforma: [MegaDrive]
 categoria: [memoria]
-tags: [sram, guardado, cabecera-rom, bateria, checksum]
+tags: [memoria, rom]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://plutiedev.com/saving-sram]
 ---

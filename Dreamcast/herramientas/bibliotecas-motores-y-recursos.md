@@ -2,8 +2,9 @@
 titulo: Bibliotecas, motores y recursos — kos-ports, GLdc, Simulant, SH4ZAM y comunidad
 plataforma: [Dreamcast]
 categoria: [herramientas]
-tags: [kos-ports, gldc, aldc, simulant, sh4zam, raylib, sdl, dolmexica, openbor, recursos, comunidad]
+tags: [kos, powervr, mugen, proceso, referencia]
 estado: borrador
+comprobado: no
 fecha: 2026-10-30
 fuentes: [https://www.dreamcast.wiki/Engine_%26_Library, https://www.dreamcast.wiki/Graphics_APIs, https://www.dreamcast.wiki/GLdc, https://github.com/Kazade/GLdc, https://gitlab.com/simulant/simulant, https://github.com/KallistiOS/kos-ports, https://github.com/dreamcastdevs/awesome-dreamcast, https://github.com/dreamcastdevs/dreamcast_tutorial, https://dreamsdk.org/, https://mc.pp.se/dc/, https://dreamcastdev.blogspot.com/]
 ---
@@ -58,7 +59,7 @@ Para añadir un port, la recomendación es copiar la estructura de uno existente
 | Motor | Qué es |
 |---|---|
 | **Simulant** | motor 2D/3D de propósito general para Linux, Android y Dreamcast (LGPLv2.1, `gitlab.com/simulant/simulant`) |
-| **DolmexicaInfinite** | motor tipo MUGEN para juegos de lucha (CaptainDreamcast). **Relevante para [MOTORES/mugen](../../MOTORES/mugen/cns-compilacion.md)**: es otra forma de llevar contenido MUGEN a la consola |
+| **DolmexicaInfinite** | intérprete de MUGEN para juegos de lucha (CaptainDreamcast). Es otra forma de llevar contenido MUGEN a la consola: ver [su entrada](../../MOTORES/mugen/dolmexica-infinite.md) |
 | **DreamBOR** | port no oficial de OpenBOR (beat'em ups), mejorado por Ian Micheal |
 | **Antiruins** | motor 2D mínimo con scripting en Lua |
 | **nuQuake**, **RADquake** | motores Quake |

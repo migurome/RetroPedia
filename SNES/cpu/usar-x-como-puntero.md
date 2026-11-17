@@ -2,8 +2,9 @@
 titulo: Usar X (o Y) como puntero de 16 bits en 65816
 plataforma: [SNES]
 categoria: [cpu]
-tags: [cpu, optimizacion, punteros, direct-page, ensamblador]
+tags: [optimizacion, memoria, 65816, asm]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://snes.nesdev.org/wiki/Using_X_as_a_pointer]
 ---

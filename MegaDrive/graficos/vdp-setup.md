@@ -2,8 +2,9 @@
 titulo: Configuración inicial del VDP
 plataforma: [MegaDrive]
 categoria: [graficos]
-tags: [vdp, inicializacion, registros, vram, cram, vsram]
+tags: [vdp, arranque, registros, vram, paletas, scroll]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://plutiedev.com/vdp-setup]
 ---

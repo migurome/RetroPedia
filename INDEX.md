@@ -10,6 +10,12 @@ Contenido inicial extraído de [plutiedev.com](https://plutiedev.com) (2026-07-2
 - **[Reglas comunes a todo proyecto](GLOSARIO/reglas-comunes-de-proyecto.md)** — RetroPedia como consulta y destino de los avances reales, herramientas compartidas en `Desktop\Tools`, `ROADMAP.md` con fases, `DIARIO.md` de builds, nombre de build `Nombre.[Fase].[Build].ext` visible en el juego, savestate como log, QR en hardware real, marcador con Start, regresión con partidas de referencia y script único de publicación, pantalla de cuelgue con QR; tabla de ideas pendientes. Se aplican desde el primer día (skill `nuevo-proyecto-retro`).
 - **[Depuración avanzada dentro del juego](GLOSARIO/depuracion-avanzada-en-el-juego.md)** — flight recorder, invariantes de estado, cápsula de fallo, replay diferencial con huellas por subsistema, telemetría en pantalla, watchpoints virtuales, canarios de memoria, perfilado por percentiles, comparación visual, huella del hardware y monitor de anomalías; priorización y flujo de depuración sin intervención (pendiente de implementar).
 
+- [Herramientas compartidas](GLOSARIO/herramientas-compartidas.md) — inventario de `Desktop\Tools` y SDK: versión, para qué, comando típico y limitaciones
+- [Registro de decisiones de proyectos](GLOSARIO/decisiones-de-proyectos.md) — qué se eligió, qué se descartó y por qué
+- [Comparativa entre plataformas](GLOSARIO/comparativa-plataformas.md) — parallax, transparencias, paletas y sprites en cada consola, para demakes
+- [Snippets](snippets/README.md) — código mínimo que compila, con su toolchain
+- [Etiquetas](ETIQUETAS.md) — lista cerrada del campo `tags:`
+
 ### GLOSARIO/ — fundamentos de programación de juegos
 
 - [Números en punto fijo](GLOSARIO/fixed-point.md)
@@ -37,6 +43,8 @@ Contenido inicial extraído de [plutiedev.com](https://plutiedev.com) (2026-07-2
 - [Dreamcast/](Dreamcast/README.md)
 
 ### Mega Drive / Genesis
+
+**Empieza aquí:** [qué leer según la tarea](MegaDrive/README.md) · [límites](MegaDrive/LIMITES.md) · [síntomas](MegaDrive/SINTOMAS.md)
 
 **cpu/**
 - [Motorola 68000 — instrucciones y modos de direccionamiento (base)](MegaDrive/cpu/68000-instrucciones-modos-direccionamiento.md)
@@ -207,6 +215,8 @@ Contenido inicial extraído de [plutiedev.com](https://plutiedev.com) (2026-07-2
 
 ### SNES
 
+**Empieza aquí:** [qué leer según la tarea](SNES/README.md) · [límites](SNES/LIMITES.md) · [síntomas](SNES/SINTOMAS.md)
+
 Contenido extraído de la [SNESdev Wiki](https://snes.nesdev.org/wiki/SNESdev_Wiki) (2026-07-21), `estado: borrador`. No se documentaron los pinouts eléctricos de chips internos (ver [`SNES/README.md`](SNES/README.md)) ni varias páginas que resultaron ser stubs sin contenido técnico real (65C816 general, Variable_width_fonts, DSP_Expansion, Super_FX, CX4).
 
 **cpu/**
@@ -282,6 +292,8 @@ Contenido extraído de la [SNESdev Wiki](https://snes.nesdev.org/wiki/SNESdev_Wi
 
 ### Neo Geo
 
+**Empieza aquí:** [qué leer según la tarea](NeoGeo/README.md) · [límites](NeoGeo/LIMITES.md) · [síntomas](NeoGeo/SINTOMAS.md)
+
 Contenido de un proyecto real (`RickAndMorty/neogeo`, 2026-10-23): ngdevkit 0.5 en Windows/MSYS2 y ROM probada en GnGeo. Las entradas prácticas están en `estado: revisado`. La ficha general es `borrador`: los límites de hardware que no se midieron van marcados como pendientes.
 
 - [Neo Geo — overview](NeoGeo/README.md) — hardware, ROM del cartucho y qué está comprobado
@@ -296,11 +308,14 @@ Contenido de un proyecto real (`RickAndMorty/neogeo`, 2026-10-23): ngdevkit 0.5 
 
 ### Dreamcast
 
+**Empieza aquí:** [qué leer según la tarea](Dreamcast/README.md) · [límites](Dreamcast/LIMITES.md) · [síntomas](Dreamcast/SINTOMAS.md)
+
 Contenido de un proyecto real (`hyperdbz-dreamcast-port`, port de un juego de lucha de MUGEN; 2026-10-30): KallistiOS con DreamSDK R4 en Windows y pruebas en Flycast 2.7. Las cifras de CPU y de carga salen del emulador y están pendientes de confirmar en una consola con GDEMU.
 
 Segunda tanda (2026-10-30, `estado: borrador`): documentación de la comunidad. Incluye [dreamcast.wiki](https://www.dreamcast.wiki/Development), la [referencia de hardware de Marcus Comstedt](https://mc.pp.se/dc/), los repositorios de KallistiOS, kos-ports y GLdc, y [awesome-dreamcast](https://github.com/dreamcastdevs/awesome-dreamcast). Los nombres de la API se contrastaron con las cabeceras de KOS de DreamSDK R4. dcemulation.org da 403. El blog dreamcastdev.blogspot.com y los foros generales (r/dreamcast, dreamcast-talk) se descartaron por falta de contenido técnico.
 
 - [Dreamcast — overview](Dreamcast/README.md) — hardware, memoria libre real con KOS y qué está comprobado
+- [Receta: del PNG al sprite en pantalla](Dreamcast/herramientas/receta-png-a-sprite.md) — las piezas encadenadas, con código que compila
 
 **herramientas/**
 - [DreamSDK R4 en Windows — instalación y problemas resueltos](Dreamcast/herramientas/dreamsdk-windows.md) — compilar desde scripts, `DREAMSDK_HOME`, wrappers de `kos-cc`, kos-ports (zlib), rutas con espacios
@@ -333,6 +348,7 @@ Segunda tanda (2026-10-30, `estado: borrador`): documentación de la comunidad. 
 **avanzado/**
 - [Arranque — IP.BIN, 1ST_READ.BIN y syscalls](Dreamcast/avanzado/arranque-ip-bin-y-syscalls.md) — estructura de IP.BIN en `0x8C008000`, regiones, carga en `0x8C010000`, vectores SYSINFO/ROMFONT/FLASHROM/GDROM
 - [Leer archivos del CD con KOS — el cuelgue del modo stream de fs_iso9660](Dreamcast/avanzado/lectura-del-cd-kos.md)
+- [Hilos de KOS — prioridad, envejecimiento y trabajo de fondo](Dreamcast/avanzado/hilos-kos-prioridad.md)
 
 ## Motores — arquitectura y diseño (multiplataforma)
 
@@ -364,14 +380,22 @@ Segunda tanda (2026-10-30, `estado: borrador`): documentación de la comunidad. 
 - [Street Fighter II: Rotating and Scaling](MOTORES/graficos-hardware/sf2-rotacion-escalado.md)
 - [Street Fighter II: Health Bar](MOTORES/graficos-hardware/sf2-health-bar.md)
 
-**mugen/** — motor de lucha MUGEN (Elecbyte), visto para portar sus juegos a consolas (proyecto `hyperdbz-dreamcast-port`)
+**mugen/** — ver la sección [MUGEN](#mugen)
+
+*(No se creó entrada para los "Game Engine Black Books" de Wolfenstein 3D/DOOM: las páginas de fabiensanglard.net son solo anuncios de venta del libro, sin contenido técnico gratuito.)*
+
+## MUGEN
+
+- [MOTORES/mugen/](MOTORES/mugen/README.md) — **mapa de la documentación oficial de Elecbyte (1.0)**, orden de lectura y licencia; motor de lucha visto para portar sus juegos a consolas (proyecto `hyperdbz-dreamcast-port`)
 - [Formatos de MUGEN — SFF (v1/v2), AIR y SND](MOTORES/mugen/formatos-sff-air-snd.md) — cabeceras, RLE8/LZ5/PCX, paletas `.act` invertidas, cajas Clsn, cifras reales
 - [Compilar la lógica CNS de MUGEN — semántica real y trampas](MOTORES/mugen/cns-compilacion.md) ⭐ — `&&`/`||` sin cortocircuito, `:=`, `[State]` sin número, lo que hace el motor por su cuenta (aterrizaje, giro, `elem`), coste medido en Dreamcast
 - [Física y golpes del motor de MUGEN 1.0](MOTORES/mugen/fisica-y-golpes-del-motor.md) ⭐ — orden del tick, rozamiento y aterrizaje, empuje y límites (los helpers no), cámara con tension, HitDef y sus valores por defecto, hitpause frente a hitshake, estados ajenos
 - [Barra de vida (fight.def), fuentes .fnt y asaltos](MOTORES/mugen/barra-de-vida-y-asaltos.md) — formato .fnt, glifos como sprites, `range.x` anclado en a, alfa en el PVR, RoundState 0–4 con intros (`AssertSpecial intro`), poses 180/170
 - [Comandos del .cmd de MUGEN y movimientos del motor](MOTORES/mugen/comandos-y-entrada.md) — sintaxis (`~` `/` `$` `>` `+`), reconocedor con historial, pasos en el mismo tick, `>` cuenta las teclas soltadas, andar/saltar/agacharse los hace el motor
-
-*(No se creó entrada para los "Game Engine Black Books" de Wolfenstein 3D/DOOM: las páginas de fabiensanglard.net son solo anuncios de venta del libro, sin contenido técnico gratuito.)*
+- [Dolmexica Infinite — intérprete de MUGEN para Dreamcast y qué recorta](MOTORES/mugen/dolmexica-infinite.md) — alternativa al motor compilado: funciones que faltan en Dreamcast (after images, sustracción, PalFX), RemapPal y equipos, opciones de carga, kit para generar el CDI; sin probar
+- [Contenido de MUGEN 2002 frente a 1.0](MOTORES/mugen/migrar-contenido-2002-a-1.0.md) — `mugenversion`, `pausetime` + 1, `localcoord` y factor de escala, `volumescale`, bucles de música, pistas de CD
+- [Escenarios de MUGEN](MOTORES/mugen/escenarios-def.md) — grupos del `.def`, elementos `normal`/`anim`/`parallax`/`dummy`, `delta`, fórmulas de parallax, controladores de fondo
+- [Efectos visuales de MUGEN en el PVR de Dreamcast](MOTORES/mugen/efectos-visuales-en-dreamcast.md) — PalFX en el color de vértice, AngleDraw, AfterImage, sombras, RemapPal; probado en Flycast
 
 ## Extracción de assets desde vídeo (ingeniería inversa)
 
@@ -386,6 +410,11 @@ Segunda tanda (2026-10-30, `estado: borrador`): documentación de la comunidad. 
 - [Paletas cerradas y fuentes de texto](EXTRACCION/paleta-y-fuentes.md) — median cut/k-means sin difuminado, `.gpl`, fuentes en mapa de bits *(sin probar aún)*
 - [IA y descomposición de vídeo en capas (qué sirve y qué no)](EXTRACCION/segmentacion-ia-y-descomposicion.md) — SAM 2, ProPainter, rembg/isnet-anime, MarioNette, Sprite-from-Sprite, Deformable Sprites, Omnimatte
 - [Caso práctico — corto pixel art de Rick and Morty en 4K](EXTRACCION/caso-rick-and-morty-pixel.md) — cronología de intentos, cifras reales y dónde están los scripts
+
+- [Receta: de un personaje de MUGEN al disco de Dreamcast](MOTORES/mugen/receta-personaje-a-disco.md) — qué herramienta convierte cada fichero y en qué orden
+- [Sprites obligatorios y grupos recomendados](MOTORES/mugen/sprites-obligatorios-y-grupos.md) — grupos 5000-5072 con sus ejes, y numeración habitual
+- [Storyboards](MOTORES/mugen/storyboards.md) — logo, intros, finales, créditos y game over: secciones, capas y herencia entre escenas
+- [Localización](MOTORES/mugen/localizacion.md) — `Language`, grupos `[xx.Nombre]` y qué no se puede traducir
 
 ## Cómo añadir una entrada al índice
 

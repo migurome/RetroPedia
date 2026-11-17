@@ -2,8 +2,9 @@
 titulo: Técnica de subida "Blargg SPC upload"
 plataforma: [SNES]
 categoria: [sonido]
-tags: [spc700, s-smp, spc, upload, audio, emulacion]
+tags: [spc700, audio, emuladores]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://snes.nesdev.org/wiki/Blargg_SPC_upload]
 ---

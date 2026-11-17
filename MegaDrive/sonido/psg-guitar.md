@@ -2,8 +2,9 @@
 titulo: Guitarra con el PSG
 plataforma: [MegaDrive]
 categoria: [sonido]
-tags: [psg, guitarra, vibrato, eef, envolvente]
+tags: [psg, fm]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://plutiedev.com/psg-guitar]
 ---

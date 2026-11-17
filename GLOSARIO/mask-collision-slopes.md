@@ -2,8 +2,10 @@
 titulo: Colisión con máscaras de píxel en consolas — trapecios y rampas de 1 píxel
 plataforma: [General]
 categoria: [fundamentos]
-tags: [colisiones, mascaras, rampas, slopes, game-maker, port, rendimiento, 68000]
+tags: [colisiones, diseno, port, optimizacion, 68000]
 estado: revisado
+comprobado: emulador
+comprobado_en: "port de Super Smash Land B011-B016"
 fecha: 2026-10-22
 fuentes: [port de Super Smash Land (Game Maker 8) a Mega Drive, B011-B016: tools/stages.py y core/ssb_core.c; scripts/movement_scr.gml del original]
 ---

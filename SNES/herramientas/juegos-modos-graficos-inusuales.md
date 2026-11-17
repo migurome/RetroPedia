@@ -2,8 +2,9 @@
 titulo: Juegos de SNES con modos gráficos inusuales
 plataforma: [SNES]
 categoria: [herramientas]
-tags: [bg-modes, modo-7, hi-res, interlace, offset-per-tile, overscan]
+tags: [ppu, efectos, vdp, scroll]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://snes.nesdev.org/wiki/Uncommon_graphics_mode_games]
 ---

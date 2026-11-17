@@ -2,8 +2,9 @@
 titulo: Re-optimización del CCA en Genesis en 2025 — contar ciclos en serio
 plataforma: [MegaDrive]
 categoria: [cpu]
-tags: [cca, optimizacion, 68000, ciclos, lea, autoincremento, macros, snes, benchmark]
+tags: [optimizacion, 68000, registros, asm]
 estado: borrador
+comprobado: no
 fecha: 2026-07-24
 fuentes: [https://bumbershootsoft.wordpress.com/2025/06/28/re-optimizing-the-cca-on-the-genesis/]
 ---

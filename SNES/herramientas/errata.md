@@ -2,8 +2,9 @@
 titulo: Erratas y quirks conocidos del hardware SNES
 plataforma: [SNES]
 categoria: [herramientas]
-tags: [errata, quirks, bugs-hardware, ppu, dsp, dma, cpu]
+tags: [depuracion, ppu, dma]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://snes.nesdev.org/wiki/Errata]
 ---

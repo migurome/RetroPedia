@@ -2,10 +2,12 @@
 titulo: Depuración avanzada dentro del juego — flight recorder, invariantes, cápsulas de fallo, replay diferencial y otras técnicas
 plataforma: [General]
 categoria: [herramientas]
-tags: [depuracion, flight-recorder, caja-negra, invariantes, assert, crash-capsule, replay, regresion, determinismo, watchpoints, perfilado, memoria, canarios, telemetria, hardware-real, qr]
+tags: [depuracion, matematicas, optimizacion, memoria]
 estado: borrador
-fecha: 2026-10-31
-fuentes: [documento del usuario "Técnicas avanzadas de depuración para juegos retro" (2026-10-31), GLOSARIO/reglas-comunes-de-proyecto.md]
+comprobado: pc
+comprobado_en: "parcial: arnés de PC de Hyper DBZ, ver los recuadros «Comprobado»"
+fecha: 2026-11-01
+fuentes: [documento del usuario "Técnicas avanzadas de depuración para juegos retro" (2026-10-31), GLOSARIO/reglas-comunes-de-proyecto.md, proyecto hyperdbz-dreamcast-port (dc/proto/src/logic.c, tools/divergencia.py, tools/qa/test_depuracion.py)]
 ---
 
 # Depuración avanzada dentro del juego
@@ -17,8 +19,10 @@ Amplían el savestate como log y el QR en hardware real ([reglas comunes](reglas
 5, 6 y 8–11). La meta es que el juego funcione como la **caja negra de un avión**: detecta que algo ha ido mal,
 guarda lo que pasó justo antes y lo saca por QR para reproducirlo en el PC.
 
-> **Ninguna de estas técnicas se ha implementado todavía en un proyecto real.** Son un plan de trabajo. Las notas
-> de cada plataforma (registros, contadores, límites de RAM) son orientativas y hay que comprobarlas al aplicarlas.
+> **Aplicadas en un proyecto real:** las técnicas 2 (invariantes) y 4 (replay diferencial), en el port de Hyper
+> DBZ a Dreamcast (noviembre de 2026), en el arnés de PC; ver los recuadros «Comprobado» de cada una. El resto
+> sigue siendo un plan de trabajo, y las notas de cada plataforma (registros, contadores, límites de RAM) son
+> orientativas hasta que se apliquen.
 
 ## Detalle técnico
 
@@ -97,6 +101,16 @@ pasa a la pantalla de cuelgue de la regla 11.
 Para no gastar CPU: las comprobaciones caras (recorrer todas las entidades) se reparten **un subsistema por
 tick** en rotación, y todo el bloque se compila solo en builds de prueba (`#ifdef DEBUG_INVARIANTES`).
 
+> **Comprobado (hyperdbz, Dreamcast/PC):** en un motor MUGEN las «entidades» son jugadores, helpers y
+> proyectiles. Lo que rindió: punteros (`root`, `parent`, objetivos...) que apuntan a un hueco libre, índices
+> auxiliares (la lista de helpers por hueco) que dejan de coincidir con los actores vivos, filtros de bits
+> desincronizados, valores no finitos (`f == f && f - f == 0`, sin libm) y cadenas de `ChangeState` agotadas
+> en un tick. Hay que **probar los invariantes con mutaciones**: romper a propósito una copia del código y
+> comprobar que saltan. Un cero sin esa prueba no demuestra nada, y no todas las mutaciones son alcanzables en
+> una partida concreta. La comprobación de la pila de la VM de expresiones rinde más en el compilador
+> (estática, sobre todo el bytecode) que en tiempo de ejecución. La QA falla en cuanto un combate incumple un
+> invariante, así que se acumulan solos en todos los tests.
+
 ### 3. Cápsula de fallo (paquete de diagnóstico)
 
 Lo que se exporta cuando algo grave falla. Es la pantalla de cuelgue de la regla 11 ampliada:
@@ -134,7 +148,16 @@ AUDIO        IGUAL
 - Requiere lógica determinista; en Dreamcast, cuidado con la coma flotante del SH-4 frente al PC (ver
   [Coma flotante determinista](../Dreamcast/cpu/coma-flotante-determinista.md)).
 - Cuando una huella falla, el arnés vuelca las variables de ese subsistema en las dos builds, en tabla.
+- La build A no tiene por qué seguir existiendo: basta con **congelar su arnés** (el ejecutable de PC) y sus
+  datos compilados antes del cambio, y ejecutarlos junto a los nuevos.
 - Si el cambio es intencionado (nuevo balance), se regeneran las referencias y se apunta en el diario.
+
+> **Comprobado (hyperdbz):** `tools/divergencia.py guardar|comparar`, con 8 huellas por tick (P1, P2, helpers
+> de cada uno, proyectiles, asalto y pausas, cámara, azar) calculadas con **las mismas listas de campos**
+> (X-macros) que la huella global. Así la global no cambia y el volcado no se desincroniza de lo que se
+> compara. Un cambio mínimo (umbral del cornerpush de 1 a 2) salió como «tick 636, P1, `cp_vel` 1,87 → 0».
+> En Dreamcast, el volcado solo se compila en el arnés, y los ayudantes de la huella van `always_inline`: la
+> huella global se calcula cada frame, y sacarla de línea le añadía llamadas.
 
 ### 5. Telemetría visual en pantalla
 

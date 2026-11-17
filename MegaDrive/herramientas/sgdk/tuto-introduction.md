@@ -2,8 +2,9 @@
 titulo: SGDK — Tutorial de introducción
 plataforma: [MegaDrive]
 categoria: [herramientas]
-tags: [sgdk, tutorial, arquitectura, rescomp, debug]
+tags: [sgdk, tutorial, arquitectura, depuracion]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://github.com/Stephane-D/SGDK/wiki/Tuto-Introduction]
 ---

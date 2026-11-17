@@ -2,8 +2,9 @@
 titulo: Multiplicación y división en el 68000
 plataforma: [MegaDrive]
 categoria: [cpu]
-tags: [68000, asm, multiplicacion, division, muls, divs]
+tags: [68000, asm, matematicas]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://plutiedev.com/multiplication-division]
 ---

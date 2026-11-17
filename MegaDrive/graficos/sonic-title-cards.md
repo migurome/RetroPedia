@@ -2,8 +2,9 @@
 titulo: Tarjetas de título de Sonic (fade-in parcial)
 plataforma: [MegaDrive]
 categoria: [graficos]
-tags: [sonic, efecto, paletas, fade, tecnica-visual]
+tags: [historia, efectos, paletas]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://plutiedev.com/sonic-title-cards]
 ---

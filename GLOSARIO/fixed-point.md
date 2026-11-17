@@ -2,8 +2,9 @@
 titulo: Números en punto fijo (Fixed Point)
 plataforma: [General]
 categoria: [fundamentos]
-tags: [matematicas, punto-fijo, fixed-point, 68000, precision]
+tags: [matematicas, 68000]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://plutiedev.com/fixed-point]
 ---

@@ -2,8 +2,9 @@
 titulo: Sprites (OAM)
 plataforma: [SNES]
 categoria: [graficos]
-tags: [ppu, sprites, oam, obj, prioridad, limites-hardware]
+tags: [ppu, sprites, limites]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://snes.nesdev.org/wiki/Sprites]
 ---

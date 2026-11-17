@@ -2,8 +2,9 @@
 titulo: Quirks de hardware documentados por Sega Retro
 plataforma: [MegaDrive]
 categoria: [memoria]
-tags: [quirks, hardware, tas, clr, vdp, segaretro, referencia-indirecta]
+tags: [depuracion, referencia, vdp]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://segaretro.org/Mega_Drive_Quirks]
 ---

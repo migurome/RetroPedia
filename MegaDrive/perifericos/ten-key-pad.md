@@ -2,8 +2,9 @@
 titulo: Ten Key Pad (Mega Anser)
 plataforma: [MegaDrive]
 categoria: [perifericos]
-tags: [ten-key-pad, mega-anser, teclado, japon, io]
+tags: [perifericos, registros]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://plutiedev.com/ten-key-pad]
 ---

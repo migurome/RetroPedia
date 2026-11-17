@@ -2,8 +2,9 @@
 titulo: Set de instrucciones del SPC-700
 plataforma: [SNES]
 categoria: [sonido]
-tags: [spc700, s-smp, asm, opcodes, instrucciones, audio]
+tags: [spc700, asm, audio]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://snes.nesdev.org/wiki/SPC-700_instruction_set]
 ---

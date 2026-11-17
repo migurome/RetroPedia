@@ -2,8 +2,9 @@
 titulo: Rutina de VBlank (patrones prácticos)
 plataforma: [SNES]
 categoria: [graficos]
-tags: [ppu, vblank, hdma, oam, dma, joypad, buffers]
+tags: [ppu, interrupciones, dma, sprites, memoria, mando]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://snes.nesdev.org/wiki/VBlank_routine]
 ---

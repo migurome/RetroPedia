@@ -2,8 +2,10 @@
 titulo: Neo Geo — formatos de la ROM C (sprites), la ROM S (capa fix) y las paletas
 plataforma: [NeoGeo]
 categoria: [graficos]
-tags: [rom-c, rom-s, tiles, bitplanes, paletas, color, dark-bit, backdrop, python]
+tags: [rom, tiles, paletas, vdp, herramientas]
 estado: revisado
+comprobado: emulador
+comprobado_en: "GnGeo y ngdevkit 0.5, RickAndMorty/neogeo"
 fecha: 2026-10-23
 fuentes: [tiletool.py y paltool.py de ngdevkit 0.5, proyecto RickAndMorty/neogeo (tools/build_gfx.py, tools/build_fix.py) probado en GnGeo]
 ---

@@ -2,8 +2,9 @@
 titulo: Registros de DMA y HDMA
 plataforma: [SNES]
 categoria: [memoria]
-tags: [dma, hdma, registros, mmio, transferencia]
+tags: [dma, registros]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://snes.nesdev.org/wiki/DMA_registers]
 ---

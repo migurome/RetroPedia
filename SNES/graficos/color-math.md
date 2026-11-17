@@ -2,8 +2,9 @@
 titulo: Color math
 plataforma: [SNES]
 categoria: [graficos]
-tags: [ppu, color-math, transparencia, subpantalla, blending]
+tags: [ppu, efectos]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://snes.nesdev.org/wiki/Color_math]
 ---

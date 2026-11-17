@@ -2,8 +2,9 @@
 titulo: La instrucción MOVEP
 plataforma: [MegaDrive]
 categoria: [cpu]
-tags: [68000, asm, movep, dma, vdp, sram]
+tags: [68000, asm, dma, vdp, memoria]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://plutiedev.com/movep]
 ---

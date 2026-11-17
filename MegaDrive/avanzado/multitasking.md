@@ -2,8 +2,9 @@
 titulo: Multitarea en Mega Drive
 plataforma: [MegaDrive]
 categoria: [avanzado]
-tags: [multitarea, scheduler, interrupciones, supervisor-mode, usp]
+tags: [arquitectura, interrupciones, 68000]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://plutiedev.com/multitasking]
 ---

@@ -2,8 +2,9 @@
 titulo: Primer diseño e implementación del Autómata Celular Cíclico (CCA) en Genesis
 plataforma: [MegaDrive]
 categoria: [cpu]
-tags: [cca, automata-celular, buffers, doble-buffer, rng, boton-start, algoritmo, toroidal]
+tags: [memoria, matematicas, mando]
 estado: borrador
+comprobado: no
 fecha: 2026-07-24
 fuentes: [https://bumbershootsoft.wordpress.com/2018/04/15/genesis-first-draft-of-the-cca/]
 ---

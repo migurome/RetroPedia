@@ -2,8 +2,10 @@
 titulo: Formatos de MUGEN — SFF (v1/v2), AIR y SND
 plataforma: [General]
 categoria: [formatos, graficos, sonido]
-tags: [mugen, sff, pcx, rle8, lz5, air, snd, act, paletas, sprites, ikemen]
+tags: [mugen, formatos, animacion, audio, paletas, sprites]
 estado: revisado
+comprobado: pc
+comprobado_en: "herramientas Python con los 22 personajes de Hyper DBZ 6.0c, hyperdbz-dreamcast-port"
 fecha: 2026-10-30
 fuentes: [implementación de Ikemen GO (decodificador LZ5), documentación de formatos de Elecbyte, proyecto hyperdbz-dreamcast-port (tools/mugen/*.py, probado con los 22 personajes de Hyper DBZ 6.0c)]
 ---

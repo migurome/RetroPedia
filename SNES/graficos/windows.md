@@ -2,8 +2,9 @@
 titulo: Ventanas de recorte (windows)
 plataforma: [SNES]
 categoria: [graficos]
-tags: [ppu, windows, mascara, recorte, color-math]
+tags: [ppu, colisiones, efectos]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://snes.nesdev.org/wiki/Windows]
 ---

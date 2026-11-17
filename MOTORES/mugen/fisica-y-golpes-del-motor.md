@@ -2,10 +2,12 @@
 titulo: Física y golpes del motor de MUGEN 1.0 — lo que el CNS no hace por sí solo
 plataforma: [General]
 categoria: [motores]
-tags: [mugen, cns, hitdef, clsn, hitpause, hitshake, guard, custom-state, targetstate, playerpush, screenbound, camara, hitvelset, hitfallvel, hitfalldamage, ikemen]
-estado: borrador
+tags: [mugen, colisiones, scroll]
+estado: revisado
+comprobado: emulador
+comprobado_en: "parcial: Flycast 2.7, hyperdbz-dreamcast-port hdbz.1.016; tests en PC con muñecos y huella Dreamcast igual a la del PC"
 fecha: 2026-10-31
-fuentes: [documentación de Elecbyte (cns.html, sctrls.html, trigger.html), código de Ikemen GO (src/char.go, src/bytecode.go, src/compiler_functions.go), common1.cns de MUGEN 1.0, CNS de Hyper DBZ Wicked Ambition, proyecto hyperdbz-dreamcast-port (dc/proto/src/logic.c)]
+fuentes: [DIARIO de hyperdbz-dreamcast-port (paso 1.8, hdbz.1.016), documentación de Elecbyte (cns.html, sctrls.html, trigger.html), código de Ikemen GO (src/char.go, src/bytecode.go, src/compiler_functions.go), common1.cns de MUGEN 1.0, CNS de Hyper DBZ Wicked Ambition, proyecto hyperdbz-dreamcast-port (dc/proto/src/logic.c)]
 ---
 
 # Física y golpes del motor de MUGEN 1.0
@@ -44,6 +46,9 @@ golpes simplificados a los reales, Goku visitó 59 estados en un minuto, frente 
 
 - **`physics = S` o `C`:** `vel x *= stand.friction` o `crouch.friction`. **El umbral
   (`stand.friction.threshold`) no lo aplica el motor**: en MUGEN 1.0 lo hace `common1.cns` con un `VelSet`.
+  Pero **de pie (`S`) el motor sí anula `vel x` por debajo de 1** tras el rozamiento (Ikemen GO, `char.go`, `ST_S`;
+  agachado no). Sin ese tope la velocidad nunca llega a 0 y un estado que sale con `vel x = 0` (el 3101 de Majin
+  Vegeta en Hyper DBZ) no termina.
 - **`physics = A`:** `vel y += yaccel`. Al llegar al suelo bajando, el motor lo lleva al estado 52.
 - **`physics = N`:** nada. Los estados de caída tras un golpe llevan su propia gravedad.
 - **`PlayerPush`, `PosFreeze`, `ScreenBound` y `Width`** duran **un tick**: los personajes los llaman con
@@ -142,8 +147,11 @@ Semántica, comprobada en el código de Ikemen GO (`char.go` y `bytecode.go`):
 
 - **`HelperMax` (56 en el `mugen.cfg` de Hyper DBZ) es por jugador**, no global. En Ikemen GO, al superarlo,
   el helper no se crea («Reached limit of 56 helpers»).
-- **`AnimElemTime` en una animación con `LoopStart`:** al dar la vuelta, el tiempo de la animación vuelve al
-  del inicio del bucle, así que `AnimElemTime(n) = 0` se cumple **en cada vuelta**. Un `Helper` disparado así
+- **`AnimElemTime` al dar la vuelta (`Animation.Action` de Ikemen GO):** el reloj llega a T (el total) y de ahí pasa al
+  **inicio del bucle + 1**: 0..T, L+1..T, L+1..T. Con eso, `AnimElemTime(ultimo) = duración del último` **se cumple** (con el reloj
+  en T), y `AnimElem` del **primer elemento del bucle** (el 1 si no hay `LoopStart`) **no se repite**: solo la primera pasada.
+  Hay intros que dependen de las dos cosas (Satan 193 y Black 706, en Hyper DBZ) y sin esto no acaban y el combate no empieza.
+  Los demás elementos sí: `AnimElemTime(n) = 0` se cumple **en cada vuelta**. Un `Helper` disparado así
   se crea una y otra vez: el aura de carga de Jiren crea uno cada 4 ticks y llega al límite. Es el
   comportamiento original, no un fallo del port.
 - **`BindToParent` / `BindToRoot`:**
@@ -327,3 +335,13 @@ Bloquear desde el principio del ataque cambió mucho la IA. En Goku contra Krill
 - [Compilar la lógica CNS de MUGEN — semántica real y trampas](cns-compilacion.md)
 - [Formatos de MUGEN — SFF, AIR y SND](formatos-sff-air-snd.md)
 - [Simulación idéntica en PC y Dreamcast](../../Dreamcast/cpu/coma-flotante-determinista.md)
+
+## Detalles de Ikemen GO que deciden si un personaje funciona (Hyper DBZ, build 2.062)
+
+- **`TargetBind` copia la velocidad** de quien agarra al objetivo. Hay estados de agarre que acaban con `Vel Y > 0` en el objetivo, y sin esto no acaban.
+  Si golpean o destruyen a quien agarra, el objetivo hace `SelfState 5050`.
+- **`GetHitVar(damage)` dura una ejecución de los estados:** al acabarla se aplica el daño y vale 0. Con `LifeAdd = -GetHitVar(damage)` y el valor
+  conservado, el personaje se mata solo.
+- **Los helpers aterrizan como cualquiera:** con `physics = A`, `Vel Y > 0` y `Pos Y >= 0` pasan al 52, salvo en el 105.
+- **Al acabar las intros:** `posReset` (posición inicial, sin velocidad) y, al dar el control, `SelfState 0` a quien no esté en el 0.
+- **Sprites de los grupos 5000-5399:** un conversor no puede quedarse solo con los del AIR propio: los pide el AIR del rival con `ChangeAnim2`.

@@ -2,8 +2,9 @@
 titulo: Matemáticas de 64 bits en el 68000
 plataforma: [MegaDrive]
 categoria: [cpu]
-tags: [68000, asm, 64-bit, addx, subx, extend-flag]
+tags: [68000, asm]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://plutiedev.com/64bit-math]
 ---

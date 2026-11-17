@@ -2,8 +2,9 @@
 titulo: Timers de juego — problemas y soluciones (bucle principal y framerate)
 plataforma: [General]
 categoria: [arquitectura]
-tags: [bucle-principal, timestep, framerate, sincronizacion, arquitectura-motor]
+tags: [arquitectura, interrupciones]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://fabiensanglard.net/timer_and_framerate/index.php]
 ---

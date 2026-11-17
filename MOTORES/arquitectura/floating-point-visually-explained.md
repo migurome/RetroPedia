@@ -2,8 +2,9 @@
 titulo: Coma flotante explicada visualmente
 plataforma: [General]
 categoria: [arquitectura]
-tags: [coma-flotante, ieee754, punto-fijo, precision-numerica, representacion-numeros]
+tags: [sh4, matematicas, arquitectura]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://fabiensanglard.net/floating_point_visually_explained/index.html]
 ---

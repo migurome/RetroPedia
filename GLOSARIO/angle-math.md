@@ -2,8 +2,9 @@
 titulo: Matemáticas de ángulos (Angle Math)
 plataforma: [General]
 categoria: [fundamentos]
-tags: [matematicas, angulos, seno, coseno, trigonometria, tablas]
+tags: [matematicas]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://plutiedev.com/angle-math]
 ---

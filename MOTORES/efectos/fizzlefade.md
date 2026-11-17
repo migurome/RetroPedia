@@ -2,8 +2,9 @@
 titulo: FizzleFade — la transición de pantalla de Wolfenstein 3D
 plataforma: [General]
 categoria: [efectos]
-tags: [wolfenstein3d, fizzlefade, lfsr, transiciones-pantalla, pseudoaleatorio]
+tags: [historia, efectos, matematicas]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://fabiensanglard.net/fizzlefade/index.php]
 ---

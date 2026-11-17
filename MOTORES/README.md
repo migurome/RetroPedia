@@ -2,9 +2,11 @@
 titulo: MOTORES — arquitectura y diseño de motores de juego
 plataforma: [General]
 categoria: [general]
-tags: [motores, arquitectura, diseno, multiplataforma]
+tags: [arquitectura, diseno, port]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
+fuentes: [resumen de las entradas de esta carpeta]
 ---
 
 # MOTORES — arquitectura y diseño de motores de juego
@@ -20,6 +22,7 @@ Primera fuente incorporada: [fabiensanglard.net](https://fabiensanglard.net/), b
 - `arquitectura/` — diseño interno de motores clásicos (bucle principal, timing, capas de abstracción motor/plataforma), incluida la serie "Another World" que analiza el MISMO motor de polígonos 2D portado a 7 plataformas distintas (Amiga, Atari ST, PC-DOS, **Sega Genesis**, **SNES**, GBA, Jaguar) — el caso de estudio más directamente comparable a la separación `ENG_*`/SGDK de motor-cenital.
 - `efectos/` — algoritmos de efectos visuales concretos y muy citados (fuego de DOOM, FizzleFade).
 - `graficos-hardware/` — sistemas de vídeo/sonido de hardware retro comparable (PPU de SNES, sistema gráfico y de sonido de placas arcade CPS-1, técnicas de sprite de Street Fighter II) — útil para comparar decisiones de diseño frente al VDP de Mega Drive.
+- [`mugen/`](mugen/README.md) — motor de lucha MUGEN: formatos, lógica, escenarios y mapa de la documentación oficial, visto para portar sus juegos a consolas.
 
 ## Cómo usar esto en el diseño de un motor
 

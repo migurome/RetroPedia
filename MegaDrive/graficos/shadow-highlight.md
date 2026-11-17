@@ -2,8 +2,9 @@
 titulo: Modo Shadow/Highlight
 plataforma: [MegaDrive]
 categoria: [graficos]
-tags: [vdp, shadow-highlight, sombra, brillo, prioridad, paletas]
+tags: [vdp, efectos, paletas, sprites]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://plutiedev.com/shadow-highlight]
 ---

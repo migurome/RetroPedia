@@ -2,8 +2,9 @@
 titulo: Carga en consola y depuración — dcload-ip/serial, dc-tool, GDB y emuladores
 plataforma: [Dreamcast]
 categoria: [herramientas]
-tags: [dcload-ip, dcload-serial, dc-tool, bba, coders-cable, gdb, emuladores, flycast, depuracion]
+tags: [depuracion, perifericos, emuladores]
 estado: borrador
+comprobado: no
 fecha: 2026-10-30
 fuentes: [https://www.dreamcast.wiki/Getting_Started_with_Dreamcast_development, https://www.dreamcast.wiki/Dcload-ip, https://github.com/sizious/dcload-ip, https://www.dreamcast.wiki/Romdisk_Swapping, https://www.dreamcast.wiki/Emulators, cabecera arch/gdb.h de KOS]
 ---

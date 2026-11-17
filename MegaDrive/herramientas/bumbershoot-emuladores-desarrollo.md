@@ -2,8 +2,9 @@
 titulo: Comparativa de emuladores para desarrollo en Mega Drive/Genesis
 plataforma: [MegaDrive]
 categoria: [herramientas]
-tags: [emuladores, gens-kmod, dgen, exodus, bizhawk, jgenesis, blastem, debug, precision, referencia-indirecta]
+tags: [emuladores, depuracion, matematicas, referencia]
 estado: borrador
+comprobado: no
 fecha: 2026-07-24
 fuentes: [https://bumbershootsoft.wordpress.com/platform-guide-sega-genesis-mega-drive/]
 ---

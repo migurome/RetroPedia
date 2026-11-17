@@ -2,8 +2,9 @@
 titulo: Imitar la paleta de otras consolas en Mega Drive (Game Boy, Virtual Boy, NES…)
 plataforma: [MegaDrive]
 categoria: [graficos]
-tags: [paletas, cuantizacion, game-boy, virtual-boy, nes, snes, estilo-retro, cram]
+tags: [paletas, port]
 estado: borrador
+comprobado: no
 fecha: 2026-10-15
 fuentes: [https://www.copetti.org/writings/consoles/game-boy/, https://www.copetti.org/writings/consoles/virtual-boy/, https://www.copetti.org/writings/consoles/nes/, https://www.copetti.org/writings/consoles/super-nintendo/, https://www.copetti.org/writings/consoles/mega-drive-genesis/]
 ---

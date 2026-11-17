@@ -2,8 +2,9 @@
 titulo: Mapas y planos de scroll — enfoque Big Evil Corporation
 plataforma: [MegaDrive]
 categoria: [graficos]
-tags: [bigevilcorporation, tanglewood, vdp, scroll, mapas, planos, vram]
+tags: [vdp, scroll, tiles, vram]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://blog.bigevilcorporation.co.uk/2012/05/30/sega-megadrive-9-maps-and-scrolling-planes/]
 ---

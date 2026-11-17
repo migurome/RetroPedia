@@ -2,8 +2,10 @@
 titulo: EXTRACCION — sacar assets y datos de un juego a partir de vídeo
 plataforma: [General]
 categoria: [extraccion]
-tags: [ingenieria-inversa, video, sprites, fondos, pixel-art, opencv]
+tags: [historia, efectos, sprites, scroll, extraccion]
 estado: borrador
+comprobado: pc
+comprobado_en: "proyecto Extractor"
 fecha: 2026-10-22
 fuentes: [proyecto Extractor (corto pixel art de Rick and Morty, 4K, 2026-10-22)]
 ---

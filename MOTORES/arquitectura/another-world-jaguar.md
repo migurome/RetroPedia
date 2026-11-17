@@ -2,8 +2,9 @@
 titulo: Los polígonos de Another World — el port a Atari Jaguar
 plataforma: [General]
 categoria: [arquitectura]
-tags: [another-world, jaguar, blitter, gpu, polígonos-2d]
+tags: [arquitectura, powervr]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://fabiensanglard.net/another_world_polygons_Jaguar/index.html]
 ---

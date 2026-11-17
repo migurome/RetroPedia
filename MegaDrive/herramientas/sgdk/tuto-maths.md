@@ -2,8 +2,9 @@
 titulo: SGDK — Tutorial de Matemáticas (fix16/fix32)
 plataforma: [MegaDrive]
 categoria: [herramientas]
-tags: [sgdk, tutorial, matematicas, punto-fijo, fix16, fix32, trigonometria]
+tags: [sgdk, tutorial, matematicas]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://github.com/Stephane-D/SGDK/wiki/Tuto-Maths]
 ---

@@ -2,8 +2,9 @@
 titulo: Tiles y formatos de bitplane
 plataforma: [SNES]
 categoria: [graficos]
-tags: [ppu, tiles, bitplane, vram, 2bpp, 4bpp, 8bpp]
+tags: [ppu, tiles, vram]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://snes.nesdev.org/wiki/Tiles]
 ---

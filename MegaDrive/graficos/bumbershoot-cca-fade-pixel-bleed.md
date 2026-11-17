@@ -2,8 +2,9 @@
 titulo: Fundido de paleta y efecto "pixel bleed" por VSRAM (Bumbershoot / CCA)
 plataforma: [MegaDrive]
 categoria: [graficos]
-tags: [fade, fundido, paleta, cram, vsram, scroll, vdp, h-v-counter, punto-fijo]
+tags: [efectos, paletas, scroll, vdp, matematicas]
 estado: borrador
+comprobado: no
 fecha: 2026-07-24
 fuentes: [https://bumbershootsoft.wordpress.com/2025/07/19/genesis-cca-special-effects-and-final-polish/]
 ---

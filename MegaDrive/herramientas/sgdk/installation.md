@@ -2,8 +2,9 @@
 titulo: Instalación de SGDK
 plataforma: [MegaDrive]
 categoria: [herramientas]
-tags: [sgdk, instalacion, java, gcc, windows]
+tags: [sgdk, toolchain]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://github.com/Stephane-D/SGDK/wiki/SGDK-Installation]
 ---

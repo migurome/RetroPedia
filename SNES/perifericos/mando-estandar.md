@@ -2,8 +2,9 @@
 titulo: Mando estándar de SNES
 plataforma: [SNES]
 categoria: [perifericos]
-tags: [mando, controller, joypad, protocolo, io]
+tags: [mando, registros]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://snes.nesdev.org/wiki/Standard_controller]
 ---

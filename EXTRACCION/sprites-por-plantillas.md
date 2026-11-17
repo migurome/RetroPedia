@@ -2,8 +2,10 @@
 titulo: Extraer sprites de vídeo con una biblioteca de poses (búsqueda por plantilla y refinado "Venn")
 plataforma: [General]
 categoria: [extraccion]
-tags: [sprites, template-matching, opencv, poses, animacion, paleta, contorno, deduplicacion]
+tags: [sprites, extraccion, animacion, paletas, formatos]
 estado: borrador
+comprobado: pc
+comprobado_en: "proyecto Extractor: 6.143 fotogramas de Rick"
 fecha: 2026-10-22
 fuentes: [proyecto Extractor (validación con Rick, 6.143 fotogramas), Guzdial & Riedl "Game Engine Learning from Video" (IJCAI 2017), MarioNette (NeurIPS 2021)]
 ---

@@ -2,8 +2,9 @@
 titulo: Conector de mando de SNES (puerto de controlador)
 plataforma: [SNES]
 categoria: [perifericos]
-tags: [pinout, mando, conector, hardware, io]
+tags: [rom, mando, referencia, registros]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://snes.nesdev.org/wiki/Controller_connector]
 ---

@@ -2,8 +2,9 @@
 titulo: Escalado de sprites (técnicas para simularlo)
 plataforma: [MegaDrive]
 categoria: [graficos]
-tags: [sprites, efecto, escalado, tecnica-visual]
+tags: [sprites, efectos]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://plutiedev.com/scaling-sprites]
 ---

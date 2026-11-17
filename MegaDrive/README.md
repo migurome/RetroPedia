@@ -2,12 +2,41 @@
 titulo: Mega Drive / Genesis — overview
 plataforma: [MegaDrive]
 categoria: [general]
-tags: [hardware, overview]
+tags: [referencia]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
+fuentes: [resumen de las entradas de esta carpeta]
 ---
 
 # Mega Drive / Genesis
+
+## Empieza aquí
+
+[Límites y presupuestos](LIMITES.md) · [Síntomas y causas](SINTOMAS.md)
+
+Hay más de 130 entradas: esta tabla lleva a la mejor para empezar en cada tema.
+
+| Si vas a... | Lee |
+|---|---|
+| Empezar en C con SGDK | [overview de SGDK](herramientas/sgdk/overview.md) y [snippet que compila](../snippets/README.md) |
+| Empezar con MD Engine | [overview de MD Engine](herramientas/md-engine/overview.md) |
+| Empezar en ensamblador | [build y depuración en ASM](herramientas/build-debug-asm-puro.md) |
+| Elegir emulador | [emuladores para desarrollar](herramientas/bumbershoot-emuladores-desarrollo.md) |
+| Mostrar sprites con SGDK | [sprites de SGDK](herramientas/sgdk/tuto-sprites.md) |
+| Entender los sprites del VDP | [sprites](graficos/sprites.md) y [tabla de sprites](graficos/sprite-table.md) |
+| Cargar gráficos | [tiles y paletas](graficos/tiles-and-palettes.md) y [DMA](graficos/dma-transfer.md) |
+| Calcular cuánto cabe por frame | [ancho de banda a VRAM](graficos/bumbershoot-badlines-revenge.md) |
+| Configurar el VDP | [registros del VDP](graficos/vdp-registers.md) y [resolución](graficos/screen-resolution.md) |
+| Hacer scroll | [mapas y scroll](graficos/bec-maps-scrolling.md) |
+| Componer música | [Furnace a VGM](sonido/furnace-fur-generar-y-exportar-vgm.md) y [registros del YM2612](sonido/ym2612-registers.md) |
+| Usar el Z80 | [usar el Z80](cpu/using-the-z80.md) |
+| Leer el mando | [mandos](perifericos/controllers.md) |
+| Guardar partida | [SRAM](memoria/saving-sram.md) |
+| Pasar de 4 MB | [más de 4 MB](memoria/beyond-4mb.md) |
+| Optimizar C | [optimizar con gcc](cpu/optimizar-c-gcc-68000.md) |
+| Evitar fallos solo en consola | [problemas de hardware](memoria/hardware-issues.md) |
+| Portar desde Game Maker | [port de Super Smash Land](../MOTORES/arquitectura/port-desde-game-maker.md) |
 
 ## Resumen de hardware (a validar/ampliar durante el proyecto)
 

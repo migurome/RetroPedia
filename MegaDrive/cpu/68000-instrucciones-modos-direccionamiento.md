@@ -2,8 +2,9 @@
 titulo: Motorola 68000 — instrucciones y modos de direccionamiento (base)
 plataforma: [MegaDrive]
 categoria: [cpu]
-tags: [68000, asm, instrucciones, modos-direccionamiento, fundamentos]
+tags: [68000, asm, ppu, referencia]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://en.wikibooks.org/wiki/68000_Assembly/Addressing_Modes, https://www.nxp.com/docs/en/reference-manual/M68000PRM.pdf, https://www.liquisearch.com/motorola_68000/instruction_set_details]
 ---

@@ -2,8 +2,9 @@
 titulo: "Análisis del startup code oficial de Sega (arqueología del boot code de ROMs comerciales)"
 plataforma: [MegaDrive]
 categoria: [avanzado]
-tags: [startup-code, boot, tmss, z80, vdp, sgdk, reverse-engineering, referencia-indirecta]
+tags: [arranque, z80, vdp, sgdk, historia, referencia]
 estado: borrador
+comprobado: no
 fecha: 2026-07-24
 fuentes: [https://bumbershootsoft.wordpress.com/2018/03/02/the-sega-genesis-startup-code/]
 ---

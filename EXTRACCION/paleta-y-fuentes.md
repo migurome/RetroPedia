@@ -2,8 +2,10 @@
 titulo: Paletas cerradas y fuentes de texto a partir de fotogramas nativos
 plataforma: [General]
 categoria: [extraccion]
-tags: [paleta, cuantizacion, median-cut, kmeans, aseprite, gpl, fuente, bitmap-font, bmfont, interfaz]
+tags: [paletas, herramientas, tiles, extraccion]
 estado: borrador
+comprobado: pc
+comprobado_en: "parcial: solo la paleta de Rick en el proyecto Extractor"
 fecha: 2026-10-23
 fuentes: [Pylette, Atomic Object (median cut vs k-means), reductor de color de Sprite-AI, extractor de Wayline, FontCutter, Sprite2Font, CopyPxl, proyecto Extractor (paleta de Rick: 13 colores)]
 ---

@@ -2,8 +2,9 @@
 titulo: Resoluciones de pantalla del VDP
 plataforma: [MegaDrive]
 categoria: [graficos]
-tags: [vdp, resolucion, h32, h40, interlace, pal, ntsc]
+tags: [vdp, interrupciones]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://plutiedev.com/screen-resolution]
 ---

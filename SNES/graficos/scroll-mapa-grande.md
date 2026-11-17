@@ -2,8 +2,9 @@
 titulo: Scroll de un mapa grande (streaming de tilemap)
 plataforma: [SNES]
 categoria: [graficos]
-tags: [ppu, scroll, tilemap, vram, streaming, vmain]
+tags: [ppu, scroll, tiles, vram, audio]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://snes.nesdev.org/wiki/Scrolling_a_large_map]
 ---

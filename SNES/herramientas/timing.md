@@ -2,8 +2,9 @@
 titulo: Timing general del sistema SNES
 plataforma: [SNES]
 categoria: [herramientas]
-tags: [timing, ciclos, scanlines, ntsc, pal, vblank, reloj-maestro]
+tags: [interrupciones, optimizacion]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://snes.nesdev.org/wiki/Timing]
 ---

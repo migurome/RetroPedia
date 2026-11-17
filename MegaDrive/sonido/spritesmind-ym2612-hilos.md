@@ -2,8 +2,9 @@
 titulo: Hilos de SpritesMind sobre el YM2612
 plataforma: [MegaDrive]
 categoria: [sonido]
-tags: [spritesmind, foro, ym2612, timers, referencia-indirecta]
+tags: [referencia, fm, interrupciones]
 estado: borrador
+comprobado: no
 fecha: 2026-07-21
 fuentes: [https://gendev.spritesmind.net/forum/viewtopic.php?t=386, https://gendev.spritesmind.net/forum/viewtopic.php?t=1883, https://gendev.spritesmind.net/forum/viewtopic.php?t=1118]
 ---

@@ -2,8 +2,10 @@
 titulo: Generar proyectos .fur de Furnace por script y exportarlos a VGM
 plataforma: [MegaDrive]
 categoria: [sonido]
-tags: [furnace, fur, vgm, ym2612, sn76489, xgm2, linea-de-ordenes]
+tags: [herramientas, audio, fm, psg, toolchain]
 estado: borrador
+comprobado: pc
+comprobado_en: "experimentos propios con Furnace 0.6.8.3, port de Super Smash Land"
 fecha: 2026-10-25
 actualizado: 2026-10-25
 fuentes: [furnace-0.6.8.3-win32/papers/format.md, furnace-0.6.8.3-win32/papers/newIns.md, manual.pdf de Furnace 0.6.8.3, experimentos propios (port de Super Smash Land a Mega Drive)]
