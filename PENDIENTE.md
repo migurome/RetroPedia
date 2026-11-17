@@ -16,3 +16,4 @@ borra de aquí.
 - [ ] **Receta de Mega Drive.** De PNG a ROM con SGDK; ya existe el snippet.
 - [ ] **`SINTOMAS.md` de Mega Drive y SNES.** Ampliados con las trampas de las entradas (2026-11-06), con un filtro por palabras: alguna puede faltar.
 - [ ] **Comparativa entre plataformas.** Confirmar las transparencias en Neo Geo, y las cifras que aún son solo documentación.
+- [ ] **Referencias cruzadas sin enlaces.** 125 entradas tienen «(pendiente de enlazar)» en esa sección (auditoría del 2026-11-17). Se buscan con Grep `pendiente de enlazar`.

@@ -3,7 +3,7 @@ titulo: Registro de decisiones de proyectos — qué se eligió, qué se descart
 plataforma: [General]
 categoria: [general]
 tags: [proceso, port, arquitectura, referencia]
-estado: revisado
+estado: borrador
 comprobado: no
 fecha: 2026-11-06
 fuentes: [proyecto hyperdbz-dreamcast-port (PLAN_PORT_DREAMCAST.md, DIARIO.md), proyecto SSB Port (PLAN_PORT_MEGADRIVE.md, CLAUDE.md)]
